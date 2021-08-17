@@ -1,0 +1,165 @@
+load data:  mnist
+Building MNIST data loader with 1 workers
+==> Building model..
+
+Epoch: 0
+/home/siu170066/miniconda3/envs/sdenet/lib/python3.8/site-packages/torch/cuda/__init__.py:52: UserWarning: CUDA initialization: CUDA unknown error - this may be due to an incorrectly set up environment, e.g. changing env variable CUDA_VISIBLE_DEVICES after program start. Setting the available devices to be zero. (Triggered internally at  /opt/conda/conda-bld/pytorch_1607370131125/work/c10/cuda/CUDAFunctions.cpp:100.)
+  return torch._C._cuda_getDeviceCount() > 0
+Train epoch:0 	Loss: 0.467504 | Acc: 84.111245 (50386/59904)
+Test epoch: 0| Acc: 97.74 (9774/10000) 
+
+Epoch: 1
+Train epoch:1 	Loss: 0.072339 | Acc: 97.889957 (58640/59904)
+Test epoch: 1| Acc: 98.83 (9883/10000) 
+
+Epoch: 2
+Train epoch:2 	Loss: 0.055992 | Acc: 98.480903 (58994/59904)
+Test epoch: 2| Acc: 98.73 (9873/10000) 
+
+Epoch: 3
+Train epoch:3 	Loss: 0.054535 | Acc: 98.497596 (59004/59904)
+Test epoch: 3| Acc: 97.99 (9799/10000) 
+
+Epoch: 4
+Train epoch:4 	Loss: 0.051581 | Acc: 98.589410 (59059/59904)
+Test epoch: 4| Acc: 98.24 (9824/10000) 
+
+Epoch: 5
+Train epoch:5 	Loss: 0.049983 | Acc: 98.651175 (59096/59904)
+Test epoch: 5| Acc: 98.85 (9885/10000) 
+
+Epoch: 6
+Train epoch:6 	Loss: 0.051264 | Acc: 98.611111 (59072/59904)
+Test epoch: 6| Acc: 98.88 (9888/10000) 
+
+Epoch: 7
+Train epoch:7 	Loss: 0.051874 | Acc: 98.597756 (59064/59904)
+Test epoch: 7| Acc: 98.68 (9868/10000) 
+
+Epoch: 8
+Train epoch:8 	Loss: 0.049710 | Acc: 98.639490 (59089/59904)
+Test epoch: 8| Acc: 98.63 (9863/10000) 
+
+Epoch: 9
+Train epoch:9 	Loss: 0.046159 | Acc: 98.781384 (59174/59904)
+Test epoch: 9| Acc: 98.7 (9870/10000) 
+
+Epoch: 10
+Train epoch:10 	Loss: 0.044415 | Acc: 98.823117 (59199/59904)
+Test epoch: 10| Acc: 98.51 (9851/10000) 
+
+Epoch: 11
+Train epoch:11 	Loss: 0.017288 | Acc: 99.611044 (59671/59904)
+Test epoch: 11| Acc: 99.47 (9947/10000) 
+
+Epoch: 12
+Train epoch:12 	Loss: 0.011101 | Acc: 99.782986 (59774/59904)
+Test epoch: 12| Acc: 99.56 (9956/10000) 
+
+Epoch: 13
+Train epoch:13 	Loss: 0.008874 | Acc: 99.829728 (59802/59904)
+Test epoch: 13| Acc: 99.44 (9944/10000) 
+
+Epoch: 14
+Train epoch:14 	Loss: 0.007721 | Acc: 99.871461 (59827/59904)
+Test epoch: 14| Acc: 99.5 (9950/10000) 
+
+Epoch: 15
+Train epoch:15 	Loss: 0.007053 | Acc: 99.883146 (59834/59904)
+Test epoch: 15| Acc: 99.54 (9954/10000) 
+
+Epoch: 16
+Train epoch:16 	Loss: 0.005687 | Acc: 99.918202 (59855/59904)
+Test epoch: 16| Acc: 99.52 (9952/10000) 
+
+Epoch: 17
+Train epoch:17 	Loss: 0.005120 | Acc: 99.939904 (59868/59904)
+Test epoch: 17| Acc: 99.49 (9949/10000) 
+
+Epoch: 18
+Train epoch:18 	Loss: 0.004692 | Acc: 99.943243 (59870/59904)
+Test epoch: 18| Acc: 99.5 (9950/10000) 
+
+Epoch: 19
+Train epoch:19 	Loss: 0.005330 | Acc: 99.916533 (59854/59904)
+Test epoch: 19| Acc: 99.44 (9944/10000) 
+
+Epoch: 20
+Train epoch:20 	Loss: 0.005225 | Acc: 99.934896 (59865/59904)
+Test epoch: 20| Acc: 99.45 (9945/10000) 
+
+Epoch: 21
+Train epoch:21 	Loss: 0.003715 | Acc: 99.973291 (59888/59904)
+Test epoch: 21| Acc: 99.48 (9948/10000) 
+
+Epoch: 22
+Train epoch:22 	Loss: 0.003563 | Acc: 99.976629 (59890/59904)
+Test epoch: 22| Acc: 99.47 (9947/10000) 
+
+Epoch: 23
+Train epoch:23 	Loss: 0.003476 | Acc: 99.978299 (59891/59904)
+Test epoch: 23| Acc: 99.49 (9949/10000) 
+
+Epoch: 24
+Train epoch:24 	Loss: 0.003417 | Acc: 99.981637 (59893/59904)
+Test epoch: 24| Acc: 99.53 (9953/10000) 
+
+Epoch: 25
+Train epoch:25 	Loss: 0.003382 | Acc: 99.981637 (59893/59904)
+Test epoch: 25| Acc: 99.51 (9951/10000) 
+
+Epoch: 26
+Train epoch:26 	Loss: 0.003352 | Acc: 99.983307 (59894/59904)
+Test epoch: 26| Acc: 99.53 (9953/10000) 
+
+Epoch: 27
+Train epoch:27 	Loss: 0.003328 | Acc: 99.983307 (59894/59904)
+Test epoch: 27| Acc: 99.54 (9954/10000) 
+
+Epoch: 28
+Train epoch:28 	Loss: 0.003307 | Acc: 99.983307 (59894/59904)
+Test epoch: 28| Acc: 99.54 (9954/10000) 
+
+Epoch: 29
+Train epoch:29 	Loss: 0.003283 | Acc: 99.983307 (59894/59904)
+Test epoch: 29| Acc: 99.53 (9953/10000) 
+
+Epoch: 30
+Train epoch:30 	Loss: 0.003261 | Acc: 99.983307 (59894/59904)
+Test epoch: 30| Acc: 99.53 (9953/10000) 
+
+Epoch: 31
+Train epoch:31 	Loss: 0.003225 | Acc: 99.983307 (59894/59904)
+Test epoch: 31| Acc: 99.53 (9953/10000) 
+
+Epoch: 32
+Train epoch:32 	Loss: 0.003222 | Acc: 99.983307 (59894/59904)
+Test epoch: 32| Acc: 99.52 (9952/10000) 
+
+Epoch: 33
+Train epoch:33 	Loss: 0.003218 | Acc: 99.983307 (59894/59904)
+Test epoch: 33| Acc: 99.52 (9952/10000) 
+
+Epoch: 34
+Train epoch:34 	Loss: 0.003170 | Acc: 99.984976 (59895/59904)
+Test epoch: 34| Acc: 99.52 (9952/10000) 
+
+Epoch: 35
+Train epoch:35 	Loss: 0.003210 | Acc: 99.983307 (59894/59904)
+Test epoch: 35| Acc: 99.52 (9952/10000) 
+
+Epoch: 36
+Train epoch:36 	Loss: 0.003207 | Acc: 99.983307 (59894/59904)
+Test epoch: 36| Acc: 99.52 (9952/10000) 
+
+Epoch: 37
+Train epoch:37 	Loss: 0.003202 | Acc: 99.983307 (59894/59904)
+Test epoch: 37| Acc: 99.52 (9952/10000) 
+
+Epoch: 38
+Train epoch:38 	Loss: 0.003198 | Acc: 99.983307 (59894/59904)
+Test epoch: 38| Acc: 99.52 (9952/10000) 
+
+Epoch: 39
+Train epoch:39 	Loss: 0.003194 | Acc: 99.983307 (59894/59904)
+Test epoch: 39| Acc: 99.52 (9952/10000) 

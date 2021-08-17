@@ -1,0 +1,163 @@
+load in-domain data:  mnist
+Building MNIST data loader with 1 workers
+==> Building model..
+
+Epoch: 0
+Train epoch:0 	Loss: 2.149882 | Loss_in: 0.409157, Loss_out: 0.445724 | Acc: 22.397503 (13417/59904)
+Test epoch: 0 | Acc: 60.330000 (6033/10000)
+
+Epoch: 1
+Train epoch:1 	Loss: 0.803879 | Loss_in: 0.102227, Loss_out: 0.101630 | Acc: 73.404113 (43972/59904)
+Test epoch: 1 | Acc: 94.370000 (9437/10000)
+
+Epoch: 2
+Train epoch:2 	Loss: 0.128211 | Loss_in: 0.002084, Loss_out: 0.002018 | Acc: 96.354167 (57720/59904)
+Test epoch: 2 | Acc: 97.910000 (9791/10000)
+
+Epoch: 3
+Train epoch:3 	Loss: 0.081677 | Loss_in: 0.000353, Loss_out: 0.000323 | Acc: 97.753072 (58558/59904)
+Test epoch: 3 | Acc: 98.650000 (9865/10000)
+
+Epoch: 4
+Train epoch:4 	Loss: 0.065586 | Loss_in: 0.000441, Loss_out: 0.000308 | Acc: 98.197115 (58824/59904)
+Test epoch: 4 | Acc: 98.500000 (9850/10000)
+
+Epoch: 5
+Train epoch:5 	Loss: 0.060965 | Loss_in: 0.000260, Loss_out: 0.000211 | Acc: 98.334001 (58906/59904)
+Test epoch: 5 | Acc: 98.110000 (9811/10000)
+
+Epoch: 6
+Train epoch:6 	Loss: 0.059612 | Loss_in: 0.000543, Loss_out: 0.000474 | Acc: 98.357372 (58920/59904)
+Test epoch: 6 | Acc: 98.550000 (9855/10000)
+
+Epoch: 7
+Train epoch:7 	Loss: 0.060919 | Loss_in: 0.000514, Loss_out: 0.000441 | Acc: 98.392428 (58941/59904)
+Test epoch: 7 | Acc: 98.880000 (9888/10000)
+
+Epoch: 8
+Train epoch:8 	Loss: 0.051027 | Loss_in: 0.000334, Loss_out: 0.000257 | Acc: 98.647837 (59094/59904)
+Test epoch: 8 | Acc: 98.450000 (9845/10000)
+
+Epoch: 9
+Train epoch:9 	Loss: 0.053017 | Loss_in: 0.000290, Loss_out: 0.000199 | Acc: 98.604434 (59068/59904)
+Test epoch: 9 | Acc: 98.720000 (9872/10000)
+
+Epoch: 10
+Train epoch:10 	Loss: 0.051990 | Loss_in: 0.000271, Loss_out: 0.000190 | Acc: 98.571047 (59048/59904)
+Test epoch: 10 | Acc: 98.240000 (9824/10000)
+
+Epoch: 11
+Train epoch:11 	Loss: 0.021265 | Loss_in: 0.000198, Loss_out: 0.000135 | Acc: 99.452457 (59576/59904)
+Test epoch: 11 | Acc: 99.290000 (9929/10000)
+
+Epoch: 12
+Train epoch:12 	Loss: 0.014206 | Loss_in: 0.000210, Loss_out: 0.000149 | Acc: 99.656116 (59698/59904)
+Test epoch: 12 | Acc: 99.390000 (9939/10000)
+
+Epoch: 13
+Train epoch:13 	Loss: 0.011901 | Loss_in: 0.000235, Loss_out: 0.000173 | Acc: 99.727898 (59741/59904)
+Test epoch: 13 | Acc: 99.430000 (9943/10000)
+
+Epoch: 14
+Train epoch:14 	Loss: 0.010380 | Loss_in: 0.000262, Loss_out: 0.000195 | Acc: 99.764623 (59763/59904)
+Test epoch: 14 | Acc: 99.470000 (9947/10000)
+
+Epoch: 15
+Train epoch:15 	Loss: 0.008837 | Loss_in: 0.000286, Loss_out: 0.000219 | Acc: 99.804688 (59787/59904)
+Test epoch: 15 | Acc: 99.430000 (9943/10000)
+
+Epoch: 16
+Train epoch:16 	Loss: 0.008222 | Loss_in: 0.000296, Loss_out: 0.000235 | Acc: 99.821381 (59797/59904)
+Test epoch: 16 | Acc: 99.370000 (9937/10000)
+
+Epoch: 17
+Train epoch:17 	Loss: 0.007641 | Loss_in: 0.000307, Loss_out: 0.000230 | Acc: 99.843082 (59810/59904)
+Test epoch: 17 | Acc: 99.490000 (9949/10000)
+
+Epoch: 18
+Train epoch:18 	Loss: 0.006515 | Loss_in: 0.000309, Loss_out: 0.000225 | Acc: 99.884816 (59835/59904)
+Test epoch: 18 | Acc: 99.430000 (9943/10000)
+
+Epoch: 19
+Train epoch:19 	Loss: 0.005994 | Loss_in: 0.000302, Loss_out: 0.000234 | Acc: 99.908186 (59849/59904)
+Test epoch: 19 | Acc: 99.400000 (9940/10000)
+
+Epoch: 20
+Train epoch:20 	Loss: 0.006490 | Loss_in: 0.000315, Loss_out: 0.000235 | Acc: 99.888154 (59837/59904)
+Test epoch: 20 | Acc: 99.480000 (9948/10000)
+
+Epoch: 21
+Train epoch:21 	Loss: 0.004493 | Loss_in: 0.000305, Loss_out: 0.000242 | Acc: 99.951589 (59875/59904)
+Test epoch: 21 | Acc: 99.480000 (9948/10000)
+
+Epoch: 22
+Train epoch:22 	Loss: 0.004071 | Loss_in: 0.000308, Loss_out: 0.000240 | Acc: 99.966613 (59884/59904)
+Test epoch: 22 | Acc: 99.470000 (9947/10000)
+
+Epoch: 23
+Train epoch:23 	Loss: 0.003893 | Loss_in: 0.000311, Loss_out: 0.000242 | Acc: 99.969952 (59886/59904)
+Test epoch: 23 | Acc: 99.470000 (9947/10000)
+
+Epoch: 24
+Train epoch:24 	Loss: 0.003794 | Loss_in: 0.000313, Loss_out: 0.000243 | Acc: 99.973291 (59888/59904)
+Test epoch: 24 | Acc: 99.480000 (9948/10000)
+
+Epoch: 25
+Train epoch:25 	Loss: 0.003720 | Loss_in: 0.000314, Loss_out: 0.000246 | Acc: 99.973291 (59888/59904)
+Test epoch: 25 | Acc: 99.460000 (9946/10000)
+
+Epoch: 26
+Train epoch:26 	Loss: 0.003678 | Loss_in: 0.000317, Loss_out: 0.000249 | Acc: 99.973291 (59888/59904)
+Test epoch: 26 | Acc: 99.470000 (9947/10000)
+
+Epoch: 27
+Train epoch:27 	Loss: 0.003624 | Loss_in: 0.000319, Loss_out: 0.000248 | Acc: 99.973291 (59888/59904)
+Test epoch: 27 | Acc: 99.460000 (9946/10000)
+
+Epoch: 28
+Train epoch:28 	Loss: 0.003591 | Loss_in: 0.000320, Loss_out: 0.000250 | Acc: 99.973291 (59888/59904)
+Test epoch: 28 | Acc: 99.480000 (9948/10000)
+
+Epoch: 29
+Train epoch:29 	Loss: 0.003548 | Loss_in: 0.000321, Loss_out: 0.000252 | Acc: 99.976629 (59890/59904)
+Test epoch: 29 | Acc: 99.470000 (9947/10000)
+
+Epoch: 30
+Train epoch:30 	Loss: 0.003520 | Loss_in: 0.000322, Loss_out: 0.000255 | Acc: 99.974960 (59889/59904)
+Test epoch: 30 | Acc: 99.490000 (9949/10000)
+
+Epoch: 31
+Train epoch:31 	Loss: 0.003410 | Loss_in: 0.000322, Loss_out: 0.000254 | Acc: 99.979968 (59892/59904)
+Test epoch: 31 | Acc: 99.490000 (9949/10000)
+
+Epoch: 32
+Train epoch:32 	Loss: 0.003372 | Loss_in: 0.000323, Loss_out: 0.000256 | Acc: 99.979968 (59892/59904)
+Test epoch: 32 | Acc: 99.490000 (9949/10000)
+
+Epoch: 33
+Train epoch:33 	Loss: 0.003457 | Loss_in: 0.000322, Loss_out: 0.000255 | Acc: 99.978299 (59891/59904)
+Test epoch: 33 | Acc: 99.480000 (9948/10000)
+
+Epoch: 34
+Train epoch:34 	Loss: 0.003451 | Loss_in: 0.000323, Loss_out: 0.000255 | Acc: 99.978299 (59891/59904)
+Test epoch: 34 | Acc: 99.480000 (9948/10000)
+
+Epoch: 35
+Train epoch:35 	Loss: 0.003451 | Loss_in: 0.000323, Loss_out: 0.000255 | Acc: 99.978299 (59891/59904)
+Test epoch: 35 | Acc: 99.480000 (9948/10000)
+
+Epoch: 36
+Train epoch:36 	Loss: 0.003450 | Loss_in: 0.000323, Loss_out: 0.000254 | Acc: 99.978299 (59891/59904)
+Test epoch: 36 | Acc: 99.480000 (9948/10000)
+
+Epoch: 37
+Train epoch:37 	Loss: 0.003447 | Loss_in: 0.000323, Loss_out: 0.000255 | Acc: 99.978299 (59891/59904)
+Test epoch: 37 | Acc: 99.480000 (9948/10000)
+
+Epoch: 38
+Train epoch:38 	Loss: 0.003443 | Loss_in: 0.000323, Loss_out: 0.000256 | Acc: 99.978299 (59891/59904)
+Test epoch: 38 | Acc: 99.480000 (9948/10000)
+
+Epoch: 39
+Train epoch:39 	Loss: 0.003440 | Loss_in: 0.000323, Loss_out: 0.000257 | Acc: 99.978299 (59891/59904)
+Test epoch: 39 | Acc: 99.480000 (9948/10000)
