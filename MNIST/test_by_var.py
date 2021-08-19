@@ -127,7 +127,9 @@ def generate_target():
             correct_index = (predicted == targets)
             for i in range(data.size(0)):
                 # confidence score: var_y
+                # large var mean low confidence, invert var to keep pace with p(y|x)
                 std = batch_std[i,predicted[i]].item()
+                std = -std
                 f1.write("{}\n".format(std))
                 if correct_index[i] == 1:
                     f3.write("{}\n".format(std))
@@ -151,14 +153,15 @@ def generate_non_target():
             total += data.size(0)
             data, targets = data.to(device), targets.to(device)
             batch_output = 0
-            for j in range(args.eva_iter):
-                batch_output = batch_output + F.softmax(model(data), dim=1)
-            batch_output = batch_output/args.eva_iter
+            batch_std = 0
+            batch_output,batch_std = evaluate(model,data)
+            _, predicted = batch_output.max(1)
             for i in range(data.size(0)):
-                # confidence score: max_y p(y|x)
-                output = batch_output[i].view(1, -1)
-                soft_out = torch.max(output).item()
-                f2.write("{}\n".format(soft_out))
+                # confidence score: var_y
+                # large var mean low confidence, invert var to keep pace with p(y|x)
+                std = batch_std[i,predicted[i]].item()
+                std = -std
+                f2.write("{}\n".format(std))
     f2.close()
 
 
