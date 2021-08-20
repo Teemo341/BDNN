@@ -3,24 +3,26 @@
 ###################################################################################################
 
 from __future__ import print_function
+
 import argparse
+import math
+import os
 from itertools import Predicate
+
+import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
-import data_loader
-import numpy as np
 import torchvision.utils as vutils
-import calculate_log as callog
-import models
-import math
-import os
-from torchvision import datasets, transforms
-from torch.nn.parameter import Parameter
-from torch.autograd import Variable
 from numpy.linalg import inv
-import numpy as np
+from torch.autograd import Variable
+from torch.nn.parameter import Parameter
+from torchvision import datasets, transforms
+
+import calculate_log as callog
+import data_loader
+import models
 
 # Training settings
 parser = argparse.ArgumentParser(
@@ -123,13 +125,13 @@ def generate_target():
             data, targets = data.to(device), targets.to(device)
             batch_output = 0
             batch_std = 0
-            batch_output,batch_std = evaluate(model,data)
+            batch_output, batch_std = evaluate(model, data)
             # compute the accuracy
             _, predicted = batch_output.max(1)
             for i in range(data.size(0)):
                 # confidence score: var_y
                 # large var mean low confidence, invert var to keep pace with p(y|x)
-                std = batch_std[i,predicted[i]].item()
+                std = batch_std[i, predicted[i]].item()
                 std = -std
                 f1.write("{}\n".format(std))
     f1.close()
@@ -142,8 +144,9 @@ def generate_semi_target():
     correct = 0
     total = 0
     f2 = open('%s/confidence_Base_semi.txt' % outf, 'w')
-    f2_0 = open('%s/confidence_Base_semi_Succ.txt' % outf, 'w')
-    f2_1 = open('%s/confidence_Base_semi_Err.txt' % outf, 'w')
+    # f2_0 = open('%s/confidence_Base_semi_Succ.txt' % outf, 'w')
+    # f2_1 = open('%s/confidence_Base_semi_Err.txt' % outf, 'w')
+    # seems no need for detection in semi-OOD
 
     with torch.no_grad():
         for data, targets in semi_test_loader:
@@ -151,7 +154,7 @@ def generate_semi_target():
             data, targets = data.to(device), targets.to(device)
             batch_output = 0
             batch_std = 0
-            batch_output,batch_std = evaluate(model,data)
+            batch_output, batch_std = evaluate(model, data)
             # compute the accuracy
             _, predicted = batch_output.max(1)
             correct += predicted.eq(targets).sum().item()
@@ -159,19 +162,18 @@ def generate_semi_target():
             for i in range(data.size(0)):
                 # confidence score: var_y
                 # large var mean low confidence, invert var to keep pace with p(y|x)
-                std = batch_std[i,predicted[i]].item()
+                std = batch_std[i, predicted[i]].item()
                 std = -std
                 f2.write("{}\n".format(std))
-                if correct_index[i] == 1:
-                    f2_0.write("{}\n".format(std))
-                elif correct_index[i] == 0:
-                    f2_1.write("{}\n".format(std))
+                # if correct_index[i] == 1:
+                #     f2_0.write("{}\n".format(std))
+                # elif correct_index[i] == 0:
+                #     f2_1.write("{}\n".format(std))
     f2.close()
-    f2_0.close()
-    f2_1.close()
-    print('\n Final Accuracy: {}/{} ({:.2f}%)\n '.format(correct,
-                                                         total, 100. * correct / total))
-
+    # f2_0.close()
+    # f2_1.close()
+    # print('\n Final Accuracy: {}/{} ({:.2f}%)\n '.format(correct,
+    #                                                      total, 100. * correct / total))
 
 
 def generate_non_target():
@@ -186,12 +188,12 @@ def generate_non_target():
             data, targets = data.to(device), targets.to(device)
             batch_output = 0
             batch_std = 0
-            batch_output,batch_std = evaluate(model,data)
+            batch_output, batch_std = evaluate(model, data)
             _, predicted = batch_output.max(1)
             for i in range(data.size(0)):
                 # confidence score: var_y
                 # large var mean low confidence, invert var to keep pace with p(y|x)
-                std = batch_std[i,predicted[i]].item()
+                std = batch_std[i, predicted[i]].item()
                 std = -std
                 f3.write("{}\n".format(std))
     f3.close()
