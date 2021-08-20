@@ -146,7 +146,7 @@ def generate_semi_target():
     f2 = open('%s/confidence_Base_semi.txt' % outf, 'w')
     # f2_0 = open('%s/confidence_Base_semi_Succ.txt' % outf, 'w')
     # f2_1 = open('%s/confidence_Base_semi_Err.txt' % outf, 'w')
-    # seems no need for detection in semi-OOD
+    #? seems no need for detection in semi-OOD
 
     with torch.no_grad():
         for data, targets in semi_test_loader:
@@ -201,9 +201,9 @@ def generate_non_target():
 
 print('generate log from in-distribution data')
 generate_target()
-print('generate log  from out-of-distribution data')
+print('generate log from semi-out-of-distribution data')
+generate_semi_target()
+print('generate log from out-of-distribution data')
 generate_non_target()
-print('calculate metrics for OOD')
-callog.metric(outf, 'OOD')
-print('calculate metrics for mis')
-callog.metric(outf, 'mis')
+
+callog.confusion_matrix(outf)

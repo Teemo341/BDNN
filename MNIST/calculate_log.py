@@ -1,5 +1,5 @@
 # original code is from https://github.com/ShiyuLiang/odin-pytorch/blob/master/code/calMetric.py
-# Modeified by Kimin Lee
+# Modeified by Shiyu Shen
 from __future__ import print_function
 
 import numpy as np
@@ -243,7 +243,7 @@ def confusion_matrix(dir_name):
             confusion[2][2] += 1
 
     # print results
-    print("Confusion Matrix:\n")
+    print("Confusion Matrix:")
     tabl = PrettyTable(["\\", "ID", "semi-OOD", "OOD"])
     tabl.add_row(["ID"]+confusion[0])
     tabl.add_row(["semi-OOD"]+confusion[1])
