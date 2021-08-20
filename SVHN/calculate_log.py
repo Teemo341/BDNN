@@ -2,21 +2,10 @@
 # Modeified by Kimin Lee
 from __future__ import print_function
 
-import time
-
 import numpy as np
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
-import torch.optim as optim
-import torchvision
-import torchvision.transforms as transforms
 from matplotlib import pyplot as plt
 from prettytable import PrettyTable
-from scipy import misc
-from scipy.sparse import construct
 from sklearn.cluster import KMeans
-from torch.autograd import Variable
 
 
 def tpr95(dir_name, task='OOD'):
