@@ -158,7 +158,7 @@ def generate_semi_target():
             # compute the accuracy
             _, predicted = batch_output.max(1)
             correct += predicted.eq(targets).sum().item()
-            correct_index = (predicted == targets)
+            # correct_index = (predicted == targets)
             for i in range(data.size(0)):
                 # confidence score: var_y
                 # large var mean low confidence, invert var to keep pace with p(y|x)
