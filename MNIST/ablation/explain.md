@@ -47,4 +47,21 @@ data: the diffusion modules are initialized by the std of drift modules
 
 * initialized/notinitialized:  
 initialized: use resnet to initialize drift  
-notinitialized: do not initialize drift
+notinitialized: do not initialize drift  
+
+***
+### 论文最终模型应该是 sin_res_with_true_noi_data_ini  
+
+### 我估计 sin_res_with_true_cifar_data_ini 效果会最好  
+
+### 要做的实验：
+
+1. 对偶结构是否有用 BDNN_sin_res_with_true_noi_data_ini / BNN_none_none_with_true_noi_man_none  
+
+2. OODloss会不会影响结果  
+3. 用真标签还是伪标签  
+4. OOD用真实数据还是噪声  
+5. 单层是否会影响结果  
+6. res结构还是linear结构  
+7. 三种贝叶斯初始化有没有不同  
+8. 从头训练会不会有提高  
