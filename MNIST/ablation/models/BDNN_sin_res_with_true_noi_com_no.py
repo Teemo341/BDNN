@@ -7,12 +7,13 @@ from blitz.utils import variational_estimator
 
 __all__ = ['BDNN_sin_res_with_true_noi_com_no']
 
+
 def init_params(net):
     '''Init layer parameters.'''
     for m in net.modules():
         if isinstance(m, nn.Conv2d):
             init.kaiming_normal_(m.weight, mode='fan_out')
-            #print(m.bias)
+            # print(m.bias)
             if m.bias is not None:
                 init.constant_(m.bias, 0)
         elif isinstance(m, nn.BatchNorm2d):
@@ -22,6 +23,7 @@ def init_params(net):
             init.normal_(m.weight, std=1e-3)
             if m.bias is not None:
                 init.constant_(m.bias, 0)
+
 
 def conv3x3(in_planes, out_planes, stride=1):
     """3x3 convolution with padding"""
@@ -64,32 +66,25 @@ class ResBlock(nn.Module):
 
         return out + shortcut
 
+
 class ResBlock_Bayesian(nn.Module):
     expansion = 1
 
-    def __init__(self, inplanes, planes, stride=1, downsample=None):
+    def __init__(self, inplanes, planes, stride=1):
         super(ResBlock_Bayesian, self).__init__()
         self.norm1 = norm(inplanes)
         self.relu = nn.ReLU(inplace=True)
-        self.downsample = downsample
-        self.conv1 = BayesianConv2d(inplanes, planes, (3,3),stride=stride,padding=1, bias=False)
+        self.conv1 = BayesianConv2d(
+            inplanes, planes, (3, 3), stride=stride, padding=1, bias=False)
         self.norm2 = norm(planes)
-        self.conv2 = BayesianConv2d(planes, planes,(3,3),stride=stride,padding=1, bias=False)
 
     def forward(self, x):
-        shortcut = x
-
         out = self.relu(self.norm1(x))
-
-        if self.downsample is not None:
-            shortcut = self.downsample(out)
-
         out = self.conv1(out)
         out = self.norm2(out)
         out = self.relu(out)
-        out = self.conv2(out)
+        return out
 
-        return out + shortcut
 
 class Flatten(nn.Module):
 
@@ -126,32 +121,36 @@ class BDNN_sin_res_with_true_noi_com_no(nn.Module):
         self.feature_layers_3_bayesian = ResBlock_Bayesian(64, 64)
         self.feature_layers_4_bayesian = ResBlock_Bayesian(64, 64)
         self.feature_layers_5_bayesian = ResBlock_Bayesian(64, 64)
-        self.fc_layers = nn.Sequential(norm(64), nn.ReLU(inplace=True), nn.AdaptiveAvgPool2d((1, 1)), Flatten(), nn.Linear(64, 10))
+        self.fc_layers = nn.Sequential(norm(64), nn.ReLU(
+            inplace=True), nn.AdaptiveAvgPool2d((1, 1)), Flatten(), nn.Linear(64, 10))
         # self.model = nn.Sequential(*self.downsampling_layers, *self.feature_layers, *self.fc_layers)
+
     def forward(self, x):
         out = self.downsampling_layers(x)
         x_0 = self.feature_layers_0_bayesian(out)
         out = self.feature_layers_0(out)+x_0
-        x_1 = self.feature_layers_1_bayesian(x_0)
-        out = self.feature_layers_1(out)+x_1
-        x_2 = self.feature_layers_1_bayesian(x_1)
-        out = self.feature_layers_2(out)+x_2
-        x_3 = self.feature_layers_1_bayesian(x_2)
-        out = self.feature_layers_3(out)+x_3
-        x_4 = self.feature_layers_1_bayesian(x_3)
-        out = self.feature_layers_4(out)+x_4
-        x_5 = self.feature_layers_1_bayesian(x_4)
-        out = self.feature_layers_5(out)+x_5
+        x_0 = self.feature_layers_1_bayesian(out)
+        out = self.feature_layers_1(out)+x_0
+        x_0 = self.feature_layers_1_bayesian(out)
+        out = self.feature_layers_2(out)+x_0
+        x_0 = self.feature_layers_1_bayesian(out)
+        out = self.feature_layers_3(out)+x_0
+        x_0 = self.feature_layers_1_bayesian(out)
+        out = self.feature_layers_4(out)+x_0
+        x_0 = self.feature_layers_1_bayesian(out)
+        out = self.feature_layers_5(out)+x_0
         out = self.fc_layers(out)
         return out
 
 
 def test():
     model = BDNN_sin_res_with_true_noi_com_no()
-    return model  
- 
+    return model
+
+
 def count_parameters(model):
     return sum(p.numel() for p in model.parameters() if p.requires_grad)
+
 
 if __name__ == '__main__':
     model = test()
