@@ -5,7 +5,7 @@ from blitz.modules import BayesianLinear, BayesianConv2d
 from blitz.losses import kl_divergence_from_nn
 from blitz.utils import variational_estimator
 
-__all__ = ['BDNN_single_res_common_without']
+__all__ = ['BDNN_mul_lin_with_true_noi_com_no']
 
 def init_params(net):
     '''Init layer parameters.'''

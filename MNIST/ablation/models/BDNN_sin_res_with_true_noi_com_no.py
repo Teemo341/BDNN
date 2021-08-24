@@ -5,7 +5,7 @@ from blitz.modules import BayesianLinear, BayesianConv2d
 from blitz.losses import kl_divergence_from_nn
 from blitz.utils import variational_estimator
 
-__all__ = ['Resnet_bayesian']
+__all__ = ['BDNN_sin_res_with_true_noi_com_no']
 
 def init_params(net):
     '''Init layer parameters.'''
@@ -102,9 +102,9 @@ class Flatten(nn.Module):
 
 
 @variational_estimator
-class Resnet_bayesian(nn.Module):
+class BDNN_sin_res_with_true_noi_com_no(nn.Module):
     def __init__(self):
-        super(Resnet_bayesian, self).__init__()
+        super(BDNN_sin_res_with_true_noi_com_no, self).__init__()
         self.downsampling_layers = nn.Sequential(
             nn.Conv2d(1, 64, 3, 1),
             norm(64),
@@ -147,7 +147,7 @@ class Resnet_bayesian(nn.Module):
 
 
 def test():
-    model = Resnet_bayesian()
+    model = BDNN_sin_res_with_true_noi_com_no()
     return model  
  
 def count_parameters(model):
