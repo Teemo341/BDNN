@@ -18,17 +18,16 @@ linear: the diffusion modules are connected
 
 ***
 
-* common/manual/data:  
-common: the diffusion modules are initialized by default  
-manual: the diffusion modules are initialized by intuition  
-data: the diffusion modules are initialized by the std of drift modules  
+* without_OOD/with_OOD:  
+<font color=red>This experiment is done by </font>  
+without_OOD: do not use OOD loss  
+with_OOD: use OOD loss
 
 ***
 
-* without_OOD/with_OOD:  
-<font color=red>This experiment is done by </font>  
-without_OOD: donot use OOD loss  
-with_OOD: add OOD noise
+* true/pseudo:  
+true: use true label and reverse loss  
+pseudo: use pseudo label and donot reverse loss  
 
 ***
 
@@ -36,6 +35,13 @@ with_OOD: add OOD noise
 <font color=red>This experiment is done by </font>  
 noise: take noise as OOD  
 cifar: take cifar-10 as OOD  
+
+***
+
+* common/manual/data:  
+common: the diffusion modules are initialized by default  
+manual: the diffusion modules are initialized by intuition  
+data: the diffusion modules are initialized by the std of drift modules  
 
 ***
 
