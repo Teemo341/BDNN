@@ -72,9 +72,9 @@ class ResBlock_Bayesian(nn.Module):
         self.norm1 = norm(inplanes)
         self.relu = nn.ReLU(inplace=True)
         self.downsample = downsample
-        self.conv1 = BayesianConv2d(inplanes, planes, (3,3),stride=stride,padding=1, bias=False)
+        self.conv1 = BayesianConv2d(inplanes, planes, (3,3),stride=stride,padding=1, bias=True)
         self.norm2 = norm(planes)
-        self.conv2 = BayesianConv2d(planes, planes,(3,3),stride=stride,padding=1, bias=False)
+        self.conv2 = BayesianConv2d(planes, planes,(3,3),stride=stride,padding=1, bias=True)
 
     def forward(self, x):
         shortcut = x

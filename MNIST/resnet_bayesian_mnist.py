@@ -16,6 +16,9 @@ import os
 import argparse
 import models
 import data_loader
+import time
+
+print(torch.cuda.is_available())
 
 parser = argparse.ArgumentParser(description='PyTorch ResNet Bayesian Training')
 parser.add_argument('--epochs', type=int, default=40, help='number of epochs to train')
@@ -45,7 +48,7 @@ train_loader, test_loader = data_loader.getDataSet(args.dataset, args.batch_size
 # Model
 print('==> Building model..')
 net = models.Resnet_bayesian()
-net = net.to(device)
+net = net.to("device")
 
 
 fake_label = 1/10
@@ -53,11 +56,13 @@ fake_label = 1/10
 
 optimizer1 = optim.Adam([{'params':[ param for name, param in net.named_parameters() if 'bayesian' not in name]}], lr=0.001)
 optimizer2 = optim.Adam([{'params':[ param for name, param in net.named_parameters() if 'bayesian' in name]}], lr=0.001)
-criterion = torch.nn.CrossEntropyLoss()
+criterion1 = torch.nn.CrossEntropyLoss()
+criterion2 = torch.nn.BCEWithLogitsLoss()
 
 
 # Training
 def train(epoch):
+    start = time.time()
     print('\nEpoch: %d' % epoch)
     net.train()
     train_loss_in_drift = 0
@@ -72,12 +77,12 @@ def train(epoch):
         optimizer2.zero_grad()
         outputs = net(inputs)
         outputs = outputs.to(device)
-        loss1 = criterion(outputs,targets)
+        loss1 = criterion1(outputs,targets)
         loss1.backward()
         optimizer1.step()
         loss2 = net.sample_elbo(inputs=inputs,
                                        labels=targets,
-                                       criterion=criterion,
+                                       criterion=criterion1,
                                        sample_nbr=3,
                                        complexity_cost_weight=1 / 50000)
         loss2.backward()
@@ -88,21 +93,25 @@ def train(epoch):
         total += targets.size(0)
         correct += predicted.eq(targets).sum().item()
     ##training with out-of-domain data
-        label = torch.full((args.batch_size,1), fake_label, device=device)
         optimizer2.zero_grad()
-        inputs_out = 2*torch.randn(args.batch_size,1, args.imageSize, args.imageSize, device = device)+inputs
+        label = torch.full((args.batch_size,10), fake_label, device=device)
+        label = label.to(device)
+        inputs_out = 16*torch.randn(args.batch_size,1, args.imageSize, args.imageSize, device = device)+inputs
+        inputs_out = inputs_out.to(device)
         loss_out = net.sample_elbo(inputs=inputs_out,
                                        labels=label,
-                                       criterion=criterion,
+                                       criterion=criterion2,
                                        sample_nbr=3,
                                        complexity_cost_weight=1 / 50000)
-        train_loss_out_diffu += loss_out.item()
-        loss_out = -loss_out
-        loss_out.backword()
+        train_loss_out_diffu += (loss_out.item())
+        loss_out = -0.5*loss_out
+        loss_out.backward()
         optimizer2.step()
         
     print('Train epoch:{} \tLoss_in: {:.6f} | Loss_in_diffu: {:.6f} | Loss_out_diffu: {:.6f} | Acc: {:.6f} ({}/{})'
         .format(epoch, train_loss_in_drift/(len(train_loader)),train_loss_in_diffu/(len(train_loader)), train_loss_out_diffu/(len(train_loader)),100.*correct/total, correct, total))
+    end = time.time()
+    print((start,end,end-start))
 
 def test(epoch):
     net.eval()

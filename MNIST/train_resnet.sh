@@ -5,7 +5,8 @@
 #SBATCH --qos=debug               
 #SBATCH -N 1                     
 #SBATCH --ntasks-per-node=1                    
-#SBATCH --cpus-per-task=20  
+#SBATCH --cpus-per-task=20
+#SBATCH -w node4
      
 #SBATCH -t 24:00:00 
 python -u /home/siu170066/SDE-Net-master/MNIST/resnet_mnist.py 
