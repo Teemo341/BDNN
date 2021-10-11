@@ -33,7 +33,7 @@ parser.add_argument('--decreasing_lr', default=[10, 20, 30], nargs='+', help='de
 parser.add_argument('--seed', type=float, default=0)
 args = parser.parse_args()
 
-device = torch.device('cuda:' + str(args.gpu) if torch.cuda.is_available() else 'cpu')
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 
 torch.manual_seed(args.seed)
@@ -48,7 +48,7 @@ train_loader, test_loader = data_loader.getDataSet(args.dataset, args.batch_size
 # Model
 print('==> Building model..')
 net = models.Resnet_bayesian()
-net = net.to("device")
+net = net.to(device)
 
 
 fake_label = 1/10
@@ -104,7 +104,7 @@ def train(epoch):
                                        sample_nbr=3,
                                        complexity_cost_weight=1 / 50000)
         train_loss_out_diffu += (loss_out.item())
-        loss_out = -0.5*loss_out
+        loss_out = -1*loss_out
         loss_out.backward()
         optimizer2.step()
         
