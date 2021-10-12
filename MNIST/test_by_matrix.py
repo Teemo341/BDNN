@@ -7,7 +7,6 @@ from __future__ import print_function
 import argparse
 import math
 import os
-from itertools import Predicate
 
 import numpy as np
 import torch
