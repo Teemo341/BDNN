@@ -115,6 +115,7 @@ def getCIFAR10(batch_size, test_batch_size, img_size, **kwargs):
                 transforms.RandomCrop(32, padding=4),
                 transforms.RandomHorizontalFlip(),
                 transforms.Resize(img_size),
+                transforms.Grayscale(),
                 transforms.ToTensor(),
             ])),
         batch_size=batch_size, shuffle=True, drop_last=True, **kwargs)
@@ -124,6 +125,7 @@ def getCIFAR10(batch_size, test_batch_size, img_size, **kwargs):
             root='../data/cifar10', train=False, download=True,
             transform=transforms.Compose([
                 transforms.Resize(img_size),
+                transforms.Grayscale(),
                 transforms.ToTensor(),
             ])),
         batch_size=batch_size, shuffle=False, drop_last=True, **kwargs)
@@ -146,6 +148,7 @@ def getCIFAR100(batch_size, test_batch_size, img_size, **kwargs):
                 transforms.RandomCrop(32, padding=4),
                 transforms.RandomHorizontalFlip(),
                 transforms.Resize(img_size),
+                transforms.Grayscale(),
                 transforms.ToTensor(),
             ])),
         batch_size=batch_size, shuffle=True, drop_last=True, **kwargs)
@@ -155,6 +158,7 @@ def getCIFAR100(batch_size, test_batch_size, img_size, **kwargs):
             root='../data/cifar100', train=False, download=True,
             transform=transforms.Compose([
                 transforms.Resize(img_size),
+                transforms.Grayscale(),
                 transforms.ToTensor(),
             ])),
         batch_size=batch_size, shuffle=False, drop_last=True, **kwargs)

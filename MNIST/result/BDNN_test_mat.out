@@ -9,58 +9,8 @@ Using downloaded and verified file: ../data/svhn/train_32x32.mat
 Using downloaded and verified file: ../data/svhn/test_32x32.mat
 load non target data:  cifar10
 Building CIFAR-10 data loader with 1 workers
-Traceback (most recent call last):
-  File "/home/ssy2120210120/anaconda3/envs/BDNN/lib/python3.8/urllib/request.py", line 1354, in do_open
-    h.request(req.get_method(), req.selector, req.data, headers,
-  File "/home/ssy2120210120/anaconda3/envs/BDNN/lib/python3.8/http/client.py", line 1256, in request
-    self._send_request(method, url, body, headers, encode_chunked)
-  File "/home/ssy2120210120/anaconda3/envs/BDNN/lib/python3.8/http/client.py", line 1302, in _send_request
-    self.endheaders(body, encode_chunked=encode_chunked)
-  File "/home/ssy2120210120/anaconda3/envs/BDNN/lib/python3.8/http/client.py", line 1251, in endheaders
-    self._send_output(message_body, encode_chunked=encode_chunked)
-  File "/home/ssy2120210120/anaconda3/envs/BDNN/lib/python3.8/http/client.py", line 1011, in _send_output
-    self.send(msg)
-  File "/home/ssy2120210120/anaconda3/envs/BDNN/lib/python3.8/http/client.py", line 951, in send
-    self.connect()
-  File "/home/ssy2120210120/anaconda3/envs/BDNN/lib/python3.8/http/client.py", line 1418, in connect
-    super().connect()
-  File "/home/ssy2120210120/anaconda3/envs/BDNN/lib/python3.8/http/client.py", line 922, in connect
-    self.sock = self._create_connection(
-  File "/home/ssy2120210120/anaconda3/envs/BDNN/lib/python3.8/socket.py", line 787, in create_connection
-    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
-  File "/home/ssy2120210120/anaconda3/envs/BDNN/lib/python3.8/socket.py", line 918, in getaddrinfo
-    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
-socket.gaierror: [Errno -2] Name or service not known
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "test_by_matrix.py", line 96, in <module>
-    nt_train_loader, nt_test_loader = data_loader.getDataSet(
-  File "/home/ssy2120210120/BDNN/MNIST/data_loader.py", line 174, in getDataSet
-    train_loader, test_loader = getCIFAR10(batch_size, test_batch_size, imageSize)
-  File "/home/ssy2120210120/BDNN/MNIST/data_loader.py", line 112, in getCIFAR10
-    datasets.CIFAR10(
-  File "/home/ssy2120210120/anaconda3/envs/BDNN/lib/python3.8/site-packages/torchvision/datasets/cifar.py", line 65, in __init__
-    self.download()
-  File "/home/ssy2120210120/anaconda3/envs/BDNN/lib/python3.8/site-packages/torchvision/datasets/cifar.py", line 143, in download
-    download_and_extract_archive(self.url, self.root, filename=self.filename, md5=self.tgz_md5)
-  File "/home/ssy2120210120/anaconda3/envs/BDNN/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 413, in download_and_extract_archive
-    download_url(url, download_root, filename, md5)
-  File "/home/ssy2120210120/anaconda3/envs/BDNN/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 129, in download_url
-    url = _get_redirect_url(url, max_hops=max_redirect_hops)
-  File "/home/ssy2120210120/anaconda3/envs/BDNN/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 77, in _get_redirect_url
-    with urllib.request.urlopen(urllib.request.Request(url, headers=headers)) as response:
-  File "/home/ssy2120210120/anaconda3/envs/BDNN/lib/python3.8/urllib/request.py", line 222, in urlopen
-    return opener.open(url, data, timeout)
-  File "/home/ssy2120210120/anaconda3/envs/BDNN/lib/python3.8/urllib/request.py", line 525, in open
-    response = self._open(req, data)
-  File "/home/ssy2120210120/anaconda3/envs/BDNN/lib/python3.8/urllib/request.py", line 542, in _open
-    result = self._call_chain(self.handle_open, protocol, protocol +
-  File "/home/ssy2120210120/anaconda3/envs/BDNN/lib/python3.8/urllib/request.py", line 502, in _call_chain
-    result = func(*args)
-  File "/home/ssy2120210120/anaconda3/envs/BDNN/lib/python3.8/urllib/request.py", line 1397, in https_open
-    return self.do_open(http.client.HTTPSConnection, req,
-  File "/home/ssy2120210120/anaconda3/envs/BDNN/lib/python3.8/urllib/request.py", line 1357, in do_open
-    raise URLError(err)
-urllib.error.URLError: <urlopen error [Errno -2] Name or service not known>
+Files already downloaded and verified
+Files already downloaded and verified
+generate log from in-distribution data
+generate log from semi-out-of-distribution data
+generate log from out-of-distribution data

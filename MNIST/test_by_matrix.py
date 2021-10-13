@@ -106,7 +106,7 @@ def evaluate(regressor, data):
     batch_output = [regressor(data) for i in range(args.eva_iter)]
     batch_output = torch.stack(batch_output).float()
     means = batch_output.mean(axis=0)
-    means = F.softmax(means)
+    means = F.softmax(means,dim=1)
     stds = batch_output.std(axis=0)
     return means, stds
 
