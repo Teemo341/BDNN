@@ -1,12 +1,11 @@
 #! /bin/bash
-#SBATCH -J BDNN
+#SBATCH -J +loss
 #SBATCH -o result/BDNN_positive_test_prob.out               
 #SBATCH -p compute                  
 #SBATCH --qos=debug               
 #SBATCH -N 1                
 #SBATCH --ntasks-per-node=1                    
-#SBATCH --cpus-per-task=12
-#SBATCH -w node1_3060        
+#SBATCH --cpus-per-task=12       
 #SBATCH -t 24:00:00 
 
 
