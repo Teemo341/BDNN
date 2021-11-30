@@ -1,0 +1,56 @@
+True
+load data:  mnist
+Building MNIST data loader with 1 workers
+==> Building model..
+
+Epoch: 0
+Train epoch:0 	Loss_in: 0.606296 | Loss_in_diffu: 10.245267 | Loss_out_diffu: 10.181984 | Acc: 86.324786 (51712/59904)
+(1638290028.6415746, 1638290129.5760121, 100.93443751335144)
+Test epoch: 0| Acc: 96.81 (9681/10000) 
+
+Epoch: 1
+Train epoch:1 	Loss_in: 0.103103 | Loss_in_diffu: 8.615927 | Loss_out_diffu: 8.890990 | Acc: 97.262286 (58264/59904)
+(1638290130.1760726, 1638290230.607469, 100.431396484375)
+Test epoch: 1| Acc: 97.38 (9738/10000) 
+
+Epoch: 2
+Train epoch:2 	Loss_in: 0.072031 | Loss_in_diffu: 7.554399 | Loss_out_diffu: 7.835032 | Acc: 97.971755 (58689/59904)
+(1638290231.20698, 1638290331.8946068, 100.68762683868408)
+Test epoch: 2| Acc: 98.44 (9844/10000) 
+
+Epoch: 3
+Train epoch:3 	Loss_in: 0.059542 | Loss_in_diffu: 6.569453 | Loss_out_diffu: 6.853557 | Acc: 98.349025 (58915/59904)
+(1638290332.6119447, 1638290432.0216236, 99.40967893600464)
+Test epoch: 3| Acc: 98.17 (9817/10000) 
+
+Epoch: 4
+Train epoch:4 	Loss_in: 0.049563 | Loss_in_diffu: 5.639499 | Loss_out_diffu: 5.930140 | Acc: 98.616119 (59075/59904)
+(1638290432.729098, 1638290532.0097477, 99.28064966201782)
+Test epoch: 4| Acc: 98.78 (9878/10000) 
+
+Epoch: 5
+Train epoch:5 	Loss_in: 0.046077 | Loss_in_diffu: 4.754156 | Loss_out_diffu: 5.047698 | Acc: 98.679554 (59113/59904)
+(1638290532.6046684, 1638290631.8938646, 99.28919625282288)
+Test epoch: 5| Acc: 98.65 (9865/10000) 
+
+Epoch: 6
+Train epoch:6 	Loss_in: 0.039288 | Loss_in_diffu: 3.904210 | Loss_out_diffu: 4.204664 | Acc: 98.874866 (59230/59904)
+(1638290632.486987, 1638290731.9586015, 99.47161436080933)
+Test epoch: 6| Acc: 98.92 (9892/10000) 
+
+Epoch: 7
+Train epoch:7 	Loss_in: 0.034917 | Loss_in_diffu: 3.100143 | Loss_out_diffu: 3.404643 | Acc: 98.980035 (59293/59904)
+(1638290732.6638124, 1638290832.5463762, 99.882563829422)
+Test epoch: 7| Acc: 99.23 (9923/10000) 
+
+Epoch: 8
+Train epoch:8 	Loss_in: 0.030408 | Loss_in_diffu: 2.366609 | Loss_out_diffu: 2.690896 | Acc: 99.197049 (59423/59904)
+(1638290833.1524796, 1638290933.4797766, 100.32729697227478)
+Test epoch: 8| Acc: 98.6 (9860/10000) 
+
+Epoch: 9
+Train epoch:9 	Loss_in: 0.027252 | Loss_in_diffu: 1.722189 | Loss_out_diffu: 2.037055 | Acc: 99.248798 (59454/59904)
+(1638290934.0867295, 1638291034.1960392, 100.10930967330933)
+Test epoch: 9| Acc: 99.1 (9910/10000) 
+
+Epoch: 10
