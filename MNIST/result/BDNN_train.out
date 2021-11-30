@@ -1,1 +1,67 @@
-python: can't open file '/home/siu170066/SDE-Net-master/MNIST/test_by_var.py': [Errno 2] No such file or directory
+True
+load data:  mnist
+Building MNIST data loader with 1 workers
+==> Building model..
+
+Epoch: 0
+Train epoch:0 	Loss_in: 0.548740 | Loss_in_diffu: 10.124745 | Loss_out_diffu: 10.118867 | Acc: 87.924012 (52670/59904)
+(1638260184.6319833, 1638260284.7973707, 100.16538739204407)
+Test epoch: 0| Acc: 97.89 (9789/10000) 
+
+Epoch: 1
+Train epoch:1 	Loss_in: 0.090649 | Loss_in_diffu: 8.465322 | Loss_out_diffu: 8.764359 | Acc: 97.674613 (58511/59904)
+(1638260285.4016874, 1638260384.4139829, 99.01229548454285)
+Test epoch: 1| Acc: 98.4 (9840/10000) 
+
+Epoch: 2
+Train epoch:2 	Loss_in: 0.066619 | Loss_in_diffu: 7.397182 | Loss_out_diffu: 7.688805 | Acc: 98.202123 (58827/59904)
+(1638260385.0121174, 1638260484.162581, 99.1504635810852)
+Test epoch: 2| Acc: 98.71 (9871/10000) 
+
+Epoch: 3
+Train epoch:3 	Loss_in: 0.054363 | Loss_in_diffu: 6.406468 | Loss_out_diffu: 6.699442 | Acc: 98.495927 (59003/59904)
+(1638260484.7616704, 1638260584.3106914, 99.5490210056305)
+Test epoch: 3| Acc: 98.9 (9890/10000) 
+
+Epoch: 4
+Train epoch:4 	Loss_in: 0.045602 | Loss_in_diffu: 5.471882 | Loss_out_diffu: 5.769511 | Acc: 98.727965 (59142/59904)
+(1638260584.9075754, 1638260684.3092206, 99.40164518356323)
+Test epoch: 4| Acc: 98.6 (9860/10000) 
+
+Epoch: 5
+Train epoch:5 	Loss_in: 0.040277 | Loss_in_diffu: 4.577694 | Loss_out_diffu: 4.877843 | Acc: 98.933293 (59265/59904)
+(1638260684.9102466, 1638260783.7361026, 98.82585597038269)
+Test epoch: 5| Acc: 98.99 (9899/10000) 
+
+Epoch: 6
+Train epoch:6 	Loss_in: 0.036705 | Loss_in_diffu: 3.719637 | Loss_out_diffu: 4.023704 | Acc: 98.968349 (59286/59904)
+(1638260784.4558425, 1638260883.1995528, 98.74371027946472)
+Test epoch: 6| Acc: 99.09 (9909/10000) 
+
+Epoch: 7
+Train epoch:7 	Loss_in: 0.030210 | Loss_in_diffu: 2.909014 | Loss_out_diffu: 3.216950 | Acc: 99.145299 (59392/59904)
+(1638260883.8077404, 1638260983.51957, 99.711829662323)
+Test epoch: 7| Acc: 99.33 (9933/10000) 
+
+Epoch: 8
+Train epoch:8 	Loss_in: 0.024950 | Loss_in_diffu: 2.158985 | Loss_out_diffu: 2.470832 | Acc: 99.313902 (59493/59904)
+(1638260984.12158, 1638261082.9490678, 98.82748794555664)
+Test epoch: 8| Acc: 98.85 (9885/10000) 
+
+Epoch: 9
+Train epoch:9 	Loss_in: 0.346559 | Loss_in_diffu: 2.293555 | Loss_out_diffu: 2.326484 | Acc: 90.862046 (54430/59904)
+(1638261083.6736329, 1638261183.4236524, 99.75001955032349)
+Test epoch: 9| Acc: 98.5 (9850/10000) 
+
+Epoch: 10
+Train epoch:10 	Loss_in: 0.051043 | Loss_in_diffu: 1.508635 | Loss_out_diffu: 1.820584 | Acc: 98.594418 (59062/59904)
+(1638261184.035454, 1638261282.8534756, 98.81802153587341)
+Test epoch: 10| Acc: 98.98 (9898/10000) 
+
+Epoch: 11
+Train epoch:11 	Loss_in: 0.023351 | Loss_in_diffu: 1.285015 | Loss_out_diffu: 1.600371 | Acc: 99.347289 (59513/59904)
+(1638261283.5778756, 1638261383.1052752, 99.52739953994751)
+Test epoch: 11| Acc: 99.1 (9910/10000) 
+
+Epoch: 12
+slurmstepd: error: *** JOB 1009 ON node1_3060 CANCELLED AT 2021-11-30T16:36:47 ***

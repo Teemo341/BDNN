@@ -1,6 +1,6 @@
 #! /bin/bash
 #SBATCH -J BDNN
-#SBATCH -o result/BDNN_test.out               
+#SBATCH -o result/BDNN_test_var.out               
 #SBATCH -p compute                  
 #SBATCH --qos=debug               
 #SBATCH -N 1                
