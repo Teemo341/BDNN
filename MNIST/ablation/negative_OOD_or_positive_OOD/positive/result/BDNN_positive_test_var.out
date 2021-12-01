@@ -11,20 +11,20 @@ generate log from in-distribution data
 /home/ssy/BDNN/MNIST/ablation/negative_OOD_or_positive_OOD/positive/test_by_var.py:95: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
   means = F.softmax(means)
 
- Final Accuracy: 9950/10000 (99.50%)
+ Final Accuracy: 9961/10000 (99.61%)
  
 generate log  from out-of-distribution data
 calculate metrics for OOD
 OOD  Performance of Baseline detector
-TNR at TPR 95%:            32.928%
-AUROC:                     77.166%
-Detection acc:             70.781%
-AUPR In:                   54.836%
-AUPR Out:                  89.593%
+TNR at TPR 95%:            72.079%
+AUROC:                     94.435%
+Detection acc:             87.370%
+AUPR In:                   87.640%
+AUPR Out:                  97.652%
 calculate metrics for mis
 mis  Performance of Baseline detector
-TNR at TPR 95%:            24.277%
-AUROC:                     83.006%
-Detection acc:             77.513%
-AUPR In:                   99.897%
-AUPR Out:                   1.661%
+TNR at TPR 95%:            21.688%
+AUROC:                     85.186%
+Detection acc:             79.984%
+AUPR In:                   99.931%
+AUPR Out:                   1.450%
