@@ -189,3 +189,16 @@ Train epoch:36 	Loss_in: 0.001091 | Loss_in_diffu: 12.072415 | Loss_out_diffu: 1
 Test epoch: 36| Acc: 99.53 (9953/10000) 
 
 Epoch: 37
+Train epoch:37 	Loss_in: 0.001088 | Loss_in_diffu: 12.072066 | Loss_out_diffu: 13.928823 | Acc: 99.989984 (59898/59904)
+(1638326859.578408, 1638326958.3713057, 98.79289770126343)
+Test epoch: 37| Acc: 99.53 (9953/10000) 
+
+Epoch: 38
+Train epoch:38 	Loss_in: 0.001082 | Loss_in_diffu: 12.072237 | Loss_out_diffu: 13.929456 | Acc: 99.989984 (59898/59904)
+(1638326959.0868413, 1638327057.8917413, 98.80489993095398)
+Test epoch: 38| Acc: 99.52 (9952/10000) 
+
+Epoch: 39
+Train epoch:39 	Loss_in: 0.001081 | Loss_in_diffu: 12.072412 | Loss_out_diffu: 13.929601 | Acc: 99.988315 (59897/59904)
+(1638327058.6106367, 1638327157.4729276, 98.86229085922241)
+Test epoch: 39| Acc: 99.55 (9955/10000) 
