@@ -164,3 +164,8 @@ Train epoch:31 	Loss_in: 0.002191 | Loss_in_diffu: 0.415628 | Loss_out_diffu: 0.
 Test epoch: 31| Acc: 99.39 (9939/10000) 
 
 Epoch: 32
+Train epoch:32 	Loss_in: 0.002162 | Loss_in_diffu: 0.415446 | Loss_out_diffu: 0.744064 | Acc: 99.969952 (59886/59904)
+(1638331750.3550699, 1638331851.0270438, 100.67197394371033)
+Test epoch: 32| Acc: 99.39 (9939/10000) 
+
+Epoch: 33
