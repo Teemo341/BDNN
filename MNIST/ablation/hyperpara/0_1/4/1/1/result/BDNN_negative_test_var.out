@@ -1,0 +1,30 @@
+Namespace(eva_iter=10, network='resnet_bayesian', batch_size=256, seed=0, dataset='mnist', imageSize=28, out_dataset='svhn', num_classes=10, pre_trained_net='save_resnet_bayesian_mnist/final_model', gpu=0, test_batch_size=1000)
+Random Seed:  0
+Load model
+load target data:  mnist
+Building MNIST data loader with 1 workers
+load non target data:  svhn
+Building SVHN data loader with 1 workers
+Using downloaded and verified file: /home/ssy/BDNN/data/svhn/train_32x32.mat
+Using downloaded and verified file: /home/ssy/BDNN/data/svhn/test_32x32.mat
+generate log from in-distribution data
+/home/ssy/BDNN/MNIST/ablation/negative_OOD_or_positive_OOD/negative/test_by_var.py:95: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  means = F.softmax(means)
+
+ Final Accuracy: 9947/10000 (99.47%)
+ 
+generate log  from out-of-distribution data
+calculate metrics for OOD
+OOD  Performance of Baseline detector
+TNR at TPR 95%:            32.825%
+AUROC:                     59.175%
+Detection acc:             67.867%
+AUPR In:                   28.972%
+AUPR Out:                  83.707%
+calculate metrics for mis
+mis  Performance of Baseline detector
+TNR at TPR 95%:            91.747%
+AUROC:                     96.350%
+Detection acc:             94.094%
+AUPR In:                   99.975%
+AUPR Out:                  18.762%
