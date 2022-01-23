@@ -1,0 +1,8 @@
+True
+load data:  mnist
+Building MNIST data loader with 1 workers
+==> Building model..
+
+Epoch: 0
+Train epoch:0 	Loss_in: 0.617787 | Loss_in_diffu: 11.653524 | Loss_out_diffu: 12.178905 | Acc: 85.616987 (51288/59904)
+(1642951433.7158792, 1642951533.2488472, 99.532968044281)

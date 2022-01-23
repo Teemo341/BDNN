@@ -17,3 +17,12 @@ OOD  Performance of Baseline detector
 TNR at TPR 95%:            91.930%
 AUROC:                     96.967%
 Detection acc:             93.586%
+AUPR In:                   92.027%
+AUPR Out:                  99.108%
+calculate metrics for mis
+mis  Performance of Baseline detector
+TNR at TPR 95%:            90.180%
+AUROC:                     97.232%
+Detection acc:             94.257%
+AUPR In:                   99.989%
+AUPR Out:                  24.872%
