@@ -3,3 +3,13 @@ load data:  mnist
 Building MNIST data loader with 1 workers
 load out data:  cifar10
 Building CIFAR-10 data loader with 1 workers
+Files already downloaded and verified
+Files already downloaded and verified
+==> Building model..
+
+Epoch: 0
+Train epoch:0 	Loss_in: 0.688125 | Loss_in_diffu: 9.899322 | Loss_out_diffu: 10.030671 | Acc: 80.522837 (40197/49920)
+(1643007748.3774858, 1643007831.2280917, 82.85060596466064)
+Test epoch: 0| Acc: 95.44 (9544/10000) 
+
+Epoch: 1
