@@ -190,15 +190,31 @@ def confusion_matrix(dir_name):
                     dir_name, delimiter=',')
     f3 = np.loadtxt('%s/confidence_Base_Out.txt' %
                     dir_name, delimiter=',')
-    # restore std from invertion
-    f1 = list(-f1)
-    f1.sort()
+    # # reform std to positive uncertainty
+    # f1 = list(-f1)
+    # f1.sort()
+    # len_1 = len(f1)
+    # f2 = list(-f2)
+    # f2.sort()
+    # len_2 = len(f2)
+    # f3 = list(-f3)
+    # f3.sort()
+    # len_3 = len(f3)
+    # f = f1+f2+f3
+    # f = np.array(f)
+
+    # reform probability to uncertainty in [0,10] 
+    f1_ = list(f1)
+    f1_.sort()
+    f1 = [(1-i) * 10 for i in f1_]
     len_1 = len(f1)
-    f2 = list(-f2)
-    f2.sort()
+    f2_ = list(f2)
+    f2_.sort()
+    f2 = [(1-i) * 10 for i in f2_]
     len_2 = len(f2)
-    f3 = list(-f3)
-    f3.sort()
+    f3_ = list(f3)
+    f3_.sort()
+    f3 = [(1-i) * 10 for i in f3_]
     len_3 = len(f3)
     f = f1+f2+f3
     f = np.array(f)
@@ -208,7 +224,7 @@ def confusion_matrix(dir_name):
         plt.scatter(i+1, f[i], c=('r' if i <
                                   len_1 else 'b' if i < (len_1+len_2) else 'g'))
     plt.savefig('%s/cluster_visualization.jpg' % dir_name)
-    plt.show()
+    # plt.show()
 
     # k-means
     clf = KMeans(n_clusters=3)

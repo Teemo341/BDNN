@@ -88,21 +88,21 @@ def train(epoch):
         _, predicted = outputs.max(1)
         total += targets.size(0)
         correct += predicted.eq(targets).sum().item()
-    ##training with out-of-domain data
-        optimizer2.zero_grad()
-        label = torch.full((args.batch_size,10), fake_label, device=device)
-        label = label.to(device)
-        inputs_out = 16*torch.randn(args.batch_size,1, args.imageSize, args.imageSize, device = device)+inputs
-        inputs_out = inputs_out.to(device)
-        loss_out = net.sample_elbo(inputs=inputs_out,
-                                       labels=label,
-                                       criterion=criterion2,
-                                       sample_nbr=3,
-                                       complexity_cost_weight=1 / 50000)
-        train_loss_out_diffu += (loss_out.item())
-        loss_out = -1*loss_out
-        loss_out.backward()
-        optimizer2.step()
+    # ##training with out-of-domain data
+    #     optimizer2.zero_grad()
+    #     label = torch.full((args.batch_size,10), fake_label, device=device)
+    #     label = label.to(device)
+    #     inputs_out = 16*torch.randn(args.batch_size,1, args.imageSize, args.imageSize, device = device)+inputs
+    #     inputs_out = inputs_out.to(device)
+    #     loss_out = net.sample_elbo(inputs=inputs_out,
+    #                                    labels=label,
+    #                                    criterion=criterion2,
+    #                                    sample_nbr=3,
+    #                                    complexity_cost_weight=1 / 50000)
+    #     train_loss_out_diffu += (loss_out.item())
+    #     loss_out = -1*loss_out
+    #     loss_out.backward()
+    #     optimizer2.step()
         
     print('Train epoch:{} \tLoss_in: {:.6f} | Loss_in_diffu: {:.6f} | Loss_out_diffu: {:.6f} | Acc: {:.6f} ({}/{})'
         .format(epoch, train_loss_in_drift/(len(train_loader)),train_loss_in_diffu/(len(train_loader)), train_loss_out_diffu/(len(train_loader)),100.*correct/total, correct, total))

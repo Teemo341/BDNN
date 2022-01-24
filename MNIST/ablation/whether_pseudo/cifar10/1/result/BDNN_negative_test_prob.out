@@ -9,20 +9,20 @@ Using downloaded and verified file: /home/ssy/BDNN/data/svhn/train_32x32.mat
 Using downloaded and verified file: /home/ssy/BDNN/data/svhn/test_32x32.mat
 generate log from in-distribution data
 
- Final Accuracy: 9956/10000 (99.56%)
+ Final Accuracy: 9947/10000 (99.47%)
  
 generate log  from out-of-distribution data
 calculate metrics for OOD
 OOD  Performance of Baseline detector
-TNR at TPR 95%:            99.995%
-AUROC:                     99.978%
-Detection acc:             99.860%
-AUPR In:                   99.976%
-AUPR Out:                  99.983%
+TNR at TPR 95%:            99.981%
+AUROC:                     99.524%
+Detection acc:             99.693%
+AUPR In:                   99.645%
+AUPR Out:                  99.043%
 calculate metrics for mis
 mis  Performance of Baseline detector
-TNR at TPR 95%:            92.937%
-AUROC:                     97.988%
-Detection acc:             95.141%
-AUPR In:                   99.991%
-AUPR Out:                  25.200%
+TNR at TPR 95%:            94.651%
+AUROC:                     98.940%
+Detection acc:             96.034%
+AUPR In:                   99.994%
+AUPR Out:                  39.242%
