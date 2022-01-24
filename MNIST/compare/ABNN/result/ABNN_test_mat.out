@@ -14,4 +14,3 @@ Files already downloaded and verified
 generate log from in-distribution data
 generate log from semi-out-of-distribution data
 generate log from out-of-distribution data
-slurmstepd: error: *** JOB 2051 ON node1_3060 CANCELLED AT 2022-01-24T17:37:30 ***

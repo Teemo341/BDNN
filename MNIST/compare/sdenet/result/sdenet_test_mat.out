@@ -1,4 +1,4 @@
-Namespace(eva_iter=10, network='resnet_bayesian', batch_size=256, seed=0, dataset='mnist', imageSize=28, semi_out_dataset='svhn', out_dataset='cifar10', num_classes=10, pre_trained_net='save_resnet_bayesian_mnist/final_model', gpu=0, test_batch_size=1000)
+Namespace(eva_iter=10, network='sdenet', batch_size=256, seed=0, dataset='mnist', imageSize=28, semi_out_dataset='svhn', out_dataset='cifar10', num_classes=10, pre_trained_net='save_sdenet_mnist/final_model', gpu=0, test_batch_size=1000)
 Random Seed:  0
 Load model
 load target data:  mnist
@@ -14,4 +14,3 @@ Files already downloaded and verified
 generate log from in-distribution data
 generate log from semi-out-of-distribution data
 generate log from out-of-distribution data
-slurmstepd: error: *** JOB 2051 ON node1_3060 CANCELLED AT 2022-01-24T17:37:30 ***

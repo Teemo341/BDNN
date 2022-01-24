@@ -216,6 +216,12 @@ def confusion_matrix(dir_name):
     f3 = [(1-i) * 10 for i in f3_]
     f3.sort()
     len_3 = len(f3)
+
+    # avoid Tianji horse racing, take first 9000 samples
+    f1 = f1[0:9000]
+    f2 = f2[0:9000]
+    f3 = f3[0:9000]
+    
     f = f1+f2+f3
     f = np.array(f)
 

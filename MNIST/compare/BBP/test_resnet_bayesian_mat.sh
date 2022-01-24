@@ -1,6 +1,6 @@
 #! /bin/bash
 #SBATCH -J BBP
-#SBATCH -o result/BDNN_test_mat.out               
+#SBATCH -o result/BBP_test_mat.out               
 #SBATCH -p compute                  
 #SBATCH --qos=debug               
 #SBATCH -N 1                
@@ -9,4 +9,4 @@
 #SBATCH -t 24:00:00 
 
 
-python -u test_by_matrix.py --pre_trained_net save_resnet_bayesian_mnist/final_model --network resnet_bayesian --dataset mnist --semi_out_dataset svhn --out_dataset cifar10
+python -u test_by_matrix.py --pre_trained_net save_BBP_mnist/final_model --network BBP --dataset mnist --semi_out_dataset svhn --out_dataset cifar10
