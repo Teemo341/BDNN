@@ -1,0 +1,20 @@
+True
+load data:  mnist
+Building MNIST data loader with 1 workers
+load out data:  svhn
+Building SVHN data loader with 1 workers
+Using downloaded and verified file: /home/ssy/BDNN/data/svhn/train_32x32.mat
+Using downloaded and verified file: /home/ssy/BDNN/data/svhn/test_32x32.mat
+==> Building model..
+
+Epoch: 0
+Train epoch:0 	Loss_in: 0.677877 | Loss_in_diffu: 11.740822 | Loss_out_diffu: 12.165059 | Acc: 84.127938 (50396/59904)
+(1642993820.7570877, 1642993919.826782, 99.06969428062439)
+Test epoch: 0| Acc: 94.85 (9485/10000) 
+
+Epoch: 1
+Train epoch:1 	Loss_in: 0.127769 | Loss_in_diffu: 11.335872 | Loss_out_diffu: 12.635962 | Acc: 96.683026 (57917/59904)
+(1642993920.5286417, 1642994020.1146214, 99.5859797000885)
+Test epoch: 1| Acc: 97.22 (9722/10000) 
+
+Epoch: 2
