@@ -14,3 +14,11 @@ Files already downloaded and verified
 generate log from in-distribution data
 generate log from semi-out-of-distribution data
 generate log from out-of-distribution data
+Confusion Matrix:
++----------+------+----------+------+
+|    \     |  ID  | semi-OOD | OOD  |
++----------+------+----------+------+
+|    ID    | 9000 |    0     |  0   |
+| semi-OOD | 713  |   320    | 7967 |
+|   OOD    |  9   |    19    | 8972 |
++----------+------+----------+------+
