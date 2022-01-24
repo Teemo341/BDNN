@@ -9,7 +9,7 @@ Using downloaded and verified file: /home/ssy/BDNN/data/svhn/train_32x32.mat
 Using downloaded and verified file: /home/ssy/BDNN/data/svhn/test_32x32.mat
 generate log from in-distribution data
 
- Final Accuracy: 9959/10000 (99.59%)
+ Final Accuracy: 9959/10000 (99.32%)
  
 generate log  from out-of-distribution data
 calculate metrics for OOD
