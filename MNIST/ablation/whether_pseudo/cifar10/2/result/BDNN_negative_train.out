@@ -8,3 +8,33 @@ Files already downloaded and verified
 ==> Building model..
 
 Epoch: 0
+Train epoch:0 	Loss_in: 0.672117 | Loss_in_diffu: 9.877380 | Loss_out_diffu: 10.025833 | Acc: 81.183894 (40527/49920)
+(1643007681.280967, 1643007764.373312, 83.09234499931335)
+Test epoch: 0| Acc: 93.88 (9388/10000) 
+
+Epoch: 1
+Train epoch:1 	Loss_in: 0.137102 | Loss_in_diffu: 9.476567 | Loss_out_diffu: 10.393000 | Acc: 95.723157 (47785/49920)
+(1643007765.0886672, 1643007847.8416684, 82.75300121307373)
+Test epoch: 1| Acc: 97.22 (9722/10000) 
+
+Epoch: 2
+Train epoch:2 	Loss_in: 0.086752 | Loss_in_diffu: 9.508613 | Loss_out_diffu: 10.503477 | Acc: 97.187500 (48516/49920)
+(1643007848.5372713, 1643007931.684402, 83.14713072776794)
+Test epoch: 2| Acc: 98.15 (9815/10000) 
+
+Epoch: 3
+Train epoch:3 	Loss_in: 0.067912 | Loss_in_diffu: 9.568098 | Loss_out_diffu: 10.565968 | Acc: 97.648237 (48746/49920)
+(1643007932.386384, 1643008015.3090913, 82.92270731925964)
+Test epoch: 3| Acc: 98.58 (9858/10000) 
+
+Epoch: 4
+Train epoch:4 	Loss_in: 0.055656 | Loss_in_diffu: 9.636623 | Loss_out_diffu: 10.632968 | Acc: 98.058894 (48951/49920)
+(1643008015.9031968, 1643008099.2782533, 83.37505650520325)
+Test epoch: 4| Acc: 98.48 (9848/10000) 
+
+Epoch: 5
+Train epoch:5 	Loss_in: 0.053742 | Loss_in_diffu: 9.721768 | Loss_out_diffu: 10.718580 | Acc: 98.149038 (48996/49920)
+(1643008099.9872072, 1643008182.9168751, 82.92966794967651)
+Test epoch: 5| Acc: 98.91 (9891/10000) 
+
+Epoch: 6
