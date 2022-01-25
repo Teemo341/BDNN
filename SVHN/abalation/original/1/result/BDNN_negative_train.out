@@ -1,0 +1,28 @@
+True
+load data:  svhn
+Building SVHN data loader with 1 workers
+Using downloaded and verified file: /home/ssy/BDNN/data/svhn/train_32x32.mat
+Using downloaded and verified file: /home/ssy/BDNN/data/svhn/test_32x32.mat
+==> Building model..
+
+Epoch: 0
+Train epoch:0 	Loss_in: 1.356860 | Loss_in_diffu: 12.413153 | Loss_out_diffu: 12.106685 | Acc: 54.832277 (40146/73216)
+(1643132133.7420647, 1643132258.2386377, 124.496572971344)
+Test epoch: 0| Acc: 82.28910098522168 (21382/25984) 
+
+Epoch: 1
+Train epoch:1 	Loss_in: 0.594319 | Loss_in_diffu: 11.920391 | Loss_out_diffu: 12.695784 | Acc: 82.480605 (60389/73216)
+(1643132261.296366, 1643132385.6443365, 124.34797048568726)
+Test epoch: 1| Acc: 84.82527709359606 (22041/25984) 
+
+Epoch: 2
+Train epoch:2 	Loss_in: 0.405677 | Loss_in_diffu: 11.881763 | Loss_out_diffu: 12.905266 | Acc: 88.176082 (64559/73216)
+(1643132388.8110623, 1643132512.5627983, 123.75173592567444)
+Test epoch: 2| Acc: 87.58851600985221 (22759/25984) 
+
+Epoch: 3
+Train epoch:3 	Loss_in: 0.346564 | Loss_in_diffu: 11.941283 | Loss_out_diffu: 13.040838 | Acc: 89.816434 (65760/73216)
+(1643132515.7302203, 1643132639.5256944, 123.7954740524292)
+Test epoch: 3| Acc: 91.1868842364532 (23694/25984) 
+
+Epoch: 4

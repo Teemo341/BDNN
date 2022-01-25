@@ -1,0 +1,13 @@
+True
+load data:  svhn
+Building SVHN data loader with 1 workers
+Using downloaded and verified file: /home/ssy/BDNN/data/svhn/train_32x32.mat
+Using downloaded and verified file: /home/ssy/BDNN/data/svhn/test_32x32.mat
+==> Building model..
+
+Epoch: 0
+Train epoch:0 	Loss_in: 1.356860 | Loss_in_diffu: 12.413153 | Loss_out_diffu: 12.106685 | Acc: 54.832277 (40146/73216)
+(1643132133.7420647, 1643132258.2386377, 124.496572971344)
+Test epoch: 0| Acc: 82.28910098522168 (21382/25984) 
+
+Epoch: 1

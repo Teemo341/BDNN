@@ -1,0 +1,28 @@
+Namespace(eva_iter=10, network='resnet_bayesian', batch_size=256, seed=0, dataset='mnist', imageSize=28, out_dataset='semeion', num_classes=10, pre_trained_net='save_resnet_bayesian_mnist/final_model', gpu=0, test_batch_size=1000)
+Random Seed:  0
+Load model
+load target data:  mnist
+Building MNIST data loader with 1 workers
+load non target data:  semeion
+Building SEMEION data loader with 1 workers
+Files already downloaded and verified
+Files already downloaded and verified
+generate log from in-distribution data
+
+ Final Accuracy: 9947/10000 (99.47%)
+ 
+generate log  from out-of-distribution data
+calculate metrics for OOD
+OOD  Performance of Baseline detector
+TNR at TPR 95%:            97.033%
+AUROC:                     99.232%
+Detection acc:             96.242%
+AUPR In:                   99.878%
+AUPR Out:                  95.856%
+calculate metrics for mis
+mis  Performance of Baseline detector
+TNR at TPR 95%:            90.733%
+AUROC:                     98.690%
+Detection acc:             96.014%
+AUPR In:                   99.993%
+AUPR Out:                  28.571%
