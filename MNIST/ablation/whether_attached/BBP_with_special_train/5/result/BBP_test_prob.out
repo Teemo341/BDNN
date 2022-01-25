@@ -1,24 +1,24 @@
-Namespace(eva_iter=10, network='BBP', batch_size=256, seed=0, dataset='mnist', imageSize=28, out_dataset='svhn', num_classes=10, pre_trained_net='save_BBP_mnist/final_model', gpu=0, test_batch_size=1000)
+Namespace(eva_iter=10, network='BBP', batch_size=256, seed=0, dataset='mnist', imageSize=28, out_dataset='semeion', num_classes=10, pre_trained_net='save_BBP_mnist/final_model', gpu=0, test_batch_size=1000)
 Random Seed:  0
 Load model
 load target data:  mnist
 Building MNIST data loader with 1 workers
-load non target data:  svhn
-Building SVHN data loader with 1 workers
-Using downloaded and verified file: /home/ssy/BDNN/data/svhn/train_32x32.mat
-Using downloaded and verified file: /home/ssy/BDNN/data/svhn/test_32x32.mat
+load non target data:  semeion
+Building SEMEION data loader with 1 workers
+Files already downloaded and verified
+Files already downloaded and verified
 generate log from in-distribution data
 
- Final Accuracy: 9953/10000 (99.33%)
+ Final Accuracy: 9953/10000 (99.53%)
  
 generate log  from out-of-distribution data
 calculate metrics for OOD
 OOD  Performance of Baseline detector
-TNR at TPR 95%:            91.106%
-AUROC:                     96.596%
-Detection acc:             93.223%
-AUPR In:                   91.367%
-AUPR Out:                  98.934%
+TNR at TPR 95%:            91.596%
+AUROC:                     97.032%
+Detection acc:             93.586%
+AUPR In:                   99.499%
+AUPR Out:                  86.521%
 calculate metrics for mis
 mis  Performance of Baseline detector
 TNR at TPR 95%:            90.492%
