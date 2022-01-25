@@ -222,15 +222,31 @@ def confusion_matrix(dir_name):
     len_1 = len(f1)
     len_2 = len(f2)
     len_3 = len(f3)
-    f = f1+f2+f3
-    f = np.array(f)
+    
+    plt.ylim((-0.1, 1.1))
+    my_y_ticks = np.arange(0, 1.25, 0.25)
+    plt.yticks(my_y_ticks)
+    plt.yticks(fontsize=16)
+    scale_ls = [0,len_1/2,len_1,len_1+len_2/2,len_1+len_2,len_1+len_2+len_3/2,len_1+len_2+len_3]
+    index_ls = [0,"ID",len_1,"semi-OOD",len_1+len_2,"full-OOD",len_1+len_2+len_3]
+    plt.xticks(scale_ls,index_ls)
+    plt.xticks(fontsize=12)
+    plt.xlabel("Data distribution",fontsize=20,fontweight='normal',fontfamily='Times New Roman')
+    plt.ylabel("Uncertainty",fontsize=20,fontweight='normal',fontfamily='Times New Roman')
 
     # visualizatoin
-    for i in range(0, (len_1+len_2+len_3)):
-        plt.scatter(i+1, f[i],s=5, c=('r' if i <
-                                  len_1 else 'b' if i < (len_1+len_2) else 'g'))
-    plt.savefig('%s/cluster_visualization.jpg' % dir_name)
+    ID = plt.scatter(np.arange(len_1), [i/10 for i in f1], s=5, c='r',label='ID')
+    semi_OOD = plt.scatter(np.arange(len_2)+len_1, [i/10 for i in f2], s=5, c='b',label='semi-OOD')
+    full_OOD = plt.scatter(np.arange(len_3)+len_1+len_2, [i/10 for i in f3], s=5, c='g',label='full-OOD')
+
+    font1 = {'family' : 'Times New Roman',
+    'weight' : 'normal',
+    'size' : 16,
+    }
+    legend = plt.legend(handles=[ID,semi_OOD,full_OOD],prop=font1,loc='upper left')
+
     # plt.show()
+    plt.savefig('%s/cluster_visualization.jpg' % dir_name,bbox_inches = 'tight')
 
     # k-means
     clf = KMeans(n_clusters=3)

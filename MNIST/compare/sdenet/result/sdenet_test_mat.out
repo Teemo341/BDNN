@@ -14,11 +14,11 @@ Files already downloaded and verified
 generate log from in-distribution data
 generate log from semi-out-of-distribution data
 generate log from out-of-distribution data
-Confusion Matrix:
-+----------+------+----------+------+
-|    \     |  ID  | semi-OOD | OOD  |
-+----------+------+----------+------+
-|    ID    | 9000 |    0     |  0   |
-| semi-OOD | 713  |   320    | 7967 |
-|   OOD    |  9   |    19    | 8972 |
-+----------+------+----------+------+
+findfont: Font family ['Times New Roman'] not found. Falling back to DejaVu Sans.
+findfont: Font family ['Times New Roman'] not found. Falling back to DejaVu Sans.
+Traceback (most recent call last):
+  File "/home/ssy/BDNN/MNIST/compare/sdenet/test_by_matrix.py", line 223, in <module>
+    callog.confusion_matrix(outf)
+  File "/home/ssy/BDNN/MNIST/compare/sdenet/calculate_log.py", line 253, in confusion_matrix
+    clf.fit(f.reshape(-1, 1))
+NameError: name 'f' is not defined
