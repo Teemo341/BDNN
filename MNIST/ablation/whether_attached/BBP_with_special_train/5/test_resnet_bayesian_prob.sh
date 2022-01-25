@@ -9,4 +9,4 @@
 #SBATCH -t 24:00:00 
 
 
-python -u test_by_probability.py --pre_trained_net save_BBP_mnist/final_model --network BBP --dataset mnist --out_dataset svhn 
+python -u test_by_probability.py --pre_trained_net save_BBP_mnist/final_model --network BBP --dataset mnist --out_dataset semeion 
