@@ -1,3 +1,4 @@
+from cmath import exp
 from matplotlib import pyplot as plt
 import numpy as np
 
@@ -9,7 +10,7 @@ f3 = []
 for i in range(9000) :
     f1.append(0)
     f2.append(1+3*i/9000)
-    f3.append(5+3*i/9000)
+    f3.append(8-3*exp(-i/2700))
 
 len_1 = len(f1)
 len_2 = len(f2)
