@@ -1,5 +1,5 @@
 #! /bin/bash
-#SBATCH -J original4
+#SBATCH -J origin4
 #SBATCH -o result/BDNN_negative_test_prob.out               
 #SBATCH -p compute                  
 #SBATCH --qos=debug               

@@ -1,4 +1,4 @@
-Namespace(eva_iter=10, network='resnet_bayesian', batch_size=256, seed=0, dataset='svhn', imageSize=28, out_dataset='cifar10', num_classes=10, pre_trained_net='save_resnet_bayesian_mnist/final_model', gpu=0, test_batch_size=1000)
+Namespace(eva_iter=10, network='resnet_bayesian', batch_size=256, seed=0, dataset='svhn', imageSize=32, out_dataset='cifar10', num_classes=10, pre_trained_net='save_resnet_bayesian_mnist/final_model', gpu=0, test_batch_size=1000)
 Random Seed:  0
 Load model
 load target data:  svhn
@@ -11,20 +11,20 @@ Files already downloaded and verified
 Files already downloaded and verified
 generate log from in-distribution data
 
- Final Accuracy: 24092/25856 (93.18%)
+ Final Accuracy: 24514/25856 (94.81%)
  
 generate log  from out-of-distribution data
 calculate metrics for OOD
 OOD  Performance of Baseline detector
-TNR at TPR 95%:            51.619%
-AUROC:                     92.525%
-Detection acc:             86.718%
-AUPR In:                   96.991%
-AUPR Out:                  80.037%
+TNR at TPR 95%:            69.960%
+AUROC:                     95.668%
+Detection acc:             90.007%
+AUPR In:                   98.409%
+AUPR Out:                  87.587%
 calculate metrics for mis
 mis  Performance of Baseline detector
-TNR at TPR 95%:            57.089%
-AUROC:                     91.801%
-Detection acc:             85.890%
-AUPR In:                   99.243%
-AUPR Out:                  47.656%
+TNR at TPR 95%:            64.131%
+AUROC:                     92.485%
+Detection acc:             86.674%
+AUPR In:                   99.437%
+AUPR Out:                  46.947%

@@ -28,7 +28,7 @@ parser.add_argument('--network', type=str, choices=['resnet','resnet_bayesian', 
 parser.add_argument('--batch-size', type=int, default=256, help='batch size')
 parser.add_argument('--seed', type=int, default=0,help='random seed')
 parser.add_argument('--dataset', required=True, help='in domain dataset')
-parser.add_argument('--imageSize', type=int, default=28, help='the height / width of the input image to network')
+parser.add_argument('--imageSize', type=int, default=32, help='the height / width of the input image to network')
 parser.add_argument('--out_dataset', required=True, help='out-of-dist dataset: cifar10 | svhn | imagenet | lsun')
 parser.add_argument('--num_classes', type=int, default=10, help='number of classes (default: 10)')
 parser.add_argument('--pre_trained_net', default='', help="path to pre trained_net")

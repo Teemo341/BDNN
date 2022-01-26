@@ -1,5 +1,5 @@
 #! /bin/bash
-#SBATCH -J original1
+#SBATCH -J origin1
 #SBATCH -o result/BDNN_negative_train.out               
 #SBATCH -p compute                  
 #SBATCH --qos=debug               
