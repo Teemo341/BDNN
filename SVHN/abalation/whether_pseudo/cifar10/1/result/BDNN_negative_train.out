@@ -10,107 +10,201 @@ Files already downloaded and verified
 ==> Building model..
 
 Epoch: 0
-Train epoch:0 	Loss_in: 1.094821 | Loss_in_diffu: 8.608123 | Loss_out_diffu: 8.100230 | Acc: 45.963542 (22945/49920)
-(1643136828.426249, 1643136912.6298935, 84.20364451408386)
-Test epoch: 0| Acc: 69.41194581280789 (18036/25984) 
+Train epoch:0 	Loss_in: 1.047761 | Loss_in_diffu: 8.551910 | Loss_out_diffu: 8.107372 | Acc: 48.637821 (24280/49920)
+(1643177546.2608922, 1643177631.1102803, 84.8493881225586)
+Test epoch: 0| Acc: 73.13346674876847 (19003/25984) 
 
 Epoch: 1
-Train epoch:1 	Loss_in: 0.592922 | Loss_in_diffu: 8.368166 | Loss_out_diffu: 8.410936 | Acc: 73.139022 (36511/49920)
-(1643136915.7374544, 1643136999.7828658, 84.0454113483429)
-Test epoch: 1| Acc: 79.01016009852216 (20530/25984) 
+Train epoch:1 	Loss_in: 0.525266 | Loss_in_diffu: 8.245399 | Loss_out_diffu: 8.373138 | Acc: 76.979167 (38428/49920)
+(1643177634.0893505, 1643177718.189703, 84.10035252571106)
+Test epoch: 1| Acc: 84.2518472906404 (21892/25984) 
 
 Epoch: 2
-Train epoch:2 	Loss_in: 0.464579 | Loss_in_diffu: 8.514576 | Loss_out_diffu: 8.679023 | Acc: 79.851763 (39862/49920)
-(1643137002.7304835, 1643137086.5668402, 83.83635663986206)
-Test epoch: 2| Acc: 82.52770935960591 (21444/25984) 
+Train epoch:2 	Loss_in: 0.422111 | Loss_in_diffu: 8.378417 | Loss_out_diffu: 8.581176 | Acc: 81.536458 (40703/49920)
+(1643177721.276831, 1643177805.7589245, 84.48209357261658)
+Test epoch: 2| Acc: 55.80357142857143 (14500/25984) 
 
 Epoch: 3
-Train epoch:3 	Loss_in: 0.392464 | Loss_in_diffu: 8.703369 | Loss_out_diffu: 8.929018 | Acc: 83.008814 (41438/49920)
-(1643137089.6523983, 1643137173.2956822, 83.64328384399414)
-Test epoch: 3| Acc: 82.82789408866995 (21522/25984) 
+Train epoch:3 	Loss_in: 0.379256 | Loss_in_diffu: 8.518891 | Loss_out_diffu: 8.754301 | Acc: 83.603766 (41735/49920)
+(1643177808.7729442, 1643177893.0497417, 84.27679753303528)
+Test epoch: 3| Acc: 84.8137315270936 (22038/25984) 
 
 Epoch: 4
-Train epoch:4 	Loss_in: 0.359095 | Loss_in_diffu: 8.923448 | Loss_out_diffu: 9.171225 | Acc: 84.481170 (42173/49920)
-(1643137176.2673905, 1643137260.1074028, 83.84001231193542)
-Test epoch: 4| Acc: 82.92025862068965 (21546/25984) 
+Train epoch:4 	Loss_in: 0.316491 | Loss_in_diffu: 8.624045 | Loss_out_diffu: 8.915597 | Acc: 86.298077 (43080/49920)
+(1643177896.1744504, 1643177980.5891528, 84.41470241546631)
+Test epoch: 4| Acc: 83.39747536945812 (21670/25984) 
 
 Epoch: 5
-Train epoch:5 	Loss_in: 0.335238 | Loss_in_diffu: 9.149342 | Loss_out_diffu: 9.418354 | Acc: 85.560897 (42712/49920)
-(1643137263.0683246, 1643137347.0436819, 83.97535729408264)
-Test epoch: 5| Acc: 83.28971674876847 (21642/25984) 
+Train epoch:5 	Loss_in: 0.293690 | Loss_in_diffu: 8.797544 | Loss_out_diffu: 9.104245 | Acc: 87.285657 (43573/49920)
+(1643177983.678784, 1643178067.917872, 84.23908805847168)
+Test epoch: 5| Acc: 86.4685960591133 (22468/25984) 
 
 Epoch: 6
-Train epoch:6 	Loss_in: 0.323290 | Loss_in_diffu: 9.386642 | Loss_out_diffu: 9.662366 | Acc: 86.141827 (43002/49920)
-(1643137350.1542826, 1643137434.375891, 84.22160840034485)
-Test epoch: 6| Acc: 87.93103448275862 (22848/25984) 
+Train epoch:6 	Loss_in: 0.282425 | Loss_in_diffu: 9.002625 | Loss_out_diffu: 9.312506 | Acc: 87.696314 (43778/49920)
+(1643178071.0203404, 1643178155.6135178, 84.593177318573)
+Test epoch: 6| Acc: 86.33389778325123 (22433/25984) 
 
 Epoch: 7
-Train epoch:7 	Loss_in: 0.313335 | Loss_in_diffu: 9.632379 | Loss_out_diffu: 9.900623 | Acc: 86.526442 (43194/49920)
-(1643137437.4639819, 1643137521.0233736, 83.55939173698425)
-Test epoch: 7| Acc: 87.8733066502463 (22833/25984) 
+Train epoch:7 	Loss_in: 0.275244 | Loss_in_diffu: 9.235556 | Loss_out_diffu: 9.549488 | Acc: 88.223157 (44041/49920)
+(1643178158.7456017, 1643178243.1960049, 84.45040321350098)
+Test epoch: 7| Acc: 87.71166871921183 (22791/25984) 
 
 Epoch: 8
-Train epoch:8 	Loss_in: 0.300387 | Loss_in_diffu: 9.863516 | Loss_out_diffu: 10.131116 | Acc: 87.081330 (43471/49920)
-(1643137524.0940852, 1643137607.6354392, 83.54135394096375)
-Test epoch: 8| Acc: 88.20427955665025 (22919/25984) 
+Train epoch:8 	Loss_in: 0.261973 | Loss_in_diffu: 9.469529 | Loss_out_diffu: 9.797350 | Acc: 88.629808 (44244/49920)
+(1643178246.2896533, 1643178330.974881, 84.68522763252258)
+Test epoch: 8| Acc: 89.04325738916256 (23137/25984) 
 
 Epoch: 9
-Train epoch:9 	Loss_in: 0.280468 | Loss_in_diffu: 10.058633 | Loss_out_diffu: 10.347735 | Acc: 88.046875 (43953/49920)
-(1643137610.7122583, 1643137694.5674207, 83.85516238212585)
-Test epoch: 9| Acc: 89.73983990147784 (23318/25984) 
+Train epoch:9 	Loss_in: 0.255307 | Loss_in_diffu: 9.723838 | Loss_out_diffu: 10.058287 | Acc: 89.094551 (44476/49920)
+(1643178334.072046, 1643178418.7749217, 84.70287561416626)
+Test epoch: 9| Acc: 89.73599137931035 (23317/25984) 
 
 Epoch: 10
-Train epoch:10 	Loss_in: 0.272135 | Loss_in_diffu: 10.256457 | Loss_out_diffu: 10.561679 | Acc: 88.399439 (44129/49920)
-(1643137697.6582527, 1643137781.469579, 83.81132626533508)
-Test epoch: 10| Acc: 89.90147783251231 (23360/25984) 
+Train epoch:10 	Loss_in: 0.248588 | Loss_in_diffu: 9.976912 | Loss_out_diffu: 10.317064 | Acc: 89.274840 (44566/49920)
+(1643178421.787994, 1643178506.1387808, 84.35078692436218)
+Test epoch: 10| Acc: 89.71674876847291 (23312/25984) 
 
 Epoch: 11
-Train epoch:11 	Loss_in: 0.262725 | Loss_in_diffu: 10.456965 | Loss_out_diffu: 10.772097 | Acc: 88.902244 (44380/49920)
-(1643137784.586102, 1643137868.6736367, 84.0875346660614)
-Test epoch: 11| Acc: 89.97075123152709 (23378/25984) 
+Train epoch:11 	Loss_in: 0.194804 | Loss_in_diffu: 10.083917 | Loss_out_diffu: 10.465716 | Acc: 91.772837 (45813/49920)
+(1643178509.1212702, 1643178593.3135965, 84.19232630729675)
+Test epoch: 11| Acc: 91.2830972906404 (23719/25984) 
 
 Epoch: 12
-Train epoch:12 	Loss_in: 0.252117 | Loss_in_diffu: 10.664711 | Loss_out_diffu: 11.001210 | Acc: 89.344952 (44601/49920)
-(1643137871.6751447, 1643137955.203221, 83.52807641029358)
-Test epoch: 12| Acc: 89.71674876847291 (23312/25984) 
+Train epoch:12 	Loss_in: 0.186260 | Loss_in_diffu: 10.100188 | Loss_out_diffu: 10.499424 | Acc: 92.193510 (46023/49920)
+(1643178596.4448738, 1643178680.7961833, 84.35130953788757)
+Test epoch: 12| Acc: 91.70643472906404 (23829/25984) 
 
 Epoch: 13
-Train epoch:13 	Loss_in: 0.244738 | Loss_in_diffu: 10.885526 | Loss_out_diffu: 11.226971 | Acc: 89.643429 (44750/49920)
-(1643137958.1435091, 1643138042.1481454, 84.00463628768921)
-Test epoch: 13| Acc: 89.02401477832512 (23132/25984) 
+Train epoch:13 	Loss_in: 0.188069 | Loss_in_diffu: 10.127746 | Loss_out_diffu: 10.530253 | Acc: 92.121394 (45987/49920)
+(1643178683.8908427, 1643178768.152007, 84.26116442680359)
+Test epoch: 13| Acc: 91.55249384236453 (23789/25984) 
 
 Epoch: 14
-Train epoch:14 	Loss_in: 0.240259 | Loss_in_diffu: 11.114864 | Loss_out_diffu: 11.456499 | Acc: 89.865785 (44861/49920)
-(1643138045.1262321, 1643138128.7898002, 83.66356801986694)
-Test epoch: 14| Acc: 90.13623768472907 (23421/25984) 
+Train epoch:14 	Loss_in: 0.188522 | Loss_in_diffu: 10.156369 | Loss_out_diffu: 10.556711 | Acc: 92.007212 (45930/49920)
+(1643178771.1488547, 1643178855.2395914, 84.09073662757874)
+Test epoch: 14| Acc: 91.7179802955665 (23832/25984) 
 
 Epoch: 15
-Train epoch:15 	Loss_in: 0.241002 | Loss_in_diffu: 11.347705 | Loss_out_diffu: 11.691170 | Acc: 89.901843 (44879/49920)
-(1643138131.8510642, 1643138215.4943373, 83.64327311515808)
-Test epoch: 15| Acc: 90.62884852216749 (23549/25984) 
+Train epoch:15 	Loss_in: 0.187603 | Loss_in_diffu: 10.185693 | Loss_out_diffu: 10.587443 | Acc: 92.033253 (45943/49920)
+(1643178858.2147563, 1643178942.5662265, 84.35147023200989)
+Test epoch: 15| Acc: 91.58328201970443 (23797/25984) 
 
 Epoch: 16
-Traceback (most recent call last):
-  File "/home/ssy/BDNN/SVHN/abalation/whether_pseudo/cifar10/1/resnet_bayesian_svhn.py", line 137, in <module>
-    train(epoch)
-  File "/home/ssy/BDNN/SVHN/abalation/whether_pseudo/cifar10/1/resnet_bayesian_svhn.py", line 83, in train
-    outputs = net(inputs)
-  File "/home/ssy/anaconda3/envs/BDNN/lib/python3.9/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
-    result = self.forward(*input, **kwargs)
-  File "/home/ssy/BDNN/SVHN/abalation/whether_pseudo/cifar10/1/models/resnet_bayesian.py", line 135, in forward
-    x_1 = self.feature_layers_1_bayesian(x_0)
-  File "/home/ssy/anaconda3/envs/BDNN/lib/python3.9/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
-    result = self.forward(*input, **kwargs)
-  File "/home/ssy/BDNN/SVHN/abalation/whether_pseudo/cifar10/1/models/resnet_bayesian.py", line 90, in forward
-    out = self.conv2(out)
-  File "/home/ssy/anaconda3/envs/BDNN/lib/python3.9/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
-    result = self.forward(*input, **kwargs)
-  File "/home/ssy/anaconda3/envs/BDNN/lib/python3.9/site-packages/blitz/modules/conv_bayesian_layer.py", line 238, in forward
-    self.log_prior = self.weight_prior_dist.log_prior(w) + b_log_prior
-  File "/home/ssy/anaconda3/envs/BDNN/lib/python3.9/site-packages/blitz/modules/weight_sampler.py", line 84, in log_prior
-    prob_n1 = torch.exp(self.dist1.log_prob(w))
-  File "/home/ssy/anaconda3/envs/BDNN/lib/python3.9/site-packages/torch/distributions/normal.py", line 73, in log_prob
-    self._validate_sample(value)
-  File "/home/ssy/anaconda3/envs/BDNN/lib/python3.9/site-packages/torch/distributions/distribution.py", line 277, in _validate_sample
-    raise ValueError('The value argument must be within the support')
-ValueError: The value argument must be within the support
+Train epoch:16 	Loss_in: 0.189584 | Loss_in_diffu: 10.218887 | Loss_out_diffu: 10.616995 | Acc: 92.073317 (45963/49920)
+(1643178945.6865373, 1643179030.3642368, 84.67769956588745)
+Test epoch: 16| Acc: 91.57558497536945 (23795/25984) 
+
+Epoch: 17
+Train epoch:17 	Loss_in: 0.186844 | Loss_in_diffu: 10.248383 | Loss_out_diffu: 10.646837 | Acc: 92.207532 (46030/49920)
+(1643179033.486829, 1643179118.1496985, 84.66286945343018)
+Test epoch: 17| Acc: 91.72182881773399 (23833/25984) 
+
+Epoch: 18
+Train epoch:18 	Loss_in: 0.184839 | Loss_in_diffu: 10.279507 | Loss_out_diffu: 10.680777 | Acc: 92.179487 (46016/49920)
+(1643179121.2677078, 1643179205.775251, 84.50754308700562)
+Test epoch: 18| Acc: 91.38700738916256 (23746/25984) 
+
+Epoch: 19
+Train epoch:19 	Loss_in: 0.185948 | Loss_in_diffu: 10.314012 | Loss_out_diffu: 10.712653 | Acc: 92.101362 (45977/49920)
+(1643179208.7905464, 1643179293.3256238, 84.53507733345032)
+Test epoch: 19| Acc: 91.59482758620689 (23800/25984) 
+
+Epoch: 20
+Train epoch:20 	Loss_in: 0.187495 | Loss_in_diffu: 10.348166 | Loss_out_diffu: 10.744042 | Acc: 92.021234 (45937/49920)
+(1643179296.338081, 1643179380.6443295, 84.30624866485596)
+Test epoch: 20| Acc: 91.36006773399015 (23739/25984) 
+
+Epoch: 21
+Train epoch:21 	Loss_in: 0.177350 | Loss_in_diffu: 10.359252 | Loss_out_diffu: 10.760693 | Acc: 92.508013 (46180/49920)
+(1643179383.6508667, 1643179467.7768123, 84.12594556808472)
+Test epoch: 21| Acc: 92.09128694581281 (23929/25984) 
+
+Epoch: 22
+Train epoch:22 	Loss_in: 0.175977 | Loss_in_diffu: 10.361057 | Loss_out_diffu: 10.764976 | Acc: 92.642228 (46247/49920)
+(1643179470.7647917, 1643179554.9458613, 84.18106961250305)
+Test epoch: 22| Acc: 92.11437807881774 (23935/25984) 
+
+Epoch: 23
+Train epoch:23 	Loss_in: 0.174746 | Loss_in_diffu: 10.363109 | Loss_out_diffu: 10.769141 | Acc: 92.648237 (46250/49920)
+(1643179558.0620415, 1643179642.847291, 84.78524947166443)
+Test epoch: 23| Acc: 91.97198275862068 (23898/25984) 
+
+Epoch: 24
+Train epoch:24 	Loss_in: 0.174045 | Loss_in_diffu: 10.365746 | Loss_out_diffu: 10.771684 | Acc: 92.704327 (46278/49920)
+(1643179645.966588, 1643179730.4421332, 84.47554516792297)
+Test epoch: 24| Acc: 91.99892241379311 (23905/25984) 
+
+Epoch: 25
+Train epoch:25 	Loss_in: 0.173296 | Loss_in_diffu: 10.368333 | Loss_out_diffu: 10.775908 | Acc: 92.606170 (46229/49920)
+(1643179733.423703, 1643179818.0767937, 84.65309071540833)
+Test epoch: 25| Acc: 92.06049876847291 (23921/25984) 
+
+Epoch: 26
+Train epoch:26 	Loss_in: 0.174053 | Loss_in_diffu: 10.372655 | Loss_out_diffu: 10.778890 | Acc: 92.670272 (46261/49920)
+(1643179821.104284, 1643179905.2090786, 84.1047945022583)
+Test epoch: 26| Acc: 91.97198275862068 (23898/25984) 
+
+Epoch: 27
+Train epoch:27 	Loss_in: 0.172052 | Loss_in_diffu: 10.373587 | Loss_out_diffu: 10.783253 | Acc: 92.774439 (46313/49920)
+(1643179908.1926975, 1643179992.645033, 84.45233535766602)
+Test epoch: 27| Acc: 92.0335591133005 (23914/25984) 
+
+Epoch: 28
+Train epoch:28 	Loss_in: 0.173001 | Loss_in_diffu: 10.378198 | Loss_out_diffu: 10.786197 | Acc: 92.782452 (46317/49920)
+(1643179995.7432175, 1643180080.517036, 84.7738184928894)
+Test epoch: 28| Acc: 91.7834051724138 (23849/25984) 
+
+Epoch: 29
+Train epoch:29 	Loss_in: 0.171437 | Loss_in_diffu: 10.380046 | Loss_out_diffu: 10.789608 | Acc: 92.826522 (46339/49920)
+(1643180083.636078, 1643180167.7895653, 84.15348744392395)
+Test epoch: 29| Acc: 92.02201354679804 (23911/25984) 
+
+Epoch: 30
+Train epoch:30 	Loss_in: 0.172791 | Loss_in_diffu: 10.384216 | Loss_out_diffu: 10.793381 | Acc: 92.756410 (46304/49920)
+(1643180170.9027405, 1643180255.5420969, 84.6393563747406)
+Test epoch: 30| Acc: 92.02586206896552 (23912/25984) 
+
+Epoch: 31
+Train epoch:31 	Loss_in: 0.172050 | Loss_in_diffu: 10.385487 | Loss_out_diffu: 10.794775 | Acc: 92.764423 (46308/49920)
+(1643180258.555156, 1643180343.213029, 84.65787291526794)
+Test epoch: 31| Acc: 92.03740763546799 (23915/25984) 
+
+Epoch: 32
+Train epoch:32 	Loss_in: 0.170436 | Loss_in_diffu: 10.384461 | Loss_out_diffu: 10.795102 | Acc: 92.888622 (46370/49920)
+(1643180346.210359, 1643180430.6789036, 84.46854448318481)
+Test epoch: 32| Acc: 91.99122536945812 (23903/25984) 
+
+Epoch: 33
+Train epoch:33 	Loss_in: 0.172224 | Loss_in_diffu: 10.386725 | Loss_out_diffu: 10.795088 | Acc: 92.836538 (46344/49920)
+(1643180433.653844, 1643180518.305042, 84.65119791030884)
+Test epoch: 33| Acc: 92.08743842364532 (23928/25984) 
+
+Epoch: 34
+Train epoch:34 	Loss_in: 0.170604 | Loss_in_diffu: 10.385518 | Loss_out_diffu: 10.796067 | Acc: 92.886619 (46369/49920)
+(1643180521.4240434, 1643180605.8293061, 84.40526270866394)
+Test epoch: 34| Acc: 92.01816502463055 (23910/25984) 
+
+Epoch: 35
+Train epoch:35 	Loss_in: 0.170570 | Loss_in_diffu: 10.385651 | Loss_out_diffu: 10.797015 | Acc: 92.824519 (46338/49920)
+(1643180608.8129263, 1643180692.9056275, 84.09270119667053)
+Test epoch: 35| Acc: 92.04895320197045 (23918/25984) 
+
+Epoch: 36
+Train epoch:36 	Loss_in: 0.174562 | Loss_in_diffu: 10.389952 | Loss_out_diffu: 10.796988 | Acc: 92.710337 (46281/49920)
+(1643180695.9952443, 1643180780.388073, 84.39282870292664)
+Test epoch: 36| Acc: 92.0335591133005 (23914/25984) 
+
+Epoch: 37
+Train epoch:37 	Loss_in: 0.168776 | Loss_in_diffu: 10.384284 | Loss_out_diffu: 10.797388 | Acc: 93.010817 (46431/49920)
+(1643180783.4808886, 1643180867.9826565, 84.50176787376404)
+Test epoch: 37| Acc: 92.06819581280789 (23923/25984) 
+
+Epoch: 38
+Train epoch:38 	Loss_in: 0.171872 | Loss_in_diffu: 10.388092 | Loss_out_diffu: 10.797537 | Acc: 92.792468 (46322/49920)
+(1643180871.112707, 1643180955.55689, 84.4441831111908)
+Test epoch: 38| Acc: 92.05280172413794 (23919/25984) 
+
+Epoch: 39
+Train epoch:39 	Loss_in: 0.172624 | Loss_in_diffu: 10.389237 | Loss_out_diffu: 10.797647 | Acc: 92.786458 (46319/49920)
+(1643180958.5441208, 1643181043.443839, 84.89971828460693)
+Test epoch: 39| Acc: 92.05665024630542 (23920/25984) 

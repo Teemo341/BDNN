@@ -1,30 +1,30 @@
-Namespace(eva_iter=10, network='resnet_bayesian', batch_size=256, seed=0, dataset='mnist', imageSize=28, out_dataset='cifar10', num_classes=10, pre_trained_net='save_resnet_bayesian_mnist/final_model', gpu=0, test_batch_size=1000)
+Namespace(eva_iter=10, network='resnet_bayesian', batch_size=256, seed=0, dataset='svhn', imageSize=28, out_dataset='cifar10', num_classes=10, pre_trained_net='save_resnet_bayesian_mnist/final_model', gpu=0, test_batch_size=1000)
 Random Seed:  0
 Load model
-load target data:  mnist
-Building MNIST data loader with 1 workers
+load target data:  svhn
+Building SVHN data loader with 1 workers
+Using downloaded and verified file: /home/ssy/BDNN/data/svhn/train_32x32.mat
+Using downloaded and verified file: /home/ssy/BDNN/data/svhn/test_32x32.mat
 load non target data:  cifar10
 Building CIFAR-10 data loader with 1 workers
 Files already downloaded and verified
 Files already downloaded and verified
 generate log from in-distribution data
-Traceback (most recent call last):
-  File "/home/ssy/BDNN/SVHN/abalation/original/3/test_by_probability.py", line 149, in <module>
-    generate_target()
-  File "/home/ssy/BDNN/SVHN/abalation/original/3/test_by_probability.py", line 104, in generate_target
-    current_batch = model(data)
-  File "/home/ssy/anaconda3/envs/BDNN/lib/python3.9/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
-    result = self.forward(*input, **kwargs)
-  File "/home/ssy/BDNN/SVHN/abalation/original/3/models/resnet_bayesian.py", line 132, in forward
-    out = self.downsampling_layers(x)
-  File "/home/ssy/anaconda3/envs/BDNN/lib/python3.9/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
-    result = self.forward(*input, **kwargs)
-  File "/home/ssy/anaconda3/envs/BDNN/lib/python3.9/site-packages/torch/nn/modules/container.py", line 119, in forward
-    input = module(input)
-  File "/home/ssy/anaconda3/envs/BDNN/lib/python3.9/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
-    result = self.forward(*input, **kwargs)
-  File "/home/ssy/anaconda3/envs/BDNN/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 399, in forward
-    return self._conv_forward(input, self.weight, self.bias)
-  File "/home/ssy/anaconda3/envs/BDNN/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 395, in _conv_forward
-    return F.conv2d(input, weight, bias, self.stride,
-RuntimeError: Given groups=1, weight of size [64, 3, 3, 3], expected input[1000, 1, 28, 28] to have 3 channels, but got 1 channels instead
+
+ Final Accuracy: 23984/25856 (92.76%)
+ 
+generate log  from out-of-distribution data
+calculate metrics for OOD
+OOD  Performance of Baseline detector
+TNR at TPR 95%:            47.745%
+AUROC:                     92.069%
+Detection acc:             86.126%
+AUPR In:                   96.941%
+AUPR Out:                  78.087%
+calculate metrics for mis
+mis  Performance of Baseline detector
+TNR at TPR 95%:            57.276%
+AUROC:                     91.352%
+Detection acc:             84.832%
+AUPR In:                   99.131%
+AUPR Out:                  48.483%
