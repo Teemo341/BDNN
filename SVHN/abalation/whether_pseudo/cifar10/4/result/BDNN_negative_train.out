@@ -3,11 +3,91 @@ load data:  svhn
 Building SVHN data loader with 1 workers
 Using downloaded and verified file: /home/ssy/BDNN/data/svhn/train_32x32.mat
 Using downloaded and verified file: /home/ssy/BDNN/data/svhn/test_32x32.mat
+load out data:  cifar10
+Building CIFAR-10 data loader with 1 workers
+Files already downloaded and verified
+Files already downloaded and verified
 ==> Building model..
 
 Epoch: 0
-Train epoch:0 	Loss_in: 1.356860 | Loss_in_diffu: 12.413153 | Loss_out_diffu: 12.106685 | Acc: 54.832277 (40146/73216)
-(1643132133.7420647, 1643132258.2386377, 124.496572971344)
-Test epoch: 0| Acc: 82.28910098522168 (21382/25984) 
+Train epoch:0 	Loss_in: 1.030792 | Loss_in_diffu: 8.530691 | Loss_out_diffu: 8.101470 | Acc: 49.080529 (24501/49920)
+(1643139846.0832238, 1643139930.5390139, 84.4557900428772)
+Test epoch: 0| Acc: 73.96089901477832 (19218/25984) 
 
 Epoch: 1
+Train epoch:1 	Loss_in: 0.526288 | Loss_in_diffu: 8.275403 | Loss_out_diffu: 8.374324 | Acc: 76.802885 (38340/49920)
+(1643139933.6365345, 1643140018.0107677, 84.37423324584961)
+Test epoch: 1| Acc: 83.26277709359606 (21635/25984) 
+
+Epoch: 2
+Train epoch:2 	Loss_in: 0.391559 | Loss_in_diffu: 8.359169 | Loss_out_diffu: 8.577633 | Acc: 83.217147 (41542/49920)
+(1643140021.0100226, 1643140105.2360792, 84.22605657577515)
+Test epoch: 2| Acc: 86.68026477832512 (22523/25984) 
+
+Epoch: 3
+Train epoch:3 	Loss_in: 0.333281 | Loss_in_diffu: 8.473546 | Loss_out_diffu: 8.738810 | Acc: 85.685096 (42774/49920)
+(1643140108.3185925, 1643140191.9782653, 83.65967273712158)
+Test epoch: 3| Acc: 83.00877463054188 (21569/25984) 
+
+Epoch: 4
+Train epoch:4 	Loss_in: 0.310441 | Loss_in_diffu: 8.616397 | Loss_out_diffu: 8.898317 | Acc: 86.596554 (43229/49920)
+(1643140195.0550144, 1643140279.160007, 84.10499262809753)
+Test epoch: 4| Acc: 85.2178263546798 (22143/25984) 
+
+Epoch: 5
+Train epoch:5 	Loss_in: 0.282597 | Loss_in_diffu: 8.762652 | Loss_out_diffu: 9.075273 | Acc: 87.694311 (43777/49920)
+(1643140282.2733748, 1643140366.3343747, 84.0609998703003)
+Test epoch: 5| Acc: 88.57758620689656 (23016/25984) 
+
+Epoch: 6
+Train epoch:6 	Loss_in: 0.275557 | Loss_in_diffu: 8.954466 | Loss_out_diffu: 9.275268 | Acc: 88.175080 (44017/49920)
+(1643140369.4462476, 1643140453.386095, 83.93984746932983)
+Test epoch: 6| Acc: 88.58143472906404 (23017/25984) 
+
+Epoch: 7
+Train epoch:7 	Loss_in: 0.258988 | Loss_in_diffu: 9.141843 | Loss_out_diffu: 9.473475 | Acc: 88.886218 (44372/49920)
+(1643140456.4631324, 1643140540.6623433, 84.19921088218689)
+Test epoch: 7| Acc: 90.22860221674877 (23445/25984) 
+
+Epoch: 8
+Train epoch:8 	Loss_in: 0.249721 | Loss_in_diffu: 9.324552 | Loss_out_diffu: 9.660773 | Acc: 89.280849 (44569/49920)
+(1643140543.657187, 1643140627.4837654, 83.82657837867737)
+Test epoch: 8| Acc: 89.6243842364532 (23288/25984) 
+
+Epoch: 9
+Train epoch:9 	Loss_in: 0.237223 | Loss_in_diffu: 9.493724 | Loss_out_diffu: 9.835479 | Acc: 89.959936 (44908/49920)
+(1643140630.579702, 1643140714.9239874, 84.34428548812866)
+Test epoch: 9| Acc: 90.24014778325123 (23448/25984) 
+
+Epoch: 10
+Train epoch:10 	Loss_in: 0.230836 | Loss_in_diffu: 9.661059 | Loss_out_diffu: 10.008243 | Acc: 90.026042 (44941/49920)
+(1643140718.0407968, 1643140801.8555162, 83.81471943855286)
+Test epoch: 10| Acc: 90.02463054187191 (23392/25984) 
+
+Epoch: 11
+Traceback (most recent call last):
+  File "/home/ssy/BDNN/SVHN/abalation/whether_pseudo/cifar10/4/resnet_bayesian_svhn.py", line 137, in <module>
+    train(epoch)
+  File "/home/ssy/BDNN/SVHN/abalation/whether_pseudo/cifar10/4/resnet_bayesian_svhn.py", line 104, in train
+    loss_out = net.sample_elbo(inputs=nt_inputs,
+  File "/home/ssy/anaconda3/envs/BDNN/lib/python3.9/site-packages/blitz/utils/variational_estimator.py", line 65, in sample_elbo
+    outputs = self(inputs)
+  File "/home/ssy/anaconda3/envs/BDNN/lib/python3.9/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/ssy/BDNN/SVHN/abalation/whether_pseudo/cifar10/4/models/resnet_bayesian.py", line 135, in forward
+    x_1 = self.feature_layers_1_bayesian(x_0)
+  File "/home/ssy/anaconda3/envs/BDNN/lib/python3.9/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/ssy/BDNN/SVHN/abalation/whether_pseudo/cifar10/4/models/resnet_bayesian.py", line 90, in forward
+    out = self.conv2(out)
+  File "/home/ssy/anaconda3/envs/BDNN/lib/python3.9/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/ssy/anaconda3/envs/BDNN/lib/python3.9/site-packages/blitz/modules/conv_bayesian_layer.py", line 238, in forward
+    self.log_prior = self.weight_prior_dist.log_prior(w) + b_log_prior
+  File "/home/ssy/anaconda3/envs/BDNN/lib/python3.9/site-packages/blitz/modules/weight_sampler.py", line 84, in log_prior
+    prob_n1 = torch.exp(self.dist1.log_prob(w))
+  File "/home/ssy/anaconda3/envs/BDNN/lib/python3.9/site-packages/torch/distributions/normal.py", line 73, in log_prob
+    self._validate_sample(value)
+  File "/home/ssy/anaconda3/envs/BDNN/lib/python3.9/site-packages/torch/distributions/distribution.py", line 277, in _validate_sample
+    raise ValueError('The value argument must be within the support')
+ValueError: The value argument must be within the support
