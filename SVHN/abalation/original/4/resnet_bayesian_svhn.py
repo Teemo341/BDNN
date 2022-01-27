@@ -24,7 +24,6 @@ parser = argparse.ArgumentParser(description='PyTorch ResNet Bayesian Training')
 parser.add_argument('--epochs', type=int, default=25, help='number of epochs to train')
 parser.add_argument('--lr', default=0.1, type=float, help='learning rate')
 parser.add_argument('--dataset', default='svhn', help='cifar10 | svhn')
-parser.add_argument('--out_dataset', default='cifar10', help='out-of-dist dataset: cifar10 | svhn | imagenet | lsun')
 parser.add_argument('--batch-size', type=int, default=128, help='input batch size for training')
 parser.add_argument('--imageSize', type=int, default=32, help='the height / width of the input image to network')
 parser.add_argument('--test_batch_size', type=int, default=1000)
@@ -45,9 +44,6 @@ if device == 'cuda':
 
 print('load data: ',args.dataset)
 train_loader, test_loader = data_loader.getDataSet(args.dataset, args.batch_size, args.test_batch_size, args.imageSize)
-
-print('load out data: ',args.out_dataset)
-nt_train_loader, nt_test_loader = data_loader.getDataSet(args.out_dataset, args.batch_size, args.test_batch_size, args.imageSize)
 
 # Model
 print('==> Building model..')
@@ -75,9 +71,8 @@ def train(epoch):
     correct = 0
     total = 0
     ##training with in-domain data
-    for (batch_idx, (inputs, targets)),(nt_batch_idx, (nt_inputs, nt_targets)) in zip(enumerate(train_loader),enumerate(nt_train_loader)):
+    for batch_idx, (inputs, targets) in enumerate(train_loader):
         inputs, targets = inputs.to(device), targets.to(device)
-        nt_inputs = nt_inputs.to(device)
         optimizer1.zero_grad()
         optimizer2.zero_grad()
         outputs = net(inputs)
@@ -101,7 +96,9 @@ def train(epoch):
         optimizer2.zero_grad()
         label = torch.full((args.batch_size,10), fake_label, device=device)
         label = label.to(device)
-        loss_out = net.sample_elbo(inputs=nt_inputs,
+        inputs_out = 2*torch.randn(args.batch_size,1, args.imageSize, args.imageSize, device = device)+inputs
+        inputs_out = inputs_out.to(device)
+        loss_out = net.sample_elbo(inputs=inputs_out,
                                        labels=label,
                                        criterion=criterion2,
                                        sample_nbr=3,

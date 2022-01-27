@@ -58,8 +58,11 @@ net = net.to(device)
 fake_label = 1/10
 
 
-optimizer1 = optim.Adam([{'params':[ param for name, param in net.named_parameters() if 'bayesian' not in name]}], lr=0.001)
+# optimizer = optim.SGD(net.parameters(), lr=args.lr, momentum=0.9, weight_decay=5e-4)
+# optimizer1 = optim.Adam([{'params':[ param for name, param in net.named_parameters() if 'bayesian' not in name]}], lr=0.001)
 optimizer2 = optim.Adam([{'params':[ param for name, param in net.named_parameters() if 'bayesian' in name]}], lr=0.001)
+optimizer1 = optim.SGD([{'params':[ param for name, param in net.named_parameters() if 'bayesian' not in name]}], lr=0.1, momentum=0.9, weight_decay=5e-4)
+# optimizer2 = optim.SGD([{'params':[ param for name, param in net.named_parameters() if 'bayesian' in name]}], lr=0.001, momentum=0.9, weight_decay=5e-4)
 criterion1 = torch.nn.CrossEntropyLoss()
 criterion2 = torch.nn.BCEWithLogitsLoss()
 
@@ -107,7 +110,7 @@ def train(epoch):
                                        sample_nbr=3,
                                        complexity_cost_weight=1 / 50000)
         train_loss_out_diffu += (loss_out.item())
-        loss_out = -0.5*loss_out
+        loss_out = -0.7*loss_out
         loss_out.backward()
         optimizer2.step()
         

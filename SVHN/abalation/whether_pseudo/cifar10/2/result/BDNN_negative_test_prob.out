@@ -11,20 +11,20 @@ Files already downloaded and verified
 Files already downloaded and verified
 generate log from in-distribution data
 
- Final Accuracy: 22073/25856 (85.37%)
+ Final Accuracy: 23613/25856 (91.33%)
  
 generate log  from out-of-distribution data
 calculate metrics for OOD
 OOD  Performance of Baseline detector
-TNR at TPR 95%:            32.438%
-AUROC:                     91.079%
-Detection acc:             86.711%
-AUPR In:                   96.893%
-AUPR Out:                  70.305%
+TNR at TPR 95%:            57.514%
+AUROC:                     93.627%
+Detection acc:             88.227%
+AUPR In:                   97.697%
+AUPR Out:                  78.619%
 calculate metrics for mis
 mis  Performance of Baseline detector
-TNR at TPR 95%:            44.153%
-AUROC:                     89.473%
-Detection acc:             82.625%
-AUPR In:                   97.941%
-AUPR Out:                  55.702%
+TNR at TPR 95%:            52.838%
+AUROC:                     91.306%
+Detection acc:             84.581%
+AUPR In:                   98.999%
+AUPR Out:                  50.015%
