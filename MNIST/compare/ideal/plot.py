@@ -16,12 +16,13 @@ len_1 = len(f1)
 len_2 = len(f2)
 len_3 = len(f3)
 
+
 plt.ylim((-0.1, 1.1))
 my_y_ticks = np.arange(0, 1.25, 0.25)
 plt.yticks(my_y_ticks)
 plt.yticks(fontsize=16)
-scale_ls = [0,len_1/2,len_1,len_1+len_2/2,len_1+len_2,len_1+len_2+len_3/2,len_1+len_2+len_3]
-index_ls = [0,"ID",len_1,"semi-OOD",len_1+len_2,"full-OOD",len_1+len_2+len_3]
+scale_ls = [len_1/2,len_1+len_2/2,len_1+len_2+len_3/2]
+index_ls = ["ID","semi-OOD","full-OOD"]
 plt.xticks(scale_ls,index_ls)
 plt.xticks(fontsize=12)
 plt.xlabel("Data distribution",fontsize=20,fontweight='normal',fontfamily='Times New Roman')

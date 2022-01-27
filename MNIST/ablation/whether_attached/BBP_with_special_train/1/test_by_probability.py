@@ -123,6 +123,7 @@ def generate_target():
     f3.close()
     f4.close()
     print('\n Final Accuracy: {}/{} ({:.2f}%)\n '.format(correct, total, 100. * correct / total))
+    
 
 def generate_non_target():
     model.eval()
