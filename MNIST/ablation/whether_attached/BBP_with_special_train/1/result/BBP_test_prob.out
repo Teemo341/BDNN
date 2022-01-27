@@ -11,6 +11,7 @@ generate log from in-distribution data
 
  Final Accuracy: 9957/10000 (99.57%)
  
+3.762540340423584
 generate log  from out-of-distribution data
 calculate metrics for OOD
 OOD  Performance of Baseline detector

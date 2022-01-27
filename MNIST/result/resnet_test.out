@@ -1,6 +1,4 @@
-Namespace(batch_size=256, dataset='mnist', eva_iter=10, gpu=0, imageSize=28, network='resnet', num_classes=10, out_dataset='svhn', pre_trained_net='save_resnet_mnist/final_model', seed=0, test_batch_size=1000)
-/home/siu170066/miniconda3/envs/sdenet/lib/python3.8/site-packages/torch/cuda/__init__.py:52: UserWarning: CUDA initialization: CUDA unknown error - this may be due to an incorrectly set up environment, e.g. changing env variable CUDA_VISIBLE_DEVICES after program start. Setting the available devices to be zero. (Triggered internally at  /opt/conda/conda-bld/pytorch_1607370131125/work/c10/cuda/CUDAFunctions.cpp:100.)
-  return torch._C._cuda_getDeviceCount() > 0
+Namespace(eva_iter=10, network='resnet', batch_size=256, seed=0, dataset='mnist', imageSize=28, out_dataset='svhn', num_classes=10, pre_trained_net='save_resnet_mnist/final_model', gpu=0, test_batch_size=1000)
 Random Seed:  0
 Load model
 load target data:  mnist
@@ -11,20 +9,21 @@ Using downloaded and verified file: ../data/svhn/train_32x32.mat
 Using downloaded and verified file: ../data/svhn/test_32x32.mat
 generate log from in-distribution data
 
- Final Accuracy: 9952/10000 (99.52%)
+ Final Accuracy: 9951/10000 (99.51%)
  
+-0.4221806526184082
 generate log  from out-of-distribution data
 calculate metrics for OOD
 OOD  Performance of Baseline detector
-TNR at TPR 95%:            90.187%
-AUROC:                     96.500%
-Detection acc:             92.745%
-AUPR In:                   89.223%
-AUPR Out:                  98.680%
+TNR at TPR 95%:            90.698%
+AUROC:                     96.834%
+Detection acc:             93.072%
+AUPR In:                   90.703%
+AUPR Out:                  98.761%
 calculate metrics for mis
 mis  Performance of Baseline detector
-TNR at TPR 95%:            87.500%
-AUROC:                     96.048%
-Detection acc:             91.750%
-AUPR In:                   99.977%
-AUPR Out:                  29.876%
+TNR at TPR 95%:            87.152%
+AUROC:                     96.297%
+Detection acc:             92.144%
+AUPR In:                   99.979%
+AUPR Out:                  22.520%

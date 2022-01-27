@@ -1,0 +1,29 @@
+Namespace(eva_iter=10, network='sdenet', batch_size=256, seed=0, dataset='mnist', imageSize=28, out_dataset='svhn', num_classes=10, pre_trained_net='save_sdenet_mnist/final_model', gpu=0, test_batch_size=1000)
+Random Seed:  0
+Load model
+load target data:  mnist
+Building MNIST data loader with 1 workers
+load non target data:  svhn
+Building SVHN data loader with 1 workers
+Using downloaded and verified file: ../data/svhn/train_32x32.mat
+Using downloaded and verified file: ../data/svhn/test_32x32.mat
+generate log from in-distribution data
+
+ Final Accuracy: 9942/10000 (99.42%)
+ 
+-2.3823463916778564
+generate log  from out-of-distribution data
+calculate metrics for OOD
+OOD  Performance of Baseline detector
+TNR at TPR 95%:            98.869%
+AUROC:                     99.710%
+Detection acc:             98.251%
+AUPR In:                   98.949%
+AUPR Out:                  99.900%
+calculate metrics for mis
+mis  Performance of Baseline detector
+TNR at TPR 95%:            85.256%
+AUROC:                     97.360%
+Detection acc:             91.683%
+AUPR In:                   99.984%
+AUPR Out:                  26.209%
