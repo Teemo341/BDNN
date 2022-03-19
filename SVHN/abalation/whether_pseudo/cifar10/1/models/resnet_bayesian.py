@@ -128,6 +128,7 @@ class Resnet_bayesian(nn.Module):
         self.feature_layers_5_bayesian = ResBlock_Bayesian(64, 64)
         self.fc_layers = nn.Sequential(norm(64), nn.ReLU(inplace=True), nn.AdaptiveAvgPool2d((1, 1)), Flatten(), nn.Linear(64, 10))
         # self.model = nn.Sequential(*self.downsampling_layers, *self.feature_layers, *self.fc_layers)
+        self.apply(init_params)
     def forward(self, x):
         out = self.downsampling_layers(x)
         x_0 = self.feature_layers_0_bayesian(out)

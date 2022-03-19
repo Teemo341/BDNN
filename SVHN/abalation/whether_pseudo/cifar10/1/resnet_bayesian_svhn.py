@@ -21,7 +21,7 @@ import time
 print(torch.cuda.is_available())
 
 parser = argparse.ArgumentParser(description='PyTorch ResNet Bayesian Training')
-parser.add_argument('--epochs', type=int, default=25, help='number of epochs to train')
+parser.add_argument('--epochs', type=int, default=60, help='number of epochs to train')
 parser.add_argument('--lr', default=0.1, type=float, help='learning rate')
 parser.add_argument('--dataset', default='svhn', help='cifar10 | svhn')
 parser.add_argument('--out_dataset', default='cifar10', help='out-of-dist dataset: cifar10 | svhn | imagenet | lsun')
@@ -30,7 +30,7 @@ parser.add_argument('--imageSize', type=int, default=32, help='the height / widt
 parser.add_argument('--test_batch_size', type=int, default=1000)
 parser.add_argument('--gpu', type=int, default=0)
 parser.add_argument('--droprate', type=float, default=0.1, help='learning rate decay')
-parser.add_argument('--decreasing_lr', default=[15,20], nargs='+', help='decreasing strategy')
+parser.add_argument('--decreasing_lr', default=[20,40], nargs='+', help='decreasing strategy')
 parser.add_argument('--seed', type=float, default=0)
 args = parser.parse_args()
 
@@ -59,9 +59,9 @@ fake_label = 1/10
 
 
 # optimizer = optim.SGD(net.parameters(), lr=args.lr, momentum=0.9, weight_decay=5e-4)
-# optimizer1 = optim.Adam([{'params':[ param for name, param in net.named_parameters() if 'bayesian' not in name]}], lr=0.001)
+optimizer1 = optim.Adam([{'params':[ param for name, param in net.named_parameters() if 'bayesian' not in name]}], lr=0.01)
 optimizer2 = optim.Adam([{'params':[ param for name, param in net.named_parameters() if 'bayesian' in name]}], lr=0.001)
-optimizer1 = optim.SGD([{'params':[ param for name, param in net.named_parameters() if 'bayesian' not in name]}], lr=0.1, momentum=0.9, weight_decay=5e-4)
+# optimizer1 = optim.SGD([{'params':[ param for name, param in net.named_parameters() if 'bayesian' not in name]}], lr=0.1, momentum=0.9, weight_decay=5e-4)
 # optimizer2 = optim.SGD([{'params':[ param for name, param in net.named_parameters() if 'bayesian' in name]}], lr=0.001, momentum=0.9, weight_decay=5e-4)
 criterion1 = torch.nn.CrossEntropyLoss()
 criterion2 = torch.nn.BCEWithLogitsLoss()
@@ -110,7 +110,7 @@ def train(epoch):
                                        sample_nbr=3,
                                        complexity_cost_weight=1 / 50000)
         train_loss_out_diffu += (loss_out.item())
-        loss_out = -0.7*loss_out
+        loss_out = -0.5*loss_out
         loss_out.backward()
         optimizer2.step()
         
