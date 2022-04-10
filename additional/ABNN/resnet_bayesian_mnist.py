@@ -51,7 +51,7 @@ net = models.Resnet_bayesian()
 net = net.to(device)
 
 
-fake_label = 1/10
+fake_label = 1/2
 
 
 optimizer1 = optim.Adam([{'params':[ param for name, param in net.named_parameters() if 'bayesian' not in name]}], lr=0.001)

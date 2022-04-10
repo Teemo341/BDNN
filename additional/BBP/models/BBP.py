@@ -106,7 +106,7 @@ class BBP(nn.Module):
     def __init__(self):
         super(BBP, self).__init__()
         self.downsampling_layers = nn.Sequential(
-            nn.Conv2d(1, 64, 3, 1),
+            nn.Conv2d(3, 64, 3, 1),
             norm(64),
             nn.ReLU(inplace=True),
             nn.Conv2d(64, 64, 4, 2, 1),
@@ -120,7 +120,7 @@ class BBP(nn.Module):
         self.feature_layers_3 = ResBlock_Bayesian(64, 64)
         self.feature_layers_4 = ResBlock_Bayesian(64, 64)
         self.feature_layers_5 = ResBlock_Bayesian(64, 64)
-        self.fc_layers = nn.Sequential(norm(64), nn.ReLU(inplace=True), nn.AdaptiveAvgPool2d((1, 1)), Flatten(), nn.Linear(64, 10))
+        self.fc_layers = nn.Sequential(norm(64), nn.ReLU(inplace=True), nn.AdaptiveAvgPool2d((1, 1)), Flatten(), nn.Linear(64, 2))
         # self.model = nn.Sequential(*self.downsampling_layers, *self.feature_layers, *self.fc_layers)
     def forward(self, x):
         out = self.downsampling_layers(x)

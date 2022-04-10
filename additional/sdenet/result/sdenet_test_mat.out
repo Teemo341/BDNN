@@ -1,24 +1,36 @@
-Namespace(eva_iter=10, network='sdenet', batch_size=256, seed=0, dataset='mnist', imageSize=28, semi_out_dataset='svhn', out_dataset='cifar10', num_classes=10, pre_trained_net='save_sdenet_mnist/final_model', gpu=0, test_batch_size=1000)
+Namespace(eva_iter=10, network='sdenet', batch_size=256, seed=0, dataset='cifar10_cat', imageSize=32, semi_out_dataset='cifar100_tiger', out_dataset='mnist', num_classes=10, pre_trained_net='save_sdenet_mnist/final_model', gpu=0, test_batch_size=200)
 Random Seed:  0
 Load model
-load target data:  mnist
-Building MNIST data loader with 1 workers
-load semi data:  mnist
-Building SVHN data loader with 1 workers
-Using downloaded and verified file: /home/ssy/BDNN/data/svhn/train_32x32.mat
-Using downloaded and verified file: /home/ssy/BDNN/data/svhn/test_32x32.mat
-load non target data:  cifar10
+load target data:  cifar10_cat
 Building CIFAR-10 data loader with 1 workers
-Files already downloaded and verified
-Files already downloaded and verified
+load semi data:  cifar10_cat
+Building CIFAR-100 data loader with 1 workers
+load non target data:  mnist
+Building MNIST data loader with 1 workers
 generate log from in-distribution data
 generate log from semi-out-of-distribution data
 generate log from out-of-distribution data
-findfont: Font family ['Times New Roman'] not found. Falling back to DejaVu Sans.
-findfont: Font family ['Times New Roman'] not found. Falling back to DejaVu Sans.
 Traceback (most recent call last):
-  File "/home/ssy/BDNN/MNIST/compare/sdenet/test_by_matrix.py", line 223, in <module>
-    callog.confusion_matrix(outf)
-  File "/home/ssy/BDNN/MNIST/compare/sdenet/calculate_log.py", line 253, in confusion_matrix
-    clf.fit(f.reshape(-1, 1))
-NameError: name 'f' is not defined
+  File "/home/home_node4/ssy/BDNN/additional/sdenet/test_by_matrix.py", line 223, in <module>
+    generate_non_target()
+  File "/home/home_node4/ssy/BDNN/additional/sdenet/test_by_matrix.py", line 203, in generate_non_target
+    batch_output, batch_std = evaluate(model, data)
+  File "/home/home_node4/ssy/BDNN/additional/sdenet/test_by_matrix.py", line 108, in evaluate
+    batch_output = [regressor(data) for i in range(args.eva_iter)]
+  File "/home/home_node4/ssy/BDNN/additional/sdenet/test_by_matrix.py", line 108, in <listcomp>
+    batch_output = [regressor(data) for i in range(args.eva_iter)]
+  File "/home/home_node4/ssy/anaconda3/envs/BDNN/lib/python3.9/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/home_node4/ssy/BDNN/additional/sdenet/models/sdenet_mnist.py", line 141, in forward
+    out = self.downsampling_layers(x)
+  File "/home/home_node4/ssy/anaconda3/envs/BDNN/lib/python3.9/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/home_node4/ssy/anaconda3/envs/BDNN/lib/python3.9/site-packages/torch/nn/modules/container.py", line 119, in forward
+    input = module(input)
+  File "/home/home_node4/ssy/anaconda3/envs/BDNN/lib/python3.9/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/home_node4/ssy/anaconda3/envs/BDNN/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 399, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/home_node4/ssy/anaconda3/envs/BDNN/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 395, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+RuntimeError: Given groups=1, weight of size [64, 3, 3, 3], expected input[256, 1, 28, 28] to have 3 channels, but got 1 channels instead

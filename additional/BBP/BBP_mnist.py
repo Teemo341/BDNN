@@ -16,15 +16,15 @@ import time
 print(torch.cuda.is_available())
 
 parser = argparse.ArgumentParser(description='PyTorch BBP Training')
-parser.add_argument('--epochs', type=int, default=40, help='number of epochs to train')
+parser.add_argument('--epochs', type=int, default=80, help='number of epochs to train')
 parser.add_argument('--lr', default=0.1, type=float, help='learning rate')
-parser.add_argument('--dataset', default='mnist', help='cifar10 | svhn')
+parser.add_argument('--dataset', default='cifar10_cat', help='cifar10 | svhn')
 parser.add_argument('--batch-size', type=int, default=128, help='input batch size for training')
-parser.add_argument('--imageSize', type=int, default=28, help='the height / width of the input image to network')
+parser.add_argument('--imageSize', type=int, default=32, help='the height / width of the input image to network')
 parser.add_argument('--test_batch_size', type=int, default=1000)
 parser.add_argument('--gpu', type=int, default=0)
 parser.add_argument('--droprate', type=float, default=0.1, help='learning rate decay')
-parser.add_argument('--decreasing_lr', default=[10, 20, 30], nargs='+', help='decreasing strategy')
+parser.add_argument('--decreasing_lr', default=[20, 40, 60], nargs='+', help='decreasing strategy')
 parser.add_argument('--seed', type=float, default=0)
 args = parser.parse_args()
 
@@ -46,7 +46,7 @@ net = models.BBP()
 net = net.to(device)
 
 
-fake_label = 1/10
+fake_label = 1/5
 
 
 # optimizer1 = optim.Adam([{'params':[ param for name, param in net.named_parameters() if 'bayesian' not in name]}], lr=0.001)

@@ -9,4 +9,4 @@
 #SBATCH -t 24:00:00 
 
 
-python -u test_by_matrix.py --pre_trained_net save_BBP_mnist/final_model --network BBP --dataset mnist --semi_out_dataset svhn --out_dataset cifar10
+python -u test_by_matrix.py --pre_trained_net save_BBP_mnist/final_model --network BBP --dataset cifar10_cat --semi_out_dataset cifar100_tiger --out_dataset cifar10_truck

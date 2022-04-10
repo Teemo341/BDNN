@@ -178,7 +178,7 @@ def getCIFAR10_cat(batch_size, test_batch_size, img_size, **kwargs):
                 transforms.RandomCrop(32, padding=4),
                 transforms.RandomHorizontalFlip(),
                 transforms.Resize(img_size),
-                transforms.Grayscale(),
+                # transforms.Grayscale(),
                 transforms.ToTensor(),
             ])),
         batch_size=batch_size, shuffle=True, drop_last=True, **kwargs)
@@ -188,7 +188,7 @@ def getCIFAR10_cat(batch_size, test_batch_size, img_size, **kwargs):
             root='/home/home_node4/ssy/BDNN/data/cifar10', train=False, download=True,
             transform=transforms.Compose([
                 transforms.Resize(img_size),
-                transforms.Grayscale(),
+                # transforms.Grayscale(),
                 transforms.ToTensor(),
             ])),
         batch_size=test_batch_size, shuffle=False, drop_last=True, **kwargs)
@@ -208,7 +208,7 @@ def getCIFAR100_tiger(batch_size, test_batch_size, img_size, **kwargs):
                 transforms.RandomCrop(32, padding=4),
                 transforms.RandomHorizontalFlip(),
                 transforms.Resize(img_size),
-                transforms.Grayscale(),
+                # transforms.Grayscale(),
                 transforms.ToTensor(),
             ])),
         batch_size=batch_size, shuffle=True, drop_last=True, **kwargs)
@@ -218,7 +218,7 @@ def getCIFAR100_tiger(batch_size, test_batch_size, img_size, **kwargs):
             root='/home/home_node4/ssy/BDNN/data', train=False, download=True,
             transform=transforms.Compose([
                 transforms.Resize(img_size),
-                transforms.Grayscale(),
+                # transforms.Grayscale(),
                 transforms.ToTensor(),
             ])),
         batch_size=test_batch_size, shuffle=False, drop_last=True, **kwargs)
@@ -238,7 +238,7 @@ def getCIFAR10_truck(batch_size, test_batch_size, img_size, **kwargs):
                 transforms.RandomCrop(32, padding=4),
                 transforms.RandomHorizontalFlip(),
                 transforms.Resize(img_size),
-                transforms.Grayscale(),
+                # transforms.Grayscale(),
                 transforms.ToTensor(),
             ])),
         batch_size=batch_size, shuffle=True, drop_last=True, **kwargs)
@@ -248,7 +248,37 @@ def getCIFAR10_truck(batch_size, test_batch_size, img_size, **kwargs):
             root='/home/home_node4/ssy/BDNN/data/cifar10', train=False, download=True,
             transform=transforms.Compose([
                 transforms.Resize(img_size),
-                transforms.Grayscale(),
+                # transforms.Grayscale(),
+                transforms.ToTensor(),
+            ])),
+        batch_size=test_batch_size, shuffle=False, drop_last=True, **kwargs)
+    ds.append(test_loader)
+
+    return ds
+
+def getCIFAR100_bus(batch_size, test_batch_size, img_size, **kwargs):
+    num_workers = kwargs.setdefault('num_workers', 1)
+    kwargs.pop('input_size', None)
+    print("Building CIFAR-100 data loader with {} workers".format(num_workers))
+    ds = []
+    train_loader = DataLoader(
+        datasets.CIFAR100_bus(
+            root='/home/home_node4/ssy/BDNN/data', train=True, download=True,
+            transform=transforms.Compose([
+                transforms.RandomCrop(32, padding=4),
+                transforms.RandomHorizontalFlip(),
+                transforms.Resize(img_size),
+                # transforms.Grayscale(),
+                transforms.ToTensor(),
+            ])),
+        batch_size=batch_size, shuffle=True, drop_last=True, **kwargs)
+    ds.append(train_loader)
+    test_loader = DataLoader(
+        datasets.CIFAR100_bus(
+            root='/home/home_node4/ssy/BDNN/data', train=False, download=True,
+            transform=transforms.Compose([
+                transforms.Resize(img_size),
+                # transforms.Grayscale(),
                 transforms.ToTensor(),
             ])),
         batch_size=test_batch_size, shuffle=False, drop_last=True, **kwargs)
@@ -274,12 +304,14 @@ def getDataSet(data_type, batch_size,test_batch_size, imageSize):
         train_loader, test_loader = getCIFAR100(batch_size, test_batch_size, imageSize)
     elif data_type == 'cifar100_tiger':
         train_loader, test_loader = getCIFAR100_tiger(batch_size, test_batch_size, imageSize)
+    elif data_type == 'cifar100_bus':
+        train_loader, test_loader = getCIFAR100_bus(batch_size, test_batch_size, imageSize)
     return train_loader, test_loader
 
 
 
 if __name__ == '__main__':
-    train_loader, test_loader = getDataSet('cifar100_tiger', 256, 1000, 28)
+    train_loader, test_loader = getDataSet('cifar100_tiger', 256, 1000, 32)
     print(len(test_loader))
     for batch_idx, (inputs, targets) in enumerate(test_loader):
         print(inputs.shape)

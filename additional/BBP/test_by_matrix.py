@@ -33,7 +33,7 @@ parser.add_argument('--network', type=str, choices=['resnet', 'resnet_bayesian',
 parser.add_argument('--batch-size', type=int, default=256, help='batch size')
 parser.add_argument('--seed', type=int, default=0, help='random seed')
 parser.add_argument('--dataset', required=True, help='in domain dataset')
-parser.add_argument('--imageSize', type=int, default=28,
+parser.add_argument('--imageSize', type=int, default=32,
                     help='the height / width of the input image to network')
 parser.add_argument('--semi_out_dataset', required=True,
                     help='semi-out-of-dist dataset: cifar10 | svhn | imagenet | lsun')
@@ -44,7 +44,7 @@ parser.add_argument('--num_classes', type=int, default=10,
 parser.add_argument('--pre_trained_net', default='',
                     help="path to pre trained_net")
 parser.add_argument('--gpu', type=int, default=0)
-parser.add_argument('--test_batch_size', type=int, default=1000)
+parser.add_argument('--test_batch_size', type=int, default=200)
 
 
 args = parser.parse_args()
@@ -72,9 +72,9 @@ if args.network == 'resnet':
 elif args.network == 'resnet_bayesian':
     model = models.Resnet_bayesian()
 elif args.network == 'sdenet':
-    model = models.SDENet_mnist(layer_depth=6, num_classes=10, dim=64)
+    model = models.SDENet_mnist(layer_depth=6, num_classes=2, dim=64)
 elif args.network == 'sdenet_multi':
-    model = models.SDENet_multi_mnist(layer_depth=6, num_classes=10, dim=64)
+    model = models.SDENet_multi_mnist(layer_depth=6, num_classes=2, dim=64)
 elif args.network == 'mc_dropout':
     model = models.Resnet_dropout()
 elif args.network == 'BBP':
@@ -155,7 +155,8 @@ def generate_semi_target():
     #? seems no need for detection in semi-OOD
 
     with torch.no_grad():
-        for data, targets in semi_test_loader:
+        # for data, targets in semi_test_loader:
+        for data, targets in semi_train_loader:
             total += data.size(0)
             data, targets = data.to(device), targets.to(device)
             batch_output = 0
@@ -193,7 +194,8 @@ def generate_non_target():
     total = 0
     f3 = open('%s/confidence_Base_Out.txt' % outf, 'w')
     with torch.no_grad():
-        for data, targets in nt_test_loader:
+        # for data, targets in nt_test_loader:
+        for data, targets in nt_train_loader:
             total += data.size(0)
             data, targets = data.to(device), targets.to(device)
             batch_output = 0
