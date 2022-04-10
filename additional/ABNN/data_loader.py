@@ -311,7 +311,7 @@ def getDataSet(data_type, batch_size,test_batch_size, imageSize):
 
 
 if __name__ == '__main__':
-    train_loader, test_loader = getDataSet('cifar100_tiger', 256, 1000, 32)
+    train_loader, test_loader = getDataSet('mnist', 256, 1000, 32)
     print(len(test_loader))
     for batch_idx, (inputs, targets) in enumerate(test_loader):
         print(inputs.shape)

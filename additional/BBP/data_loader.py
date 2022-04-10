@@ -52,7 +52,7 @@ def getSVHN(batch_size, test_batch_size, img_size, **kwargs):
         datasets.SVHN(
             root='/home/home_node4/ssy/BDNN/data/svhn', split='train', download=True,
             transform=transforms.Compose([
-                transforms.Grayscale(),
+                # transforms.Grayscale(),
                 transforms.Resize(img_size),
                 transforms.ToTensor(),
             ]),
