@@ -215,16 +215,37 @@ def confusion_matrix(dir_name):
     f3.sort()
 
     # avoid Tianji horse racing, take first 9000 samples
-    f1 = f1[0:1000]
-    f2 = f2[0:1000]
-    f3 = f3[0:1000]
+    # f1 = f1[0:1000]
+    # f2 = f2[0:1000]
+    # f3 = f3[0:1000]
     
     len_1 = len(f1)
     len_2 = len(f2)
     len_3 = len(f3)
+
+    # f1 = f1[::int(len_1/500)]
+    # f2 = f2[::int(len_2/500)]
+    # f3 = f3[::int(len_3/500)]
+
+    # f1 = f1[0:300]
+    # f2 = f2[0:300]
+    # f3 = f3[0:300]
+
+    # len_1 = len(f1)
+    # len_2 = len(f2)
+    # len_3 = len(f3)
+    # print(len_1,len_2,len_3)
     
-    plt.ylim((-0.1, 1.1))
-    my_y_ticks = np.arange(0, 1.25, 0.25)
+    # f1 = f1[int((len_1-500)/2):int((len_1-500)/2+500)]
+    # f2 = f2[int((len_2-500)/2):int((len_2-500)/2+500)]
+    # f3 = f3[int((len_3-500)/2):int((len_3-500)/2+500)]
+
+    # len_1 = len(f1)
+    # len_2 = len(f2)
+    # len_3 = len(f3)
+    
+    plt.ylim((-0.1, 0.6))
+    my_y_ticks = np.arange(0, 0.6, 0.125)
     plt.yticks(my_y_ticks)
     plt.yticks(fontsize=16)
     scale_ls = [len_1/2,len_1+len_2/2,len_1+len_2+len_3/2]

@@ -68,6 +68,8 @@ def train(epoch):
     total = 0
     ##training with in-domain data
     for batch_idx, (inputs, targets) in enumerate(train_loader):
+        if args.dataset=='mnist':
+            inputs = torch.cat((inputs,inputs,inputs),dim=1)
         inputs, targets = inputs.to(device), targets.to(device)
         # optimizer1.zero_grad()
         optimizer2.zero_grad()
@@ -115,6 +117,8 @@ def test(epoch):
     total = 0
     with torch.no_grad():
         for batch_idx, (inputs, targets) in enumerate(test_loader):
+            if args.dataset=='mnist':
+                inputs = torch.cat((inputs,inputs,inputs),dim=1)
             inputs, targets = inputs.to(device), targets.to(device)
             outputs = net(inputs).to(device)
             _, predicted = outputs.max(1)

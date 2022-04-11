@@ -10,27 +10,6 @@ Building MNIST data loader with 1 workers
 generate log from in-distribution data
 generate log from semi-out-of-distribution data
 generate log from out-of-distribution data
-Traceback (most recent call last):
-  File "/home/home_node4/ssy/BDNN/additional/sdenet/test_by_matrix.py", line 223, in <module>
-    generate_non_target()
-  File "/home/home_node4/ssy/BDNN/additional/sdenet/test_by_matrix.py", line 203, in generate_non_target
-    batch_output, batch_std = evaluate(model, data)
-  File "/home/home_node4/ssy/BDNN/additional/sdenet/test_by_matrix.py", line 108, in evaluate
-    batch_output = [regressor(data) for i in range(args.eva_iter)]
-  File "/home/home_node4/ssy/BDNN/additional/sdenet/test_by_matrix.py", line 108, in <listcomp>
-    batch_output = [regressor(data) for i in range(args.eva_iter)]
-  File "/home/home_node4/ssy/anaconda3/envs/BDNN/lib/python3.9/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
-    result = self.forward(*input, **kwargs)
-  File "/home/home_node4/ssy/BDNN/additional/sdenet/models/sdenet_mnist.py", line 141, in forward
-    out = self.downsampling_layers(x)
-  File "/home/home_node4/ssy/anaconda3/envs/BDNN/lib/python3.9/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
-    result = self.forward(*input, **kwargs)
-  File "/home/home_node4/ssy/anaconda3/envs/BDNN/lib/python3.9/site-packages/torch/nn/modules/container.py", line 119, in forward
-    input = module(input)
-  File "/home/home_node4/ssy/anaconda3/envs/BDNN/lib/python3.9/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
-    result = self.forward(*input, **kwargs)
-  File "/home/home_node4/ssy/anaconda3/envs/BDNN/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 399, in forward
-    return self._conv_forward(input, self.weight, self.bias)
-  File "/home/home_node4/ssy/anaconda3/envs/BDNN/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 395, in _conv_forward
-    return F.conv2d(input, weight, bias, self.stride,
-RuntimeError: Given groups=1, weight of size [64, 3, 3, 3], expected input[256, 1, 28, 28] to have 3 channels, but got 1 channels instead
+10000 768 59904
+findfont: Font family ['Times New Roman'] not found. Falling back to DejaVu Sans.
+findfont: Font family ['Times New Roman'] not found. Falling back to DejaVu Sans.

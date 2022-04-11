@@ -196,6 +196,8 @@ def generate_non_target():
     with torch.no_grad():
         # for data, targets in nt_test_loader:
         for data, targets in nt_train_loader:
+            if args.out_dataset=='mnist':
+                data = torch.cat((data,data,data),dim=1)
             total += data.size(0)
             data, targets = data.to(device), targets.to(device)
             batch_output = 0
