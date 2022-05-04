@@ -288,7 +288,7 @@ def getCIFAR100_bus(batch_size, test_batch_size, img_size, **kwargs):
 
     return ds
 
-def getAircraft_ID(batch_size, test_batch_size, **kwargs):
+def getAircraft_ID(batch_size, test_batch_size, img_size, **kwargs):
     num_workers = kwargs.setdefault('num_workers', 1)
     print("Building aircraft ID data loader with {} workers".format(num_workers))
     ds = []
@@ -312,10 +312,92 @@ def getAircraft_ID(batch_size, test_batch_size, **kwargs):
             transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225)),
         ]
     )
-    train_set = datasets.ImageFolder(root=join(data_dir, data_sets[0]), transform=train_transform)
+    train_set = datasets.ImageFolder(root='/home/home_node4/ssy/BDNN/data/FGVC_t/ID/train', transform=train_transform)
     train_loader = DataLoader(
         train_set, batch_size=batch_size, shuffle=True, num_workers=num_workers
     )
+    ds.append(train_loader)
+    test_set = datasets.ImageFolder(root='/home/home_node4/ssy/BDNN/data/FGVC_t/ID/test', transform=test_transform)
+    test_loader = DataLoader(
+        test_set, batch_size=test_batch_size, shuffle=True, num_workers=num_workers
+    )
+    ds.append(test_loader)
+
+    return ds
+
+def getAircraft_full(batch_size, test_batch_size, img_size, **kwargs):
+    num_workers = kwargs.setdefault('num_workers', 1)
+    print("Building aircraft ID data loader with {} workers".format(num_workers))
+    ds = []
+    re_size = 512
+    crop_size = 448
+
+    train_transform = transforms.Compose(
+        [
+            transforms.Resize((re_size, re_size)),
+            transforms.RandomCrop(crop_size, padding=8),
+            transforms.RandomHorizontalFlip(),
+            transforms.ToTensor(),
+            transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225)),
+        ]
+    )
+    test_transform = transforms.Compose(
+        [
+            transforms.Resize((re_size, re_size)),
+            transforms.CenterCrop(crop_size),
+            transforms.ToTensor(),
+            transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225)),
+        ]
+    )
+    train_set = datasets.ImageFolder(root='/home/home_node4/ssy/BDNN/data/FGVC_t/full/train', transform=train_transform)
+    train_loader = DataLoader(
+        train_set, batch_size=batch_size, shuffle=True, num_workers=num_workers
+    )
+    ds.append(train_loader)
+    test_set = datasets.ImageFolder(root='/home/home_node4/ssy/BDNN/data/FGVC_t/full/test', transform=test_transform)
+    test_loader = DataLoader(
+        test_set, batch_size=test_batch_size, shuffle=True, num_workers=num_workers
+    )
+    ds.append(test_loader)
+
+    return ds
+
+def getAircraft_semi(batch_size, test_batch_size, img_size, **kwargs):
+    num_workers = kwargs.setdefault('num_workers', 1)
+    print("Building aircraft ID data loader with {} workers".format(num_workers))
+    ds = []
+    re_size = 512
+    crop_size = 448
+
+    train_transform = transforms.Compose(
+        [
+            transforms.Resize((re_size, re_size)),
+            transforms.RandomCrop(crop_size, padding=8),
+            transforms.RandomHorizontalFlip(),
+            transforms.ToTensor(),
+            transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225)),
+        ]
+    )
+    test_transform = transforms.Compose(
+        [
+            transforms.Resize((re_size, re_size)),
+            transforms.CenterCrop(crop_size),
+            transforms.ToTensor(),
+            transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225)),
+        ]
+    )
+    train_set = datasets.ImageFolder(root='/home/home_node4/ssy/BDNN/data/FGVC_t/semi/train', transform=train_transform)
+    train_loader = DataLoader(
+        train_set, batch_size=batch_size, shuffle=True, num_workers=num_workers
+    )
+    ds.append(train_loader)
+    test_set = datasets.ImageFolder(root='/home/home_node4/ssy/BDNN/data/FGVC_t/semi/test', transform=test_transform)
+    test_loader = DataLoader(
+        test_set, batch_size=test_batch_size, shuffle=True, num_workers=num_workers
+    )
+    ds.append(test_loader)
+
+    return ds
 
 
 def getDataSet(data_type, batch_size,test_batch_size, imageSize):
@@ -337,14 +419,24 @@ def getDataSet(data_type, batch_size,test_batch_size, imageSize):
         train_loader, test_loader = getCIFAR100_tiger(batch_size, test_batch_size, imageSize)
     elif data_type == 'cifar100_bus':
         train_loader, test_loader = getCIFAR100_bus(batch_size, test_batch_size, imageSize)
+    elif data_type == 'aircraft_ID':
+        train_loader, test_loader = getAircraft_ID(batch_size, test_batch_size, imageSize)
+    elif data_type == 'aircraft_semi':
+        train_loader, test_loader = getAircraft_semi(batch_size, test_batch_size, imageSize)
+    elif data_type == 'aircraft_full':
+        train_loader, test_loader = getAircraft_full(batch_size, test_batch_size, imageSize)
     return train_loader, test_loader
 
 
 
 if __name__ == '__main__':
-    train_loader, test_loader = getDataSet('cifar100_tiger', 256, 1000, 32)
+    train_loader, test_loader = getDataSet('aircraft_ID', 256, 1000, 32)
     print(len(test_loader))
     for batch_idx, (inputs, targets) in enumerate(test_loader):
+        print(inputs.shape)
+        print(targets.shape)
+    print(len(train_loader))
+    for batch_idx, (inputs, targets) in enumerate(train_loader):
         print(inputs.shape)
         print(targets.shape)
 
