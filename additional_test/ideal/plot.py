@@ -9,8 +9,8 @@ f2 = []
 f3 = []
 for i in range(200) :
     f1.append(0)
-    f2.append(1+i/200*1.15)
-    f3.append(7-4*exp(-i/300))
+    f2.append(1+i/200*0.55)
+    f3.append(6-4*exp(-i/300))
 
 len_1 = len(f1)
 len_2 = len(f2)
@@ -29,9 +29,9 @@ plt.xlabel("Data distribution",fontsize=20,fontweight='normal',fontfamily='Times
 plt.ylabel("Uncertainty",fontsize=20,fontweight='normal',fontfamily='Times New Roman')
 
 # visualizatoin
-ID = plt.scatter(np.arange(len_1), [i/10 for i in f1], s=5, c='r',label='ID')
-semi_OOD = plt.scatter(np.arange(len_2)+len_1, [i/10 for i in f2], s=5, c='b',label='semi-OOD')
-full_OOD = plt.scatter(np.arange(len_3)+len_1+len_2, [i/10 for i in f3], s=5, c='g',label='full-OOD')
+ID = plt.scatter(np.arange(len_1), [i/10*1.5 for i in f1], s=5, c='r',label='ID')
+semi_OOD = plt.scatter(np.arange(len_2)+len_1, [i/10*1.5 for i in f2], s=5, c='b',label='semi-OOD')
+full_OOD = plt.scatter(np.arange(len_3)+len_1+len_2, [i/10*1.5 for i in f3], s=5, c='g',label='full-OOD')
 
 font1 = {'family' : 'Times New Roman',
 'weight' : 'normal',

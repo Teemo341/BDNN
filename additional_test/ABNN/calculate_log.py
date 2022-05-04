@@ -229,7 +229,7 @@ def confusion_matrix(dir_name):
 
     f1 = f1[0:100]
     f2 = f2[0:100]
-    f3 = f3[50:150]
+    f3 = f3[30:130]
 
     # len_1 = len(f1)
     # len_2 = len(f2)
@@ -255,9 +255,9 @@ def confusion_matrix(dir_name):
     plt.ylabel("Uncertainty",fontsize=20,fontweight='normal',fontfamily='Times New Roman')
 
     # visualizatoin
-    ID = plt.scatter(np.arange(len_1), [i/10*3 for i in f1], s=5, c='r',label='ID')
-    semi_OOD = plt.scatter(np.arange(len_2)+len_1, [i/10*3 for i in f2], s=5, c='b',label='semi-OOD')
-    full_OOD = plt.scatter(np.arange(len_3)+len_1+len_2, [i/10*3 for i in f3], s=5, c='g',label='full-OOD')
+    ID = plt.scatter(np.arange(len_1), [i/10*3*1.5 for i in f1], s=5, c='r',label='ID')
+    semi_OOD = plt.scatter(np.arange(len_2)+len_1, [i/10*3*1.5 for i in f2], s=5, c='b',label='semi-OOD')
+    full_OOD = plt.scatter(np.arange(len_3)+len_1+len_2, [i/10*3*1.5 for i in f3], s=5, c='g',label='full-OOD')
 
     font1 = {'family' : 'Times New Roman',
     'weight' : 'normal',
