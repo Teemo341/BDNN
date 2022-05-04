@@ -1,0 +1,23 @@
+Namespace(eva_iter=10, network='resnet_bayesian', batch_size=256, seed=0, dataset='cifar10_cat', imageSize=32, semi_out_dataset='cifar100_tiger', out_dataset='mnist', num_classes=10, pre_trained_net='save_resnet_bayesian_mnist/final_model', gpu=0, test_batch_size=200)
+Random Seed:  0
+Load model
+load target data:  cifar10_cat
+Building CIFAR-10 data loader with 1 workers
+load semi data:  cifar10_cat
+Building CIFAR-100 data loader with 1 workers
+load non target data:  mnist
+Building MNIST data loader with 1 workers
+generate log from in-distribution data
+generate log from semi-out-of-distribution data
+generate log from out-of-distribution data
+10000 768 10000
+findfont: Font family ['Times New Roman'] not found. Falling back to DejaVu Sans.
+findfont: Font family ['Times New Roman'] not found. Falling back to DejaVu Sans.
+Confusion Matrix:
++----------+-----+----------+-----+
+|    \     |  ID | semi-OOD | OOD |
++----------+-----+----------+-----+
+|    ID    | 100 |    0     |  0  |
+| semi-OOD |  4  |    96    |  0  |
+|   OOD    |  0  |    68    |  32 |
++----------+-----+----------+-----+
