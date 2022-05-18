@@ -270,47 +270,47 @@ def confusion_matrix(dir_name):
     # plt.show()
     plt.savefig('%s/cluster_visualization.jpg' % dir_name,bbox_inches = 'tight')
 
-    # # k-means
-    # f = f1+f2+f3
-    # f = np.array(f)
-    # clf = KMeans(n_clusters=3)
-    # clf.fit(f.reshape(-1, 1))
-    # centers = clf.cluster_centers_
-    # labels = clf.labels_
-    # # find the class of cluster centers
-    # idx = sorted(enumerate(centers[:, 0]), key=lambda x: x[1])
+    # k-means
+    f = f1+f2+f3
+    f = np.array(f)
+    clf = KMeans(n_clusters=3)
+    clf.fit(f.reshape(-1, 1))
+    centers = clf.cluster_centers_
+    labels = clf.labels_
+    # find the class of cluster centers
+    idx = sorted(enumerate(centers[:, 0]), key=lambda x: x[1])
 
-    # # construct confusion matrix
-    # confusion = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
-    # for i in range(0, len_1):
-    #     if labels[i] == idx[0][0]:
-    #         confusion[0][0] += 1
-    #     elif labels[i] == idx[1][0]:
-    #         confusion[0][1] += 1
-    #     else:
-    #         confusion[0][2] += 1
-    # for i in range(len_1, len_1+len_2):
-    #     if labels[i] == idx[0][0]:
-    #         confusion[1][0] += 1
-    #     elif labels[i] == idx[1][0]:
-    #         confusion[1][1] += 1
-    #     else:
-    #         confusion[1][2] += 1
-    # for i in range(len_1+len_2, len_1+len_2+len_3):
-    #     if labels[i] == idx[0][0]:
-    #         confusion[2][0] += 1
-    #     elif labels[i] == idx[1][0]:
-    #         confusion[2][1] += 1
-    #     else:
-    #         confusion[2][2] += 1
+    # construct confusion matrix
+    confusion = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+    for i in range(0, len_1):
+        if labels[i] == idx[0][0]:
+            confusion[0][0] += 1
+        elif labels[i] == idx[1][0]:
+            confusion[0][1] += 1
+        else:
+            confusion[0][2] += 1
+    for i in range(len_1, len_1+len_2):
+        if labels[i] == idx[0][0]:
+            confusion[1][0] += 1
+        elif labels[i] == idx[1][0]:
+            confusion[1][1] += 1
+        else:
+            confusion[1][2] += 1
+    for i in range(len_1+len_2, len_1+len_2+len_3):
+        if labels[i] == idx[0][0]:
+            confusion[2][0] += 1
+        elif labels[i] == idx[1][0]:
+            confusion[2][1] += 1
+        else:
+            confusion[2][2] += 1
 
-    # # print results
-    # print("Confusion Matrix:")
-    # tabl = PrettyTable(["\\", "ID", "semi-OOD", "OOD"])
-    # tabl.add_row(["ID"]+confusion[0])
-    # tabl.add_row(["semi-OOD"]+confusion[1])
-    # tabl.add_row(["OOD"]+confusion[2])
-    # print(tabl)
+    # print results
+    print("Confusion Matrix:")
+    tabl = PrettyTable(["\\", "ID", "semi-OOD", "OOD"])
+    tabl.add_row(["ID"]+confusion[0])
+    tabl.add_row(["semi-OOD"]+confusion[1])
+    tabl.add_row(["OOD"]+confusion[2])
+    print(tabl)
 
 
 def metric(dir_name, task):

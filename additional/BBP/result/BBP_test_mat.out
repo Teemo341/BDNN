@@ -13,3 +13,11 @@ generate log from out-of-distribution data
 10000 768 59904
 findfont: Font family ['Times New Roman'] not found. Falling back to DejaVu Sans.
 findfont: Font family ['Times New Roman'] not found. Falling back to DejaVu Sans.
+Confusion Matrix:
++----------+-----+----------+-----+
+|    \     |  ID | semi-OOD | OOD |
++----------+-----+----------+-----+
+|    ID    | 200 |    0     |  0  |
+| semi-OOD | 200 |    0     |  0  |
+|   OOD    |  0  |   112    |  88 |
++----------+-----+----------+-----+

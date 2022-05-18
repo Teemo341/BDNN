@@ -1,0 +1,163 @@
+load data:  aircraft_ID
+Building aircraft ID data loader with 1 workers
+==> Building model..
+
+Epoch: 0
+Train epoch:0 	Loss: 0.760499 | Acc: 48.507463 (65/134)
+Test epoch: 0| Acc: 50.0 (33/66) 
+
+Epoch: 1
+Train epoch:1 	Loss: 1.006389 | Acc: 40.298507 (54/134)
+Test epoch: 1| Acc: 50.0 (33/66) 
+
+Epoch: 2
+Train epoch:2 	Loss: 0.696502 | Acc: 55.223881 (74/134)
+Test epoch: 2| Acc: 60.60606060606061 (40/66) 
+
+Epoch: 3
+Train epoch:3 	Loss: 0.777375 | Acc: 44.029851 (59/134)
+Test epoch: 3| Acc: 59.09090909090909 (39/66) 
+
+Epoch: 4
+Train epoch:4 	Loss: 0.705286 | Acc: 52.238806 (70/134)
+Test epoch: 4| Acc: 50.0 (33/66) 
+
+Epoch: 5
+Train epoch:5 	Loss: 0.699201 | Acc: 52.238806 (70/134)
+Test epoch: 5| Acc: 57.57575757575758 (38/66) 
+
+Epoch: 6
+Train epoch:6 	Loss: 0.762092 | Acc: 53.731343 (72/134)
+Test epoch: 6| Acc: 50.0 (33/66) 
+
+Epoch: 7
+Train epoch:7 	Loss: 0.730637 | Acc: 50.746269 (68/134)
+Test epoch: 7| Acc: 50.0 (33/66) 
+
+Epoch: 8
+Train epoch:8 	Loss: 0.692678 | Acc: 48.507463 (65/134)
+Test epoch: 8| Acc: 60.60606060606061 (40/66) 
+
+Epoch: 9
+Train epoch:9 	Loss: 0.680431 | Acc: 53.731343 (72/134)
+Test epoch: 9| Acc: 50.0 (33/66) 
+
+Epoch: 10
+Train epoch:10 	Loss: 0.707697 | Acc: 55.970149 (75/134)
+Test epoch: 10| Acc: 50.0 (33/66) 
+
+Epoch: 11
+Train epoch:11 	Loss: 0.713847 | Acc: 48.507463 (65/134)
+Test epoch: 11| Acc: 51.515151515151516 (34/66) 
+
+Epoch: 12
+Train epoch:12 	Loss: 0.669204 | Acc: 62.686567 (84/134)
+Test epoch: 12| Acc: 59.09090909090909 (39/66) 
+
+Epoch: 13
+Train epoch:13 	Loss: 0.657831 | Acc: 61.940299 (83/134)
+Test epoch: 13| Acc: 60.60606060606061 (40/66) 
+
+Epoch: 14
+Train epoch:14 	Loss: 0.654807 | Acc: 64.179104 (86/134)
+Test epoch: 14| Acc: 62.121212121212125 (41/66) 
+
+Epoch: 15
+Train epoch:15 	Loss: 0.655779 | Acc: 64.179104 (86/134)
+Test epoch: 15| Acc: 60.60606060606061 (40/66) 
+
+Epoch: 16
+Train epoch:16 	Loss: 0.654618 | Acc: 62.686567 (84/134)
+Test epoch: 16| Acc: 57.57575757575758 (38/66) 
+
+Epoch: 17
+Train epoch:17 	Loss: 0.659311 | Acc: 64.179104 (86/134)
+Test epoch: 17| Acc: 59.09090909090909 (39/66) 
+
+Epoch: 18
+Train epoch:18 	Loss: 0.646307 | Acc: 62.686567 (84/134)
+Test epoch: 18| Acc: 57.57575757575758 (38/66) 
+
+Epoch: 19
+Train epoch:19 	Loss: 0.641268 | Acc: 62.686567 (84/134)
+Test epoch: 19| Acc: 59.09090909090909 (39/66) 
+
+Epoch: 20
+Train epoch:20 	Loss: 0.642747 | Acc: 63.432836 (85/134)
+Test epoch: 20| Acc: 57.57575757575758 (38/66) 
+
+Epoch: 21
+Train epoch:21 	Loss: 0.646337 | Acc: 63.432836 (85/134)
+Test epoch: 21| Acc: 57.57575757575758 (38/66) 
+
+Epoch: 22
+Train epoch:22 	Loss: 0.643119 | Acc: 63.432836 (85/134)
+Test epoch: 22| Acc: 60.60606060606061 (40/66) 
+
+Epoch: 23
+Train epoch:23 	Loss: 0.643397 | Acc: 62.686567 (84/134)
+Test epoch: 23| Acc: 59.09090909090909 (39/66) 
+
+Epoch: 24
+Train epoch:24 	Loss: 0.634807 | Acc: 64.179104 (86/134)
+Test epoch: 24| Acc: 60.60606060606061 (40/66) 
+
+Epoch: 25
+Train epoch:25 	Loss: 0.636605 | Acc: 61.940299 (83/134)
+Test epoch: 25| Acc: 59.09090909090909 (39/66) 
+
+Epoch: 26
+Train epoch:26 	Loss: 0.637842 | Acc: 62.686567 (84/134)
+Test epoch: 26| Acc: 60.60606060606061 (40/66) 
+
+Epoch: 27
+Train epoch:27 	Loss: 0.638032 | Acc: 62.686567 (84/134)
+Test epoch: 27| Acc: 59.09090909090909 (39/66) 
+
+Epoch: 28
+Train epoch:28 	Loss: 0.634225 | Acc: 64.179104 (86/134)
+Test epoch: 28| Acc: 59.09090909090909 (39/66) 
+
+Epoch: 29
+Train epoch:29 	Loss: 0.632455 | Acc: 64.925373 (87/134)
+Test epoch: 29| Acc: 59.09090909090909 (39/66) 
+
+Epoch: 30
+Train epoch:30 	Loss: 0.640050 | Acc: 65.671642 (88/134)
+Test epoch: 30| Acc: 59.09090909090909 (39/66) 
+
+Epoch: 31
+Train epoch:31 	Loss: 0.638062 | Acc: 65.671642 (88/134)
+Test epoch: 31| Acc: 59.09090909090909 (39/66) 
+
+Epoch: 32
+Train epoch:32 	Loss: 0.642203 | Acc: 63.432836 (85/134)
+Test epoch: 32| Acc: 59.09090909090909 (39/66) 
+
+Epoch: 33
+Train epoch:33 	Loss: 0.634224 | Acc: 64.179104 (86/134)
+Test epoch: 33| Acc: 59.09090909090909 (39/66) 
+
+Epoch: 34
+Train epoch:34 	Loss: 0.635801 | Acc: 64.925373 (87/134)
+Test epoch: 34| Acc: 59.09090909090909 (39/66) 
+
+Epoch: 35
+Train epoch:35 	Loss: 0.639048 | Acc: 64.179104 (86/134)
+Test epoch: 35| Acc: 59.09090909090909 (39/66) 
+
+Epoch: 36
+Train epoch:36 	Loss: 0.641860 | Acc: 61.940299 (83/134)
+Test epoch: 36| Acc: 59.09090909090909 (39/66) 
+
+Epoch: 37
+Train epoch:37 	Loss: 0.637371 | Acc: 63.432836 (85/134)
+Test epoch: 37| Acc: 59.09090909090909 (39/66) 
+
+Epoch: 38
+Train epoch:38 	Loss: 0.638706 | Acc: 63.432836 (85/134)
+Test epoch: 38| Acc: 59.09090909090909 (39/66) 
+
+Epoch: 39
+Train epoch:39 	Loss: 0.639877 | Acc: 64.925373 (87/134)
+Test epoch: 39| Acc: 59.09090909090909 (39/66) 
