@@ -104,7 +104,7 @@ def train(epoch):
                                        sample_nbr=3,
                                        complexity_cost_weight=1 / 50000)
         train_loss_out_diffu += (loss_out.item())
-        loss_out = -1*loss_out
+        loss_out = -0.2*loss_out
         loss_out.backward()
         optimizer2.step()
         

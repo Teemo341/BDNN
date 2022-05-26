@@ -258,8 +258,10 @@ def confusion_matrix(dir_name):
 
     # visualizatoin
     f1 = [i/10*3*1.5 for i in f1]
-    f2 = [i/10*3*1.5-0.05 for i in f2]
-    f3 = [i/10*3*1.5+0.08 for i in f3]
+    # f2 = [i/10*3*1.5-0.06 for i in f2]
+    # f3 = [i/10*3*1.5+0.08 for i in f3]
+    f2 = [i/10*3*1.5 for i in f2]
+    f3 = [i/10*3*1.5 for i in f3]
     ID = plt.scatter(np.arange(len_1), f1, s=5, c='r',label='ID')
     semi_OOD = plt.scatter(np.arange(len_2)+len_1, f2, s=5, c='b',label='semi-OOD')
     full_OOD = plt.scatter(np.arange(len_3)+len_1+len_2, [f3], s=5, c='g',label='full-OOD')
