@@ -20,13 +20,13 @@ def getMNIST(batch_size, test_batch_size, img_size, **kwargs):
     ])
     ds = []
     train_loader = DataLoader(
-        datasets.MNIST(root='/home/ssy/BDNN/data/mnist', train=True, download=True, transform=transform_train), batch_size=batch_size,
+        datasets.MNIST(root='/home/home_node4/ssy/BDNN/data/mnist', train=True, download=True, transform=transform_train), batch_size=batch_size,
         shuffle=True, num_workers=num_workers, drop_last=True
     )
     ds.append(train_loader)
 
     test_loader = DataLoader(
-        datasets.MNIST(root='/home/ssy/BDNN/data/mnist', train=False, download=True, transform=transform_test),
+        datasets.MNIST(root='/home/home_node4/ssy/BDNN/data/mnist', train=False, download=True, transform=transform_test),
         batch_size=test_batch_size, shuffle=False, num_workers=num_workers, drop_last=True
     )
     ds.append(test_loader)
@@ -50,7 +50,7 @@ def getSVHN(batch_size, test_batch_size, img_size, **kwargs):
 
     train_loader = DataLoader(
         datasets.SVHN(
-            root='/home/ssy/BDNN/data/svhn', split='train', download=True,
+            root='/home/home_node4/ssy/BDNN/data/svhn', split='train', download=True,
             transform=transforms.Compose([
                 transforms.Grayscale(),
                 transforms.Resize(img_size),
@@ -63,7 +63,7 @@ def getSVHN(batch_size, test_batch_size, img_size, **kwargs):
 
     test_loader = DataLoader(
         datasets.SVHN(
-            root='/home/ssy/BDNN/data/svhn', split='test', download=True,
+            root='/home/home_node4/ssy/BDNN/data/svhn', split='test', download=True,
             transform=transforms.Compose([
                 transforms.Grayscale(),
                 transforms.Resize(img_size),
@@ -83,7 +83,7 @@ def getSEMEION(batch_size, test_batch_size, img_size, **kwargs):
     ds = []
     train_loader = DataLoader(
         datasets.SEMEION(
-            root='/home/ssy/BDNN/data/semeion', download=True,
+            root='/home/home_node4/ssy/BDNN/data/semeion', download=True,
             transform=transforms.Compose([
                 transforms.Resize(img_size),
                 transforms.ToTensor(),
@@ -92,7 +92,7 @@ def getSEMEION(batch_size, test_batch_size, img_size, **kwargs):
     ds.append(train_loader)
     test_loader = DataLoader(
         datasets.SEMEION(
-            root='/home/ssy/BDNN/data/semeion', download=True,
+            root='/home/home_node4/ssy/BDNN/data/semeion', download=True,
             transform=transforms.Compose([
                 transforms.Resize(img_size),
                 transforms.ToTensor(),
@@ -110,7 +110,7 @@ def getCIFAR10(batch_size, test_batch_size, img_size, **kwargs):
     ds = []
     train_loader = DataLoader(
         datasets.CIFAR10(
-            root='/home/ssy/BDNN/data/cifar10', train=True, download=True,
+            root='/home/home_node4/ssy/BDNN/data/cifar10', train=True, download=True,
             transform=transforms.Compose([
                 transforms.RandomCrop(32, padding=4),
                 transforms.RandomHorizontalFlip(),
@@ -122,7 +122,7 @@ def getCIFAR10(batch_size, test_batch_size, img_size, **kwargs):
     ds.append(train_loader)
     test_loader = DataLoader(
         datasets.CIFAR10(
-            root='/home/ssy/BDNN/data/cifar10', train=False, download=True,
+            root='/home/home_node4/ssy/BDNN/data/cifar10', train=False, download=True,
             transform=transforms.Compose([
                 transforms.Resize(img_size),
                 transforms.Grayscale(),
@@ -143,7 +143,7 @@ def getCIFAR100(batch_size, test_batch_size, img_size, **kwargs):
     ds = []
     train_loader = DataLoader(
         datasets.CIFAR100(
-            root='/home/ssy/BDNN/data/cifar100', train=True, download=True,
+            root='/home/home_node4/ssy/BDNN/data/cifar100', train=True, download=True,
             transform=transforms.Compose([
                 transforms.RandomCrop(32, padding=4),
                 transforms.RandomHorizontalFlip(),
@@ -155,7 +155,7 @@ def getCIFAR100(batch_size, test_batch_size, img_size, **kwargs):
     ds.append(train_loader)
     test_loader = DataLoader(
         datasets.CIFAR100(
-            root='/home/ssy/BDNN/data/cifar100', train=False, download=True,
+            root='/home/home_node4/ssy/BDNN/data/cifar100', train=False, download=True,
             transform=transforms.Compose([
                 transforms.Resize(img_size),
                 transforms.Grayscale(),
