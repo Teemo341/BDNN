@@ -51,6 +51,7 @@ fake_label = 1/10
 
 optimizer = optim.Adam(net.parameters(), lr=0.001)
 criterion = torch.nn.CrossEntropyLoss()
+criterion2 = torch.nn.BCEWithLogitsLoss()
 
 
 # Training
@@ -82,7 +83,7 @@ def train(epoch):
         inputs_out = 16*torch.randn(args.batch_size,1, args.imageSize, args.imageSize, device = device)+inputs
         inputs_out = inputs_out.to(device)
         outputs_out = outputs = net(inputs_out)
-        loss2 = criterion(outputs_out,label)
+        loss2 = criterion2(outputs_out,label)
         train_loss_out+= loss2.item()
 
         loss = loss1+loss2

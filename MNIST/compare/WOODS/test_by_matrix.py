@@ -67,7 +67,7 @@ if device == 'cuda':
 
 print('Load model')
 if args.network == 'resnet':
-    model = models.Resnet()
+    model = models.Resnet_aux()
     args.eva_iter = 1
 elif args.network == 'resnet_bayesian':
     model = models.Resnet_bayesian()
@@ -105,7 +105,7 @@ def apply_dropout(m):
 
 
 def evaluate(regressor, data):
-    batch_output = [regressor(data) for i in range(args.eva_iter)]
+    batch_output = [regressor(data)[:,:10] for i in range(args.eva_iter)]
     batch_output = torch.stack(batch_output).float()
     means = batch_output.mean(axis=0)
     means = F.softmax(means,dim=1)

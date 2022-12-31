@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.init as init
-__all__ = ['Resnet']
+__all__ = ['Resnet','Resnet_aux']
 
 def init_params(net):
     '''Init layer parameters.'''
@@ -103,6 +103,37 @@ class Resnet(nn.Module):
         out = self.fc_layers(out)
         return out
 
+class Resnet_aux(nn.Module):
+    def __init__(self):
+        super(Resnet_aux, self).__init__()
+        self.downsampling_layers = nn.Sequential(
+            nn.Conv2d(1, 64, 3, 1),
+            norm(64),
+            nn.ReLU(inplace=True),
+            nn.Conv2d(64, 64, 4, 2, 1),
+            norm(64),
+            nn.ReLU(inplace=True),
+            nn.Conv2d(64, 64, 4, 2, 1),
+        )
+        self.feature_layers_0 = ResBlock(64, 64)
+        self.feature_layers_1 = ResBlock(64, 64)
+        self.feature_layers_2 = ResBlock(64, 64)
+        self.feature_layers_3 = ResBlock(64, 64)
+        self.feature_layers_4 = ResBlock(64, 64)
+        self.feature_layers_5 = ResBlock(64, 64)
+        self.fc_layers = nn.Sequential(norm(64), nn.ReLU(inplace=True), nn.AdaptiveAvgPool2d((1, 1)), Flatten(), nn.Linear(64, 11))
+        # self.model = nn.Sequential(*self.downsampling_layers, *self.feature_layers, *self.fc_layers)
+        self.apply(init_params)
+    def forward(self, x):
+        out = self.downsampling_layers(x)
+        out = self.feature_layers_0(out)
+        out = self.feature_layers_1(out)
+        out = self.feature_layers_2(out)
+        out = self.feature_layers_3(out)
+        out = self.feature_layers_4(out)
+        out = self.feature_layers_5(out)
+        out = self.fc_layers(out)
+        return out
 
 def test():
     model = Resnet()

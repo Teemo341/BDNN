@@ -55,7 +55,7 @@ if device == 'cuda':
 
 print('Load model')
 if args.network == 'resnet':
-    model = models.Resnet()
+    model = models.Resnet_aux()
     args.eva_iter = 1
 elif args.network == 'resnet_bayesian':
     model = models.Resnet_bayesian()
@@ -101,7 +101,7 @@ def generate_target():
             data, targets = data.to(device), targets.to(device)
             batch_output = 0
             for j in range(args.eva_iter):
-                current_batch = model(data)
+                current_batch = model(data)[:,:10]
                 batch_output = batch_output + F.softmax(current_batch, dim=1)
             batch_output = batch_output/args.eva_iter
             # compute the accuracy
@@ -134,7 +134,7 @@ def generate_non_target():
             data, targets = data.to(device), targets.to(device)
             batch_output = 0
             for j in range(args.eva_iter):
-                batch_output = batch_output + F.softmax(model(data), dim=1)
+                batch_output = batch_output + F.softmax(model(data)[:,:10], dim=1)
             batch_output = batch_output/args.eva_iter
             for i in range(data.size(0)):
                 # confidence score: max_y p(y|x)

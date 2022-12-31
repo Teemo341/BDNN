@@ -1,0 +1,31 @@
+True
+load data:  mnist
+Building MNIST data loader with 1 workers
+==> Building model..
+average loss fr classification 2.302607774734497
+
+Epoch: 0
+making updates for SSND alm methods...
+updating lam...
+in_distribution constraint value 0.9992769479751586
+updating lam2...
+cross entropy constraint -2.302584409713745
+increasing in_constraint_weight weight....
+
+Train epoch:0 	Loss_in: 0.000000 | Loss_in_diffu: 0.499594 | Loss_out_diffu: 0.947632 | Acc: 10.046074 (3009/29952)
+(1672496142.8351102, 1672496154.0353947, 11.200284481048584)
+Test epoch: 0| Acc: 10.11 (1011/10000) 
+
+Epoch: 1
+making updates for SSND alm methods...
+updating lam...
+in_distribution constraint value 0.590250027179718
+updating lam2...
+cross entropy constraint -2.3025810718536377
+increasing in_constraint_weight weight....
+
+Train epoch:1 	Loss_in: 0.000000 | Loss_in_diffu: 0.317705 | Loss_out_diffu: 1.230607 | Acc: 10.012687 (2999/29952)
+(1672496154.4929223, 1672496165.6193619, 11.126439571380615)
+Test epoch: 1| Acc: 10.1 (1010/10000) 
+
+Epoch: 2

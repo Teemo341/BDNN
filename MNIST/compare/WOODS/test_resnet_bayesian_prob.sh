@@ -1,6 +1,6 @@
 #! /bin/bash
-#SBATCH -J original1
-#SBATCH -o result/BDNN_negative_test_prob.out               
+#SBATCH -J WOODS
+#SBATCH -o result/WOODS_test_prob.out               
 #SBATCH -p compute                  
 #SBATCH --qos=debug               
 #SBATCH -N 1                
@@ -9,4 +9,4 @@
 #SBATCH -t 24:00:00 
 
 
-python -u test_by_probability.py --pre_trained_net save_resnet_bayesian_mnist/final_model --network resnet_bayesian --dataset mnist --out_dataset svhn 
+python -u test_by_probability.py --pre_trained_net save_resnet_WOODS_mnist/final_model --network resnet --dataset mnist --out_dataset svhn 
