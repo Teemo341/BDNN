@@ -247,7 +247,7 @@ def confusion_matrix(dir_name):
     legend = plt.legend(handles=[ID,semi_OOD,full_OOD],prop=font1,loc='upper left')
 
     # plt.show()
-    plt.savefig('%s/cluster_visualization_ABNN.jpg' % dir_name,bbox_inches = 'tight')
+    plt.savefig('%s/cluster_visualization_WOODS.jpg' % dir_name,bbox_inches = 'tight')
     plt.close()
 
     #distribution
@@ -272,8 +272,8 @@ def confusion_matrix(dir_name):
     plt.ylim((0.0, 1.0))
     plt.yticks(fontsize=16)
     plt.xticks(fontsize=16)
-    plt.legend(prop=font1)
-    plt.savefig('%s/distribution_ABNN.jpg' % dir_name,bbox_inches = 'tight')
+    plt.legend(prop=font1,loc='upper right')
+    plt.savefig('%s/distribution_WOODS.jpg' % dir_name,bbox_inches = 'tight')
     plt.close()
 
     # k-means

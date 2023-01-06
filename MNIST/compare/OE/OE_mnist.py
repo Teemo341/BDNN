@@ -81,7 +81,7 @@ def train(epoch):
         label = label.to(device)
         inputs_out = 16*torch.randn(args.batch_size,1, args.imageSize, args.imageSize, device = device)+inputs
         inputs_out = inputs_out.to(device)
-        outputs_out = outputs = net(inputs_out)
+        outputs_out = net(inputs_out)
         loss2 = criterion2(outputs_out,label)
         train_loss_out+= loss2.item()
 

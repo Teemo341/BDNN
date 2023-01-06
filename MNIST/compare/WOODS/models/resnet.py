@@ -121,7 +121,8 @@ class Resnet_aux(nn.Module):
         self.feature_layers_3 = ResBlock(64, 64)
         self.feature_layers_4 = ResBlock(64, 64)
         self.feature_layers_5 = ResBlock(64, 64)
-        self.fc_layers = nn.Sequential(norm(64), nn.ReLU(inplace=True), nn.AdaptiveAvgPool2d((1, 1)), Flatten(), nn.Linear(64, 11))
+        self.fc_layers = nn.Sequential(norm(64), nn.ReLU(inplace=True), nn.AdaptiveAvgPool2d((1, 1)), Flatten(), nn.Linear(64, 10))
+        self.ood_layers = nn.Sequential(norm(64), nn.ReLU(inplace=True), nn.AdaptiveAvgPool2d((1, 1)), Flatten(), nn.Linear(64, 1))
         # self.model = nn.Sequential(*self.downsampling_layers, *self.feature_layers, *self.fc_layers)
         self.apply(init_params)
     def forward(self, x):
@@ -132,7 +133,9 @@ class Resnet_aux(nn.Module):
         out = self.feature_layers_3(out)
         out = self.feature_layers_4(out)
         out = self.feature_layers_5(out)
-        out = self.fc_layers(out)
+        out_cls = self.fc_layers(out)
+        out_ood = self.ood_layers(out)
+        out = torch.cat([out_cls, out_ood], dim=1)
         return out
 
 def test():

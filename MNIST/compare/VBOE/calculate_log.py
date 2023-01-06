@@ -272,7 +272,7 @@ def confusion_matrix(dir_name):
     plt.ylim((0.0, 1.0))
     plt.yticks(fontsize=16)
     plt.xticks(fontsize=16)
-    plt.legend(prop=font1)
+    plt.legend(prop=font1,loc='upper right')
     plt.savefig('%s/distribution_VBOE.jpg' % dir_name,bbox_inches = 'tight')
     plt.close()
 

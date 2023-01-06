@@ -24,14 +24,14 @@ print(torch.cuda.is_available())
 
 parser = argparse.ArgumentParser(description='PyTorch ResNet WOODS Training')
 parser.add_argument('--epochs', type=int, default=40, help='number of epochs to train')
-parser.add_argument('--lr', default=0.1, type=float, help='learning rate')
+parser.add_argument('--lr', default=0.001, type=float, help='learning rate')
 parser.add_argument('--dataset', default='mnist', help='cifar10 | svhn')
 parser.add_argument('--batch-size', type=int, default=128, help='input batch size for training')
 parser.add_argument('--imageSize', type=int, default=28, help='the height / width of the input image to network')
 parser.add_argument('--test_batch_size', type=int, default=1000)
 parser.add_argument('--gpu', type=int, default=0)
 parser.add_argument('--droprate', type=float, default=0.1, help='learning rate decay')
-parser.add_argument('--decreasing_lr', default=[10, 20, 30], nargs='+', help='decreasing strategy')
+parser.add_argument('--decreasing_lr', default=[10,20,30], nargs='+', help='decreasing strategy')
 parser.add_argument('--seed', type=float, default=0)
 args = parser.parse_args()
 
@@ -57,9 +57,8 @@ fake_label = 1/10
 
 optimizer = optim.SGD(
         list(net.parameters()),
-        0.001, momentum=0.9,
+        args.lr, momentum=0.9,
         weight_decay=0.0005, nesterov=True)
-criterion = nn.CrossEntropyLoss()
 
 in_constraint_weight=1.0
 ce_constraint_weight = 1.0
@@ -100,7 +99,7 @@ def train(epoch):
         outputs = outputs.to(device)
         outputs_classification = outputs[:len(inputs_in), :10]
 
-        loss_ce = criterion(outputs_classification, targets)
+        loss_ce = F.cross_entropy(outputs_classification, targets)
 
         out_x_ood_task = outputs[len(inputs_in):, 10]
         out_loss = torch.mean(F.relu(1 - out_x_ood_task))
@@ -113,18 +112,19 @@ def train(epoch):
         else:
             in_loss = - torch.pow(lam, 2) * 0.5 / in_constraint_weight
 
-        loss_ce_constraint = loss_ce - 2 * full_train_loss
-        if ce_constraint_weight * loss_ce_constraint + lam2 >= 0:
-            loss_ce = loss_ce_constraint * lam2 + ce_constraint_weight / 2 * torch.pow(loss_ce_constraint, 2)
-        else:
-            loss_ce = - torch.pow(lam2, 2) * 0.5 / ce_constraint_weight
+        #? seems better
+        # loss_ce_constraint = loss_ce - 2 * full_train_loss
+        # if ce_constraint_weight * loss_ce_constraint + lam2 >= 0:
+        #     loss_ce = loss_ce_constraint * lam2 + ce_constraint_weight / 2 * torch.pow(loss_ce_constraint, 2)
+        # else:
+        #     loss_ce = - torch.pow(lam2, 2) * 0.5 / ce_constraint_weight
 
         # add the losses together
         loss = loss_ce + out_loss_weighted + in_loss
 
-        optimizer.zero_grad()
         loss.backward()
         optimizer.step()
+        optimizer.zero_grad()
 
         train_loss_in_drift += loss_ce.item()
         train_loss_in_diffu += in_loss.item()
@@ -222,6 +222,8 @@ def evaluate_classification_loss_training():
     for batch_idx, (data, target) in enumerate(train_loader):
         data=data.to(device)
         target=target.to(device)
+        data = data[:int(args.batch_size/2),]
+        target = target[:int(args.batch_size/2),]
 
         # forward
         x = net(data)
@@ -255,6 +257,8 @@ def compute_constraint_terms():
         num_batches += 1
         data=data.to(device)
         target=target.to(device)
+        data = data[:int(args.batch_size/2),]
+        target = target[:int(args.batch_size/2),]
 
         # forward
         net(data)
