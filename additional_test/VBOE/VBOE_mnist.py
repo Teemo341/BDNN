@@ -18,7 +18,7 @@ print(torch.cuda.is_available())
 parser = argparse.ArgumentParser(description='PyTorch VBOE Training')
 parser.add_argument('--epochs', type=int, default=40, help='number of epochs to train')
 parser.add_argument('--lr', default=0.1, type=float, help='learning rate')
-parser.add_argument('--dataset', default='svhn', help='cifar10 | svhn')
+parser.add_argument('--dataset', default='cifar10_cat', help='cifar10 | svhn')
 parser.add_argument('--batch-size', type=int, default=128, help='input batch size for training')
 parser.add_argument('--imageSize', type=int, default=32, help='the height / width of the input image to network')
 parser.add_argument('--test_batch_size', type=int, default=1000)
@@ -46,7 +46,7 @@ net = models.BBP()
 net = net.to(device)
 
 
-fake_label = 1/10
+fake_label = 1/2
 
 
 optimizer = optim.Adam(net.parameters(), lr=0.001)
@@ -78,7 +78,7 @@ def train(epoch):
         train_loss_in += loss1.item()
         
         #training with ood data
-        label = torch.full((args.batch_size,10), fake_label, device=device)
+        label = torch.full((args.batch_size,2), fake_label, device=device)
         label = label.to(device)
         inputs_out = 16*torch.randn(args.batch_size,1, args.imageSize, args.imageSize, device = device)+inputs
         inputs_out = inputs_out.to(device)

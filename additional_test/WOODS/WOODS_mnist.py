@@ -25,7 +25,7 @@ print(torch.cuda.is_available())
 parser = argparse.ArgumentParser(description='PyTorch ResNet WOODS Training')
 parser.add_argument('--epochs', type=int, default=40, help='number of epochs to train')
 parser.add_argument('--lr', default=0.001, type=float, help='learning rate')
-parser.add_argument('--dataset', default='svhn', help='cifar10 | svhn')
+parser.add_argument('--dataset', default='cifar10_cat', help='cifar10 | svhn')
 parser.add_argument('--batch-size', type=int, default=128, help='input batch size for training')
 parser.add_argument('--imageSize', type=int, default=32, help='the height / width of the input image to network')
 parser.add_argument('--test_batch_size', type=int, default=1000)
@@ -52,7 +52,7 @@ print('==> Building model..')
 net = models.Resnet_aux()
 net = net.to(device)
 
-fake_label = 1/10
+fake_label = 1/2
 
 
 optimizer = optim.SGD(
@@ -97,15 +97,15 @@ def train(epoch):
 
         outputs = net(inputs)
         outputs = outputs.to(device)
-        outputs_classification = outputs[:len(inputs_in), :10]
+        outputs_classification = outputs[:len(inputs_in), :2]
 
         loss_ce = F.cross_entropy(outputs_classification, targets)
 
-        out_x_ood_task = outputs[len(inputs_in):, 10]
+        out_x_ood_task = outputs[len(inputs_in):, 2]
         out_loss = torch.mean(F.relu(1 - out_x_ood_task))
         out_loss_weighted = 1* out_loss
 
-        in_x_ood_task = outputs[:len(inputs_in), 10]
+        in_x_ood_task = outputs[:len(inputs_in), 2]
         f_term = torch.mean(F.relu(1 + in_x_ood_task)) - 0.05
         if in_constraint_weight * f_term + lam >= 0:
             in_loss = f_term * lam + in_constraint_weight / 2 * torch.pow(f_term, 2)
@@ -181,7 +181,7 @@ def test(epoch):
         for batch_idx, (inputs, targets) in enumerate(test_loader):
             inputs, targets = inputs.to(device), targets.to(device)
             outputs = net(inputs).to(device)
-            outputs = outputs[:len(inputs), :10]
+            outputs = outputs[:len(inputs), :2]
             _, predicted = outputs.max(1)
             total += targets.size(0)
             correct += predicted.eq(targets).sum().item()
@@ -229,7 +229,7 @@ def evaluate_classification_loss_training():
         x = net(data)
 
         # in-distribution classification accuracy
-        x_classification = x[:,:10]
+        x_classification = x[:,:2]
         loss_ce = F.cross_entropy(x_classification, target, reduction='none')
 
         losses.extend(list(to_np(loss_ce)))
@@ -265,11 +265,11 @@ def compute_constraint_terms():
         z = net(data)
 
         # compute in-distribution term
-        in_x_ood_task = z[:, 10]
+        in_x_ood_task = z[:, 2]
         in_terms.extend(list(to_np(F.relu(1 + in_x_ood_task))))
 
         # compute cross entropy term
-        z_classification = z[:, :10]
+        z_classification = z[:, :2]
         loss_ce = F.cross_entropy(z_classification, target, reduction='none')
         ce_losses.extend(list(to_np(loss_ce)))
 
