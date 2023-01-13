@@ -2,3 +2,9 @@
   offsets = np.asanyarray(offsets, float)
 findfont: Font family ['Times New Roman'] not found. Falling back to DejaVu Sans.
 findfont: Font family ['Times New Roman'] not found. Falling back to DejaVu Sans.
+/home/home_node4/ssy/anaconda3/envs/BDNN/lib/python3.9/site-packages/numpy/lib/histograms.py:852: ComplexWarning: Casting complex values to real discards the imaginary part
+  indices = f_indices.astype(np.intp)
+/home/home_node4/ssy/anaconda3/envs/BDNN/lib/python3.9/site-packages/numpy/lib/histograms.py:905: ComplexWarning: Casting complex values to real discards the imaginary part
+  db = np.array(np.diff(bin_edges), float)
+/home/home_node4/ssy/anaconda3/envs/BDNN/lib/python3.9/site-packages/matplotlib/transforms.py:788: ComplexWarning: Casting complex values to real discards the imaginary part
+  points = np.asarray(points, float)

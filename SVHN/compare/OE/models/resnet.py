@@ -75,7 +75,7 @@ class Resnet(nn.Module):
     def __init__(self):
         super(Resnet, self).__init__()
         self.downsampling_layers = nn.Sequential(
-            nn.Conv2d(1, 64, 3, 1),
+            nn.Conv2d(3, 64, 3, 1),
             norm(64),
             nn.ReLU(inplace=True),
             nn.Conv2d(64, 64, 4, 2, 1),

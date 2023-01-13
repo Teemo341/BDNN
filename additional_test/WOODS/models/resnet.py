@@ -107,7 +107,7 @@ class Resnet_aux(nn.Module):
     def __init__(self):
         super(Resnet_aux, self).__init__()
         self.downsampling_layers = nn.Sequential(
-            nn.Conv2d(1, 64, 3, 1),
+            nn.Conv2d(3, 64, 3, 1),
             norm(64),
             nn.ReLU(inplace=True),
             nn.Conv2d(64, 64, 4, 2, 1),
@@ -121,7 +121,7 @@ class Resnet_aux(nn.Module):
         self.feature_layers_3 = ResBlock(64, 64)
         self.feature_layers_4 = ResBlock(64, 64)
         self.feature_layers_5 = ResBlock(64, 64)
-        self.fc_layers = nn.Sequential(norm(64), nn.ReLU(inplace=True), nn.AdaptiveAvgPool2d((1, 1)), Flatten(), nn.Linear(64, 10))
+        self.fc_layers = nn.Sequential(norm(64), nn.ReLU(inplace=True), nn.AdaptiveAvgPool2d((1, 1)), Flatten(), nn.Linear(64, 2))
         self.ood_layers = nn.Sequential(norm(64), nn.ReLU(inplace=True), nn.AdaptiveAvgPool2d((1, 1)), Flatten(), nn.Linear(64, 1))
         # self.model = nn.Sequential(*self.downsampling_layers, *self.feature_layers, *self.fc_layers)
         self.apply(init_params)
