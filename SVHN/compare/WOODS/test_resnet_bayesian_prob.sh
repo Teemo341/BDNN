@@ -8,4 +8,4 @@
 #SBATCH --cpus-per-task=12      
 
 
-python -u test_by_probability.py --pre_trained_net save_resnet_WOODS_mnist/final_model --network resnet --dataset svhn --out_dataset cifar10
+python -u test_by_probability.py --pre_trained_net save_resnet_WOODS_mnist/final_model --network resnet --dataset svhn --out_dataset cifar100

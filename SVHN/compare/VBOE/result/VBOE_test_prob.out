@@ -1,30 +1,30 @@
-Namespace(eva_iter=10, network='BBP', batch_size=256, seed=0, dataset='svhn', imageSize=32, out_dataset='cifar10', num_classes=10, pre_trained_net='save_VBOE_mnist/final_model', gpu=0, test_batch_size=1000)
+Namespace(eva_iter=10, network='BBP', batch_size=256, seed=0, dataset='svhn', imageSize=32, out_dataset='cifar100', num_classes=10, pre_trained_net='save_VBOE_mnist/final_model', gpu=0, test_batch_size=1000)
 Random Seed:  0
 Load model
 load target data:  svhn
 Building SVHN data loader with 1 workers
 Using downloaded and verified file: /home/home_node4/ssy/BDNN/data/svhn/train_32x32.mat
 Using downloaded and verified file: /home/home_node4/ssy/BDNN/data/svhn/test_32x32.mat
-load non target data:  cifar10
-Building CIFAR-10 data loader with 1 workers
+load non target data:  cifar100
+Building CIFAR-100 data loader with 1 workers
 Files already downloaded and verified
 Files already downloaded and verified
 generate log from in-distribution data
 
- Final Accuracy: 24593/25856 (95.12%)
+ Final Accuracy: 24528/25856 (94.86%)
  
 generate log  from out-of-distribution data
 calculate metrics for OOD
 OOD  Performance of Baseline detector
-TNR at TPR 95%:            59.020%
-AUROC:                     92.841%
-Detection acc:             87.538%
-AUPR In:                   96.960%
-AUPR Out:                  81.419%
+TNR at TPR 95%:            60.041%
+AUROC:                     93.648%
+Detection acc:             88.425%
+AUPR In:                   97.340%
+AUPR Out:                  82.665%
 calculate metrics for mis
 mis  Performance of Baseline detector
-TNR at TPR 95%:            62.467%
-AUROC:                     89.086%
-Detection acc:             83.008%
-AUPR In:                   99.163%
-AUPR Out:                  43.100%
+TNR at TPR 95%:            63.179%
+AUROC:                     90.357%
+Detection acc:             84.404%
+AUPR In:                   99.251%
+AUPR Out:                  43.879%

@@ -4,442 +4,444 @@ Building SVHN data loader with 1 workers
 Using downloaded and verified file: /home/home_node4/ssy/BDNN/data/svhn/train_32x32.mat
 Using downloaded and verified file: /home/home_node4/ssy/BDNN/data/svhn/test_32x32.mat
 ==> Building model..
-average loss fr classification 2.301832914352417
+average loss fr classification 2.3022959232330322
 
 Epoch: 0
 making updates for SSND alm methods...
 updating lam...
-in_distribution constraint value 0.9894480228424072
+in_distribution constraint value 0.8739397644996643
 updating lam2...
-cross entropy constraint -2.3687169551849365
+cross entropy constraint -2.6723769903182983
 increasing in_constraint_weight weight....
 
-Train epoch:0 	Loss_in: 2.239003 | Loss_in_diffu: 0.492973 | Loss_out_diffu: 0.941649 | Acc: 18.952142 (6938/36608)
-(1673187870.6004188, 1673187884.8904388, 14.290019989013672)
-Test epoch: 0| Acc: 19.58512931034483 (5089/25984) 
+Train epoch:0 	Loss_in: 2.181202 | Loss_in_diffu: 0.421831 | Loss_out_diffu: 0.941880 | Acc: 21.754808 (7964/36608)
+(1673621442.2483225, 1673621456.606176, 14.357853412628174)
+Test epoch: 0| Acc: 33.53602216748769 (8714/25984) 
 
 Epoch: 1
 making updates for SSND alm methods...
 updating lam...
-in_distribution constraint value 0.6096998572349548
+in_distribution constraint value 0.7008314251899719
 updating lam2...
-cross entropy constraint -2.373159885406494
+cross entropy constraint -3.3684403896331787
 increasing in_constraint_weight weight....
 
-Train epoch:1 	Loss_in: 2.235569 | Loss_in_diffu: 0.278898 | Loss_out_diffu: 1.209534 | Acc: 18.851071 (6901/36608)
-(1673187886.8165066, 1673187901.0789514, 14.262444734573364)
-Test epoch: 1| Acc: 19.58512931034483 (5089/25984) 
+Train epoch:1 	Loss_in: 1.658087 | Loss_in_diffu: 0.277149 | Loss_out_diffu: 1.213131 | Acc: 41.717657 (15272/36608)
+(1673621458.4823256, 1673621473.1804516, 14.698126077651978)
+Test epoch: 1| Acc: 58.93241995073892 (15313/25984) 
 
 Epoch: 2
 making updates for SSND alm methods...
 updating lam...
-in_distribution constraint value 0.3979256868362427
+in_distribution constraint value 0.4281118631362915
 updating lam2...
-cross entropy constraint -2.393460988998413
+cross entropy constraint -3.872064709663391
 increasing in_constraint_weight weight....
 
-Train epoch:2 	Loss_in: 2.224183 | Loss_in_diffu: 0.182409 | Loss_out_diffu: 1.393264 | Acc: 18.815559 (6888/36608)
-(1673187903.0119839, 1673187917.2890854, 14.277101516723633)
-Test epoch: 2| Acc: 19.58512931034483 (5089/25984) 
+Train epoch:2 	Loss_in: 0.991428 | Loss_in_diffu: 0.194894 | Loss_out_diffu: 1.387057 | Acc: 67.545345 (24727/36608)
+(1673621475.059622, 1673621489.3276708, 14.268048763275146)
+Test epoch: 2| Acc: 79.40270935960591 (20632/25984) 
 
 Epoch: 3
 making updates for SSND alm methods...
 updating lam...
-in_distribution constraint value 0.27160791754722596
+in_distribution constraint value 0.2774511992931366
 updating lam2...
-cross entropy constraint -2.5104944705963135
+cross entropy constraint -4.138647586107254
 increasing in_constraint_weight weight....
 
-Train epoch:3 	Loss_in: 2.167804 | Loss_in_diffu: 0.122078 | Loss_out_diffu: 1.513837 | Acc: 22.975852 (8411/36608)
-(1673187919.2193716, 1673187933.4853172, 14.265945672988892)
-Test epoch: 3| Acc: 31.669488916256157 (8229/25984) 
+Train epoch:3 	Loss_in: 0.589959 | Loss_in_diffu: 0.126496 | Loss_out_diffu: 1.514025 | Acc: 82.487434 (30197/36608)
+(1673621491.2046432, 1673621505.571377, 14.36673378944397)
+Test epoch: 3| Acc: 86.17610837438424 (22392/25984) 
 
 Epoch: 4
 making updates for SSND alm methods...
 updating lam...
-in_distribution constraint value 0.17852092981338502
+in_distribution constraint value 0.1906592220067978
 updating lam2...
-cross entropy constraint -2.7058188915252686
+cross entropy constraint -4.220906615257263
 increasing in_constraint_weight weight....
 
-Train epoch:4 	Loss_in: 1.981156 | Loss_in_diffu: 0.083292 | Loss_out_diffu: 1.595438 | Acc: 30.247487 (11073/36608)
-(1673187935.4036572, 1673187949.6554782, 14.251821041107178)
-Test epoch: 4| Acc: 33.83620689655172 (8792/25984) 
+Train epoch:4 	Loss_in: 0.424837 | Loss_in_diffu: 0.087742 | Loss_out_diffu: 1.595525 | Acc: 87.636582 (32082/36608)
+(1673621507.4478745, 1673621521.7361302, 14.28825569152832)
+Test epoch: 4| Acc: 87.64239532019704 (22773/25984) 
 
 Epoch: 5
 making updates for SSND alm methods...
 updating lam...
-in_distribution constraint value 0.10596272051334381
+in_distribution constraint value 0.10540790557861328
 updating lam2...
-cross entropy constraint -2.756295919418335
+cross entropy constraint -4.268309980630875
 increasing in_constraint_weight weight....
 
-Train epoch:5 	Loss_in: 1.859301 | Loss_in_diffu: 0.055297 | Loss_out_diffu: 1.649501 | Acc: 32.375437 (11852/36608)
-(1673187951.5734193, 1673187965.8007364, 14.227317094802856)
-Test epoch: 5| Acc: 34.49815270935961 (8964/25984) 
+Train epoch:5 	Loss_in: 0.369370 | Loss_in_diffu: 0.061442 | Loss_out_diffu: 1.647764 | Acc: 89.300153 (32691/36608)
+(1673621523.631664, 1673621537.9415348, 14.309870719909668)
+Test epoch: 5| Acc: 89.52817118226601 (23263/25984) 
 
 Epoch: 6
 making updates for SSND alm methods...
 updating lam...
-in_distribution constraint value 0.08208368420600891
+in_distribution constraint value 0.08719211518764496
 updating lam2...
-cross entropy constraint -2.820808529853821
+cross entropy constraint -4.324080765247345
 increasing in_constraint_weight weight....
 
-Train epoch:6 	Loss_in: 1.793196 | Loss_in_diffu: 0.037496 | Loss_out_diffu: 1.680022 | Acc: 33.416193 (12233/36608)
-(1673187967.7306075, 1673187981.9896762, 14.259068727493286)
-Test epoch: 6| Acc: 37.84636699507389 (9834/25984) 
+Train epoch:6 	Loss_in: 0.316881 | Loss_in_diffu: 0.044749 | Loss_out_diffu: 1.680308 | Acc: 90.690559 (33200/36608)
+(1673621539.8535104, 1673621554.1670418, 14.313531398773193)
+Test epoch: 6| Acc: 91.41779556650246 (23754/25984) 
 
 Epoch: 7
 making updates for SSND alm methods...
 updating lam...
-in_distribution constraint value 0.06784771084785461
+in_distribution constraint value 0.017841619253158567
 updating lam2...
-cross entropy constraint -2.9467527866363525
+cross entropy constraint -4.333513826131821
 increasing in_constraint_weight weight....
 
-Train epoch:7 	Loss_in: 1.705059 | Loss_in_diffu: 0.026301 | Loss_out_diffu: 1.712534 | Acc: 38.488855 (14090/36608)
-(1673187983.9205668, 1673187998.1363773, 14.215810537338257)
-Test epoch: 7| Acc: 42.57235221674877 (11062/25984) 
+Train epoch:7 	Loss_in: 0.282831 | Loss_in_diffu: 0.036270 | Loss_out_diffu: 1.715453 | Acc: 91.821460 (33614/36608)
+(1673621556.064293, 1673621570.437427, 14.373134136199951)
+Test epoch: 7| Acc: 90.85591133004927 (23608/25984) 
 
 Epoch: 8
 making updates for SSND alm methods...
 updating lam...
-in_distribution constraint value 0.038474288582801816
+in_distribution constraint value 0.0510994017124176
 updating lam2...
-cross entropy constraint -3.0573790073394775
+cross entropy constraint -4.349806129932404
 increasing in_constraint_weight weight....
 
-Train epoch:8 	Loss_in: 1.615030 | Loss_in_diffu: 0.019047 | Loss_out_diffu: 1.724515 | Acc: 42.080966 (15405/36608)
-(1673188000.0291436, 1673188014.1537662, 14.124622583389282)
-Test epoch: 8| Acc: 45.00461822660098 (11694/25984) 
+Train epoch:8 	Loss_in: 0.260839 | Loss_in_diffu: 0.030234 | Loss_out_diffu: 1.733462 | Acc: 92.545345 (33879/36608)
+(1673621572.305206, 1673621586.713038, 14.407831907272339)
+Test epoch: 8| Acc: 91.48322044334975 (23771/25984) 
 
 Epoch: 9
 making updates for SSND alm methods...
 updating lam...
-in_distribution constraint value -0.005450393259525302
+in_distribution constraint value 0.02564885914325714
 updating lam2...
-cross entropy constraint -3.1335777044296265
-Train epoch:9 	Loss_in: 1.519405 | Loss_in_diffu: 0.015515 | Loss_out_diffu: 1.728918 | Acc: 44.883632 (16431/36608)
-(1673188016.0514061, 1673188030.1948073, 14.143401145935059)
-Test epoch: 9| Acc: 49.9076354679803 (12968/25984) 
+cross entropy constraint -4.360963478684425
+increasing in_constraint_weight weight....
+
+Train epoch:9 	Loss_in: 0.248578 | Loss_in_diffu: 0.022608 | Loss_out_diffu: 1.739897 | Acc: 92.823973 (33981/36608)
+(1673621588.586902, 1673621602.859539, 14.272637128829956)
+Test epoch: 9| Acc: 91.67179802955665 (23820/25984) 
 
 Epoch: 10
 making updates for SSND alm methods...
 updating lam...
-in_distribution constraint value 0.024029229581356046
+in_distribution constraint value 0.03281389623880386
 updating lam2...
-cross entropy constraint -3.277007222175598
+cross entropy constraint -4.344743251800537
 increasing in_constraint_weight weight....
 
-Train epoch:10 	Loss_in: 1.402194 | Loss_in_diffu: 0.014165 | Loss_out_diffu: 1.729996 | Acc: 49.664008 (18181/36608)
-(1673188032.0947957, 1673188046.2394423, 14.144646644592285)
-Test epoch: 10| Acc: 53.148091133004925 (13810/25984) 
+Train epoch:10 	Loss_in: 0.235585 | Loss_in_diffu: 0.017404 | Loss_out_diffu: 1.750671 | Acc: 93.209135 (34122/36608)
+(1673621604.7610607, 1673621619.0972989, 14.336238145828247)
+Test epoch: 10| Acc: 91.05603448275862 (23660/25984) 
 
 Epoch: 11
 making updates for SSND alm methods...
 updating lam...
-in_distribution constraint value 0.015646544098854062
+in_distribution constraint value 0.008466419577598569
 updating lam2...
-cross entropy constraint -3.310917019844055
+cross entropy constraint -4.453069940209389
 increasing in_constraint_weight weight....
 
-Train epoch:11 	Loss_in: 1.301825 | Loss_in_diffu: 0.008243 | Loss_out_diffu: 1.740012 | Acc: 52.870957 (19355/36608)
-(1673188048.126845, 1673188062.2760293, 14.149184465408325)
-Test epoch: 11| Acc: 54.47583128078818 (14155/25984) 
+Train epoch:11 	Loss_in: 0.171006 | Loss_in_diffu: 0.005914 | Loss_out_diffu: 1.745161 | Acc: 95.279720 (34880/36608)
+(1673621620.979969, 1673621635.2894263, 14.309457302093506)
+Test epoch: 11| Acc: 94.03863916256158 (24435/25984) 
 
 Epoch: 12
 making updates for SSND alm methods...
 updating lam...
-in_distribution constraint value 0.009306576848030088
+in_distribution constraint value 0.008969743549823758
 updating lam2...
-cross entropy constraint -3.3348076343536377
+cross entropy constraint -4.464317426085472
 increasing in_constraint_weight weight....
 
-Train epoch:12 	Loss_in: 1.282177 | Loss_in_diffu: 0.006052 | Loss_out_diffu: 1.741852 | Acc: 54.023711 (19777/36608)
-(1673188064.166807, 1673188078.3058007, 14.138993740081787)
-Test epoch: 12| Acc: 55.68041871921182 (14468/25984) 
+Train epoch:12 	Loss_in: 0.148375 | Loss_in_diffu: 0.003704 | Loss_out_diffu: 1.744988 | Acc: 96.123798 (35189/36608)
+(1673621637.1648824, 1673621651.571781, 14.406898498535156)
+Test epoch: 12| Acc: 94.21182266009852 (24480/25984) 
 
 Epoch: 13
 making updates for SSND alm methods...
 updating lam...
-in_distribution constraint value 0.009516273438930509
+in_distribution constraint value 0.002996981889009473
 updating lam2...
-cross entropy constraint -3.346480131149292
+cross entropy constraint -4.474300920963287
 increasing in_constraint_weight weight....
 
-Train epoch:13 	Loss_in: 1.260207 | Loss_in_diffu: 0.005082 | Loss_out_diffu: 1.750922 | Acc: 54.539991 (19966/36608)
-(1673188080.1886828, 1673188094.4241114, 14.23542857170105)
-Test epoch: 13| Acc: 56.226908866995075 (14610/25984) 
+Train epoch:13 	Loss_in: 0.140061 | Loss_in_diffu: 0.003003 | Loss_out_diffu: 1.752761 | Acc: 96.467985 (35315/36608)
+(1673621653.4739103, 1673621667.7700465, 14.296136140823364)
+Test epoch: 13| Acc: 94.18103448275862 (24472/25984) 
 
 Epoch: 14
 making updates for SSND alm methods...
 updating lam...
-in_distribution constraint value 0.0017224483191966983
+in_distribution constraint value 0.0017061203718185397
 updating lam2...
-cross entropy constraint -3.364792585372925
+cross entropy constraint -4.477943077683449
 increasing in_constraint_weight weight....
 
-Train epoch:14 	Loss_in: 1.249684 | Loss_in_diffu: 0.004187 | Loss_out_diffu: 1.751540 | Acc: 54.851399 (20080/36608)
-(1673188096.348796, 1673188110.5826073, 14.233811378479004)
-Test epoch: 14| Acc: 56.70027709359606 (14733/25984) 
+Train epoch:14 	Loss_in: 0.133862 | Loss_in_diffu: 0.002606 | Loss_out_diffu: 1.752086 | Acc: 96.577251 (35355/36608)
+(1673621669.6774592, 1673621684.0157015, 14.338242292404175)
+Test epoch: 14| Acc: 94.29264162561576 (24501/25984) 
 
 Epoch: 15
 making updates for SSND alm methods...
 updating lam...
-in_distribution constraint value 0.004065961390733716
+in_distribution constraint value -0.000882330536842349
 updating lam2...
-cross entropy constraint -3.3807793855667114
-increasing in_constraint_weight weight....
-
-Train epoch:15 	Loss_in: 1.235019 | Loss_in_diffu: 0.003955 | Loss_out_diffu: 1.754388 | Acc: 55.594406 (20352/36608)
-(1673188112.516112, 1673188126.767365, 14.251252889633179)
-Test epoch: 15| Acc: 57.36222290640394 (14905/25984) 
+cross entropy constraint -4.487081803381443
+Train epoch:15 	Loss_in: 0.131505 | Loss_in_diffu: 0.002586 | Loss_out_diffu: 1.754925 | Acc: 96.754808 (35420/36608)
+(1673621685.9126208, 1673621700.178834, 14.266213178634644)
+Test epoch: 15| Acc: 94.3118842364532 (24506/25984) 
 
 Epoch: 16
 making updates for SSND alm methods...
 updating lam...
-in_distribution constraint value -0.005286219716072085
+in_distribution constraint value -0.00534588769078255
 updating lam2...
-cross entropy constraint -3.382029175758362
-Train epoch:16 	Loss_in: 1.229464 | Loss_in_diffu: 0.003593 | Loss_out_diffu: 1.753452 | Acc: 55.834790 (20440/36608)
-(1673188128.6971343, 1673188142.9127953, 14.21566104888916)
-Test epoch: 16| Acc: 57.04664408866995 (14823/25984) 
+cross entropy constraint -4.482936665415764
+Train epoch:16 	Loss_in: 0.121396 | Loss_in_diffu: 0.002457 | Loss_out_diffu: 1.749877 | Acc: 97.049825 (35528/36608)
+(1673621702.0511863, 1673621716.3133605, 14.262174129486084)
+Test epoch: 16| Acc: 93.94242610837438 (24410/25984) 
 
 Epoch: 17
 making updates for SSND alm methods...
 updating lam...
-in_distribution constraint value 0.00844675004482269
+in_distribution constraint value 0.005453069508075711
 updating lam2...
-cross entropy constraint -3.3986217975616455
+cross entropy constraint -4.490613505244255
 increasing in_constraint_weight weight....
 
-Train epoch:17 	Loss_in: 1.212125 | Loss_in_diffu: 0.003680 | Loss_out_diffu: 1.754616 | Acc: 55.987762 (20496/36608)
-(1673188144.7968214, 1673188159.0554736, 14.258652210235596)
-Test epoch: 17| Acc: 57.543103448275865 (14952/25984) 
+Train epoch:17 	Loss_in: 0.115288 | Loss_in_diffu: 0.002592 | Loss_out_diffu: 1.751776 | Acc: 97.241040 (35598/36608)
+(1673621718.231659, 1673621732.6239278, 14.392268896102905)
+Test epoch: 17| Acc: 94.35036945812809 (24516/25984) 
 
 Epoch: 18
 making updates for SSND alm methods...
 updating lam...
-in_distribution constraint value -0.014565865695476535
+in_distribution constraint value -0.003894287347793582
 updating lam2...
-cross entropy constraint -3.40521776676178
-Train epoch:18 	Loss_in: 1.200721 | Loss_in_diffu: 0.003833 | Loss_out_diffu: 1.763678 | Acc: 56.181709 (20567/36608)
-(1673188160.991755, 1673188175.2422988, 14.25054383277893)
-Test epoch: 18| Acc: 58.0626539408867 (15087/25984) 
+cross entropy constraint -4.495540231466293
+Train epoch:18 	Loss_in: 0.111031 | Loss_in_diffu: 0.002963 | Loss_out_diffu: 1.757518 | Acc: 97.363964 (35643/36608)
+(1673621734.4891884, 1673621748.7643003, 14.27511191368103)
+Test epoch: 18| Acc: 94.24261083743842 (24488/25984) 
 
 Epoch: 19
 making updates for SSND alm methods...
 updating lam...
-in_distribution constraint value -0.002532321214675906
+in_distribution constraint value 0.006859169155359265
 updating lam2...
-cross entropy constraint -3.4176493883132935
-Train epoch:19 	Loss_in: 1.193162 | Loss_in_diffu: 0.003680 | Loss_out_diffu: 1.766407 | Acc: 56.465800 (20671/36608)
-(1673188177.1653252, 1673188191.3981814, 14.232856273651123)
-Test epoch: 19| Acc: 57.897167487684726 (15044/25984) 
+cross entropy constraint -4.501299679279327
+increasing in_constraint_weight weight....
+
+Train epoch:19 	Loss_in: 0.108440 | Loss_in_diffu: 0.002468 | Loss_out_diffu: 1.760006 | Acc: 97.530594 (35704/36608)
+(1673621750.6347833, 1673621764.919452, 14.284668684005737)
+Test epoch: 19| Acc: 94.0309421182266 (24433/25984) 
 
 Epoch: 20
 making updates for SSND alm methods...
 updating lam...
-in_distribution constraint value -0.0017169445753097562
+in_distribution constraint value -0.020545392483472827
 updating lam2...
-cross entropy constraint -3.43492329120636
-Train epoch:20 	Loss_in: 1.175464 | Loss_in_diffu: 0.004331 | Loss_out_diffu: 1.764042 | Acc: 56.662478 (20743/36608)
-(1673188193.320805, 1673188207.5686991, 14.247894048690796)
-Test epoch: 20| Acc: 58.832358374384235 (15287/25984) 
+cross entropy constraint -4.506884872913361
+Train epoch:20 	Loss_in: 0.101101 | Loss_in_diffu: 0.003586 | Loss_out_diffu: 1.772647 | Acc: 97.664445 (35753/36608)
+(1673621766.8176098, 1673621781.119151, 14.301541328430176)
+Test epoch: 20| Acc: 94.13485221674877 (24460/25984) 
 
 Epoch: 21
 making updates for SSND alm methods...
 updating lam...
-in_distribution constraint value -0.003102830797433856
+in_distribution constraint value 0.0005844578146934482
 updating lam2...
-cross entropy constraint -3.44114351272583
-Train epoch:21 	Loss_in: 1.163018 | Loss_in_diffu: 0.002107 | Loss_out_diffu: 1.756248 | Acc: 57.331731 (20988/36608)
-(1673188209.4885042, 1673188223.7522407, 14.263736486434937)
-Test epoch: 21| Acc: 58.93241995073892 (15313/25984) 
+cross entropy constraint -4.518274366855621
+increasing in_constraint_weight weight....
+
+Train epoch:21 	Loss_in: 0.098395 | Loss_in_diffu: 0.001373 | Loss_out_diffu: 1.756454 | Acc: 97.899366 (35839/36608)
+(1673621782.9857256, 1673621797.368129, 14.382403373718262)
+Test epoch: 21| Acc: 94.19258004926108 (24475/25984) 
 
 Epoch: 22
 making updates for SSND alm methods...
 updating lam...
-in_distribution constraint value -0.0013857699930667905
+in_distribution constraint value -0.00047605782747268954
 updating lam2...
-cross entropy constraint -3.4475462436676025
-Train epoch:22 	Loss_in: 1.159497 | Loss_in_diffu: 0.002120 | Loss_out_diffu: 1.756953 | Acc: 57.487434 (21045/36608)
-(1673188225.6898842, 1673188239.935967, 14.246082782745361)
-Test epoch: 22| Acc: 58.890086206896555 (15302/25984) 
+cross entropy constraint -4.513501405715942
+Train epoch:22 	Loss_in: 0.094192 | Loss_in_diffu: 0.001210 | Loss_out_diffu: 1.757129 | Acc: 98.055070 (35896/36608)
+(1673621799.2838628, 1673621813.6127186, 14.328855752944946)
+Test epoch: 22| Acc: 94.26185344827586 (24493/25984) 
 
 Epoch: 23
 making updates for SSND alm methods...
 updating lam...
-in_distribution constraint value 0.00028942599892615994
+in_distribution constraint value -0.00473853871226311
 updating lam2...
-cross entropy constraint -3.4424185752868652
-increasing in_constraint_weight weight....
-
-Train epoch:23 	Loss_in: 1.162643 | Loss_in_diffu: 0.002231 | Loss_out_diffu: 1.755590 | Acc: 57.271635 (20966/36608)
-(1673188241.8704023, 1673188256.1364052, 14.266002893447876)
-Test epoch: 23| Acc: 58.951662561576356 (15318/25984) 
+cross entropy constraint -4.51346455514431
+Train epoch:23 	Loss_in: 0.090563 | Loss_in_diffu: 0.001085 | Loss_out_diffu: 1.755746 | Acc: 98.109703 (35916/36608)
+(1673621815.5187263, 1673621829.9545553, 14.435828924179077)
+Test epoch: 23| Acc: 94.1848830049261 (24473/25984) 
 
 Epoch: 24
 making updates for SSND alm methods...
 updating lam...
-in_distribution constraint value -0.0041095606982708005
+in_distribution constraint value -0.003132994472980502
 updating lam2...
-cross entropy constraint -3.4500951766967773
-Train epoch:24 	Loss_in: 1.158286 | Loss_in_diffu: 0.001922 | Loss_out_diffu: 1.751375 | Acc: 57.503824 (21051/36608)
-(1673188258.0338814, 1673188272.1887257, 14.154844284057617)
-Test epoch: 24| Acc: 58.82466133004926 (15285/25984) 
+cross entropy constraint -4.515092961490154
+Train epoch:24 	Loss_in: 0.091301 | Loss_in_diffu: 0.001077 | Loss_out_diffu: 1.749836 | Acc: 98.128824 (35923/36608)
+(1673621831.8615072, 1673621846.1367655, 14.275258302688599)
+Test epoch: 24| Acc: 94.1233066502463 (24457/25984) 
 
 Epoch: 25
 making updates for SSND alm methods...
 updating lam...
-in_distribution constraint value 0.0030265197157859774
+in_distribution constraint value -0.0025457769632339505
 updating lam2...
-cross entropy constraint -3.444844961166382
-increasing in_constraint_weight weight....
-
-Train epoch:25 	Loss_in: 1.153858 | Loss_in_diffu: 0.002047 | Loss_out_diffu: 1.757299 | Acc: 57.583042 (21080/36608)
-(1673188274.092392, 1673188288.2980278, 14.205635786056519)
-Test epoch: 25| Acc: 58.90163177339902 (15305/25984) 
+cross entropy constraint -4.514599330723286
+Train epoch:25 	Loss_in: 0.087290 | Loss_in_diffu: 0.001136 | Loss_out_diffu: 1.756031 | Acc: 98.172531 (35939/36608)
+(1673621848.0481555, 1673621862.3527613, 14.304605722427368)
+Test epoch: 25| Acc: 94.08866995073892 (24448/25984) 
 
 Epoch: 26
 making updates for SSND alm methods...
 updating lam...
-in_distribution constraint value -0.007651048898696902
+in_distribution constraint value -0.0001708075404167203
 updating lam2...
-cross entropy constraint -3.4468274116516113
-Train epoch:26 	Loss_in: 1.154537 | Loss_in_diffu: 0.001981 | Loss_out_diffu: 1.757241 | Acc: 57.796110 (21158/36608)
-(1673188290.1832457, 1673188304.398928, 14.2156822681427)
-Test epoch: 26| Acc: 58.92857142857143 (15312/25984) 
+cross entropy constraint -4.518313944339752
+Train epoch:26 	Loss_in: 0.089421 | Loss_in_diffu: 0.001043 | Loss_out_diffu: 1.753571 | Acc: 98.167067 (35937/36608)
+(1673621864.2677925, 1673621878.6885118, 14.420719385147095)
+Test epoch: 26| Acc: 94.18103448275862 (24472/25984) 
 
 Epoch: 27
 making updates for SSND alm methods...
 updating lam...
-in_distribution constraint value 0.00044811591506004056
+in_distribution constraint value -0.0010493241250515012
 updating lam2...
-cross entropy constraint -3.444883704185486
-increasing in_constraint_weight weight....
-
-Train epoch:27 	Loss_in: 1.164361 | Loss_in_diffu: 0.001932 | Loss_out_diffu: 1.751089 | Acc: 57.359047 (20998/36608)
-(1673188306.309129, 1673188320.511609, 14.20248007774353)
-Test epoch: 27| Acc: 58.94396551724138 (15316/25984) 
+cross entropy constraint -4.519926227629185
+Train epoch:27 	Loss_in: 0.085517 | Loss_in_diffu: 0.001039 | Loss_out_diffu: 1.747839 | Acc: 98.221700 (35957/36608)
+(1673621880.548892, 1673621895.037191, 14.488298892974854)
+Test epoch: 27| Acc: 94.20027709359606 (24477/25984) 
 
 Epoch: 28
 making updates for SSND alm methods...
 updating lam...
-in_distribution constraint value -0.007436669617891314
+in_distribution constraint value -0.001058186590671542
 updating lam2...
-cross entropy constraint -3.449429750442505
-Train epoch:28 	Loss_in: 1.153166 | Loss_in_diffu: 0.001835 | Loss_out_diffu: 1.758465 | Acc: 57.760599 (21145/36608)
-(1673188322.420451, 1673188336.6045911, 14.1841402053833)
-Test epoch: 28| Acc: 58.8439039408867 (15290/25984) 
+cross entropy constraint -4.515558883547783
+Train epoch:28 	Loss_in: 0.086901 | Loss_in_diffu: 0.001095 | Loss_out_diffu: 1.753924 | Acc: 98.320039 (35993/36608)
+(1673621896.907815, 1673621911.2605214, 14.35270643234253)
+Test epoch: 28| Acc: 94.1579433497537 (24466/25984) 
 
 Epoch: 29
 making updates for SSND alm methods...
 updating lam...
-in_distribution constraint value -0.00025407895445823947
+in_distribution constraint value -0.0018925175070762662
 updating lam2...
-cross entropy constraint -3.4499270915985107
-Train epoch:29 	Loss_in: 1.145590 | Loss_in_diffu: 0.001840 | Loss_out_diffu: 1.759235 | Acc: 57.894449 (21194/36608)
-(1673188338.4878078, 1673188352.6667717, 14.178963899612427)
-Test epoch: 29| Acc: 58.967056650246306 (15322/25984) 
+cross entropy constraint -4.515440076589584
+Train epoch:29 	Loss_in: 0.085426 | Loss_in_diffu: 0.001056 | Loss_out_diffu: 1.754806 | Acc: 98.295455 (35984/36608)
+(1673621913.147288, 1673621927.5336127, 14.386324644088745)
+Test epoch: 29| Acc: 94.1540948275862 (24465/25984) 
 
 Epoch: 30
 making updates for SSND alm methods...
 updating lam...
-in_distribution constraint value -0.005610185861587527
+in_distribution constraint value 0.002032534033060071
 updating lam2...
-cross entropy constraint -3.4619561433792114
-Train epoch:30 	Loss_in: 1.147789 | Loss_in_diffu: 0.001825 | Loss_out_diffu: 1.757807 | Acc: 57.935424 (21209/36608)
-(1673188354.568928, 1673188368.7831285, 14.214200496673584)
-Test epoch: 30| Acc: 59.10175492610838 (15357/25984) 
+cross entropy constraint -4.521546021103859
+increasing in_constraint_weight weight....
+
+Train epoch:30 	Loss_in: 0.085493 | Loss_in_diffu: 0.001142 | Loss_out_diffu: 1.753294 | Acc: 98.303649 (35987/36608)
+(1673621929.4334364, 1673621943.814964, 14.381527662277222)
+Test epoch: 30| Acc: 94.15024630541872 (24464/25984) 
 
 Epoch: 31
 making updates for SSND alm methods...
 updating lam...
-in_distribution constraint value -0.0005298770964145688
+in_distribution constraint value -0.0007768638432025937
 updating lam2...
-cross entropy constraint -3.4496339559555054
-Train epoch:31 	Loss_in: 1.152427 | Loss_in_diffu: 0.001398 | Loss_out_diffu: 1.764362 | Acc: 57.771525 (21149/36608)
-(1673188370.7100103, 1673188384.904806, 14.194795608520508)
-Test epoch: 31| Acc: 59.07096674876847 (15349/25984) 
+cross entropy constraint -4.516680642962456
+Train epoch:31 	Loss_in: 0.084429 | Loss_in_diffu: 0.000910 | Loss_out_diffu: 1.761607 | Acc: 98.391062 (36019/36608)
+(1673621945.6727095, 1673621959.984595, 14.311885595321655)
+Test epoch: 31| Acc: 94.18103448275862 (24472/25984) 
 
 Epoch: 32
 making updates for SSND alm methods...
 updating lam...
-in_distribution constraint value -0.0031797170639038114
+in_distribution constraint value -0.000918469578027728
 updating lam2...
-cross entropy constraint -3.4541175365448
-Train epoch:32 	Loss_in: 1.140749 | Loss_in_diffu: 0.001691 | Loss_out_diffu: 1.755275 | Acc: 58.091128 (21266/36608)
-(1673188386.783956, 1673188400.9278712, 14.143915176391602)
-Test epoch: 32| Acc: 59.05172413793103 (15344/25984) 
+cross entropy constraint -4.522084556519985
+Train epoch:32 	Loss_in: 0.084039 | Loss_in_diffu: 0.000825 | Loss_out_diffu: 1.752708 | Acc: 98.393794 (36020/36608)
+(1673621961.8941693, 1673621976.3282719, 14.434102535247803)
+Test epoch: 32| Acc: 94.16179187192118 (24467/25984) 
 
 Epoch: 33
 making updates for SSND alm methods...
 updating lam...
-in_distribution constraint value -0.001358821243047717
+in_distribution constraint value 0.00038213357329368314
 updating lam2...
-cross entropy constraint -3.458288788795471
-Train epoch:33 	Loss_in: 1.148681 | Loss_in_diffu: 0.001694 | Loss_out_diffu: 1.756601 | Acc: 57.984594 (21227/36608)
-(1673188402.834252, 1673188417.0320973, 14.197845220565796)
-Test epoch: 33| Acc: 59.032481527093594 (15339/25984) 
+cross entropy constraint -4.51765039563179
+increasing in_constraint_weight weight....
+
+Train epoch:33 	Loss_in: 0.085972 | Loss_in_diffu: 0.000768 | Loss_out_diffu: 1.754523 | Acc: 98.355551 (36006/36608)
+(1673621978.2390218, 1673621992.6216857, 14.38266396522522)
+Test epoch: 33| Acc: 94.15024630541872 (24464/25984) 
 
 Epoch: 34
 making updates for SSND alm methods...
 updating lam...
-in_distribution constraint value -0.0036352939903736142
+in_distribution constraint value -0.0004917301237583188
 updating lam2...
-cross entropy constraint -3.45914888381958
-Train epoch:34 	Loss_in: 1.149636 | Loss_in_diffu: 0.001599 | Loss_out_diffu: 1.759919 | Acc: 57.798842 (21159/36608)
-(1673188418.9437094, 1673188433.1550028, 14.211293458938599)
-Test epoch: 34| Acc: 59.047875615763544 (15343/25984) 
+cross entropy constraint -4.518432877957821
+Train epoch:34 	Loss_in: 0.085183 | Loss_in_diffu: 0.000781 | Loss_out_diffu: 1.757755 | Acc: 98.374672 (36013/36608)
+(1673621994.5176356, 1673622008.882379, 14.36474347114563)
+Test epoch: 34| Acc: 94.16564039408867 (24468/25984) 
 
 Epoch: 35
 making updates for SSND alm methods...
 updating lam...
-in_distribution constraint value -0.0034699991345405606
+in_distribution constraint value -0.0017570920288562802
 updating lam2...
-cross entropy constraint -3.4463380575180054
-Train epoch:35 	Loss_in: 1.149067 | Loss_in_diffu: 0.001511 | Loss_out_diffu: 1.758577 | Acc: 57.787915 (21155/36608)
-(1673188435.0733926, 1673188449.3164837, 14.243091106414795)
-Test epoch: 35| Acc: 59.02478448275862 (15337/25984) 
+cross entropy constraint -4.518906079232693
+Train epoch:35 	Loss_in: 0.082942 | Loss_in_diffu: 0.000650 | Loss_out_diffu: 1.756636 | Acc: 98.377404 (36014/36608)
+(1673622010.7543452, 1673622025.1630576, 14.408712387084961)
+Test epoch: 35| Acc: 94.17718596059113 (24471/25984) 
 
 Epoch: 36
 making updates for SSND alm methods...
 updating lam...
-in_distribution constraint value -0.004836480319499972
+in_distribution constraint value -0.0017655372619628934
 updating lam2...
-cross entropy constraint -3.4548473358154297
-Train epoch:36 	Loss_in: 1.154507 | Loss_in_diffu: 0.001426 | Loss_out_diffu: 1.757716 | Acc: 57.648601 (21104/36608)
-(1673188451.242535, 1673188465.360853, 14.11831784248352)
-Test epoch: 36| Acc: 59.047875615763544 (15343/25984) 
+cross entropy constraint -4.5240654945373535
+Train epoch:36 	Loss_in: 0.082954 | Loss_in_diffu: 0.000795 | Loss_out_diffu: 1.755949 | Acc: 98.451158 (36041/36608)
+(1673622027.082422, 1673622041.4321084, 14.34968638420105)
+Test epoch: 36| Acc: 94.1848830049261 (24473/25984) 
 
 Epoch: 37
 making updates for SSND alm methods...
 updating lam...
-in_distribution constraint value -0.003664220869541171
+in_distribution constraint value -0.0007682956755161313
 updating lam2...
-cross entropy constraint -3.4523919820785522
-Train epoch:37 	Loss_in: 1.153501 | Loss_in_diffu: 0.001249 | Loss_out_diffu: 1.755287 | Acc: 57.572115 (21076/36608)
-(1673188467.2511227, 1673188481.4440722, 14.192949533462524)
-Test epoch: 37| Acc: 59.032481527093594 (15339/25984) 
+cross entropy constraint -4.519130505621433
+Train epoch:37 	Loss_in: 0.085810 | Loss_in_diffu: 0.000766 | Loss_out_diffu: 1.753739 | Acc: 98.336429 (35999/36608)
+(1673622043.3393874, 1673622057.6952698, 14.355882406234741)
+Test epoch: 37| Acc: 94.16948891625616 (24469/25984) 
 
 Epoch: 38
 making updates for SSND alm methods...
 updating lam...
-in_distribution constraint value -0.003053016215562823
+in_distribution constraint value -0.00013779029250145236
 updating lam2...
-cross entropy constraint -3.4564930200576782
-Train epoch:38 	Loss_in: 1.151261 | Loss_in_diffu: 0.001450 | Loss_out_diffu: 1.755773 | Acc: 57.588505 (21082/36608)
-(1673188483.3616047, 1673188497.541597, 14.179992198944092)
-Test epoch: 38| Acc: 59.032481527093594 (15339/25984) 
+cross entropy constraint -4.5252640172839165
+Train epoch:38 	Loss_in: 0.082743 | Loss_in_diffu: 0.000788 | Loss_out_diffu: 1.753821 | Acc: 98.401989 (36023/36608)
+(1673622059.5806627, 1673622073.9420178, 14.361355066299438)
+Test epoch: 38| Acc: 94.19258004926108 (24475/25984) 
 
 Epoch: 39
 making updates for SSND alm methods...
 updating lam...
-in_distribution constraint value -0.0018601261079311399
+in_distribution constraint value -0.0003741785883903531
 updating lam2...
-cross entropy constraint -3.4511823654174805
-Train epoch:39 	Loss_in: 1.142713 | Loss_in_diffu: 0.001435 | Loss_out_diffu: 1.756575 | Acc: 57.924497 (21205/36608)
-(1673188499.4636748, 1673188514.1684072, 14.704732418060303)
-Test epoch: 39| Acc: 59.063269704433495 (15347/25984) 
+cross entropy constraint -4.520687900483608
+Train epoch:39 	Loss_in: 0.086736 | Loss_in_diffu: 0.000755 | Loss_out_diffu: 1.754491 | Acc: 98.341892 (36001/36608)
+(1673622075.8553224, 1673622090.1681466, 14.312824249267578)
+Test epoch: 39| Acc: 94.16948891625616 (24469/25984) 

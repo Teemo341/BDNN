@@ -7,4 +7,24 @@ Using downloaded and verified file: /home/home_node4/ssy/BDNN/data/svhn/train_32
 Using downloaded and verified file: /home/home_node4/ssy/BDNN/data/svhn/test_32x32.mat
 load non target data:  cifar100
 Building CIFAR-100 data loader with 1 workers
-slurmstepd: error: *** JOB 23740 ON node1_3060 CANCELLED AT 2023-01-13T21:01:37 ***
+Files already downloaded and verified
+Files already downloaded and verified
+generate log from in-distribution data
+
+ Final Accuracy: 24632/25856 (95.27%)
+ 
+generate log  from out-of-distribution data
+calculate metrics for OOD
+OOD  Performance of Baseline detector
+TNR at TPR 95%:            63.586%
+AUROC:                     93.934%
+Detection acc:             89.158%
+AUPR In:                   97.413%
+AUPR Out:                  83.699%
+calculate metrics for mis
+mis  Performance of Baseline detector
+TNR at TPR 95%:            62.772%
+AUROC:                     90.370%
+Detection acc:             85.371%
+AUPR In:                   99.297%
+AUPR Out:                  42.575%
