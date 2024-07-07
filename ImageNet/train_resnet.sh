@@ -9,4 +9,4 @@
 #SBATCH --gres=gpu:1
      
 
-python -u /home/home_node4/ssy/BDNN/ImageNet/resnet.py
+python -u /home/home_node4/ssy/BDNN/ImageNet/resnet_imagenet.py 

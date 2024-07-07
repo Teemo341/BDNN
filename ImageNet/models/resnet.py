@@ -84,7 +84,7 @@ class Resnet(nn.Module):
             nn.Conv2d(64, 64, 4, 2, 1),
         )
         self.feature_layers = [ResBlock(64, 64) for _ in range(6)]
-        self.fc_layers = nn.Sequential(norm(64), nn.ReLU(inplace=True), nn.AdaptiveAvgPool2d((1, 1)), Flatten(), nn.Linear(64, 200))
+        self.fc_layers = nn.Sequential(norm(64), nn.ReLU(inplace=True), nn.AdaptiveAvgPool2d((1, 1)), Flatten(), nn.Dropout(0.1), nn.Linear(64, 200))
         self.model = nn.Sequential(*self.downsampling_layers, *self.feature_layers, *self.fc_layers)
         self.apply(init_params)
     def forward(self, x):

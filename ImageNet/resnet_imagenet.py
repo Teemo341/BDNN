@@ -15,10 +15,11 @@ import os
 import argparse
 import models
 import data_loader
+import time
 
 parser = argparse.ArgumentParser(description='PyTorch ResNet Training')
 parser.add_argument('--epochs', type=int, default=60, help='number of epochs to train')
-parser.add_argument('--lr', default=0.1, type=float, help='learning rate')
+parser.add_argument('--lr', default=1e+0, type=float, help='learning rate')
 parser.add_argument('--dataset', default='imagenet', help='in domain dataset')
 parser.add_argument('--batch-size', type=int, default=128, help='input batch size for training')
 parser.add_argument('--imageSize', type=int, default=32, help='the height / width of the input image to network')
@@ -30,6 +31,7 @@ parser.add_argument('--seed', type=float, default=0)
 args = parser.parse_args()
 
 device = torch.device('cuda:' + str(args.gpu) if torch.cuda.is_available() else 'cpu')
+print(device)
 
 # Data
 torch.manual_seed(args.seed)
@@ -51,11 +53,13 @@ net = net.to(device)
 
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.SGD(net.parameters(), lr=args.lr, momentum=0.9, weight_decay=5e-4)
+# optimizer = optim.Adam(net.parameters(), lr=args.lr, weight_decay=5e-4)
 
 
 # Training
 def train(epoch):
     print('\nEpoch: %d' % epoch)
+    time_ = time.time()
     net.train()
     train_loss = 0
     correct = 0
@@ -73,8 +77,8 @@ def train(epoch):
         total += targets.size(0)
         correct += predicted.eq(targets).sum().item()
         
-    print('Train epoch:{} \tLoss: {:.6f} | Acc: {:.6f} ({}/{})'
-        .format(epoch, train_loss/(len(train_loader)), 100.*correct/total, correct, total))
+    print('Train epoch:{} \tLoss: {:.6f} | Acc: {:.6f} ({}/{}) | Time: {:.2f}m'
+        .format(epoch, train_loss/(len(train_loader)), 100.*correct/total, correct, total, (time.time()-time_)/60))
 
 def test(epoch):
     net.eval()
@@ -90,7 +94,7 @@ def test(epoch):
             correct += predicted.eq(targets).sum().item()
 
 
-        print('Test epoch: {}| Acc: {} ({}/{})'
+        print('Test epoch: {}  Acc: {} ({}/{})'
         .format(epoch, 100.*correct/total, correct, total))
            
 
