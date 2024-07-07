@@ -4,28 +4,28 @@ Building Tiny ImageNet data loader with 4 workers
 ==> Building model..
 
 Epoch: 0
-Train epoch:0 	Loss: 5.141767 | Acc: 1.283411 (1283/99968) | Time: 0.29m
-Test epoch: 0  Acc: 2.2636217948717947 (226/9984)
+Train epoch:0 	Loss: 5.251808 | Acc: 0.814261 (814/99968) | Time: 0.30m
+Test epoch: 0  Acc: 0.9114583333333334 (91/9984)
 
 Epoch: 1
-Train epoch:1 	Loss: 4.850308 | Acc: 3.409091 (3408/99968) | Time: 0.27m
-Test epoch: 1  Acc: 5.428685897435898 (542/9984)
+Train epoch:1 	Loss: 5.017032 | Acc: 2.057658 (2057/99968) | Time: 0.28m
+Test epoch: 1  Acc: 2.8545673076923075 (285/9984)
 
 Epoch: 2
-Train epoch:2 	Loss: 4.572107 | Acc: 6.259003 (6257/99968) | Time: 0.28m
-Test epoch: 2  Acc: 7.582131410256411 (757/9984)
+Train epoch:2 	Loss: 4.871128 | Acc: 3.158011 (3157/99968) | Time: 0.28m
+Test epoch: 2  Acc: 4.1766826923076925 (417/9984)
 
 Epoch: 3
-Train epoch:3 	Loss: 4.362431 | Acc: 8.826825 (8824/99968) | Time: 0.28m
-Test epoch: 3  Acc: 10.9375 (1092/9984)
+Train epoch:3 	Loss: 4.778020 | Acc: 4.090309 (4089/99968) | Time: 0.28m
+Test epoch: 3  Acc: 5.158253205128205 (515/9984)
 
 Epoch: 4
-Train epoch:4 	Loss: 4.241058 | Acc: 10.535371 (10532/99968) | Time: 0.30m
-Test epoch: 4  Acc: 12.690304487179487 (1267/9984)
+Train epoch:4 	Loss: 4.739732 | Acc: 4.655490 (4654/99968) | Time: 0.28m
+Test epoch: 4  Acc: 5.679086538461538 (567/9984)
 
 Epoch: 5
-Train epoch:5 	Loss: 4.147812 | Acc: 11.795775 (11792/99968) | Time: 0.28m
-Test epoch: 5  Acc: 12.830528846153847 (1281/9984)
+Train epoch:5 	Loss: 4.721728 | Acc: 4.773528 (4772/99968) | Time: 0.30m
+Test epoch: 5  Acc: 4.527243589743589 (452/9984)
 
 Epoch: 6
-Train epoch:6 	Loss: 4.051608 | Acc: 12.955146 (12951/99968) | Time: 0.28m
+Train epoch:6 	Loss: 4.705475 | Acc: 4.954585 (4953/99968) | Time: 0.28m

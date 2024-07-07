@@ -19,7 +19,7 @@ import time
 
 parser = argparse.ArgumentParser(description='PyTorch ResNet Training')
 parser.add_argument('--epochs', type=int, default=60, help='number of epochs to train')
-parser.add_argument('--lr', default=1e-1, type=float, help='learning rate')
+parser.add_argument('--lr', default=5e-1, type=float, help='learning rate')
 parser.add_argument('--dataset', default='imagenet', help='in domain dataset')
 parser.add_argument('--batch-size', type=int, default=128, help='input batch size for training')
 parser.add_argument('--imageSize', type=int, default=32, help='the height / width of the input image to network')
