@@ -4,36 +4,32 @@ Building Tiny ImageNet data loader with 4 workers
 ==> Building model..
 
 Epoch: 0
-Train epoch:0 	Loss: 5.168771 | Acc: 1.102353 (1102/99968) | Time: 0.29m
-Test epoch: 0  Acc: 1.7127403846153846 (171/9984)
+Train epoch:0 	Loss: 5.297594 | Acc: 0.549176 (549/99968) | Time: 0.29m
+Test epoch: 0  Acc: 1.0616987179487178 (106/9984)
 
 Epoch: 1
-Train epoch:1 	Loss: 4.896199 | Acc: 2.990957 (2990/99968) | Time: 0.27m
-Test epoch: 1  Acc: 4.637419871794871 (463/9984)
+Train epoch:1 	Loss: 5.174087 | Acc: 1.053337 (1053/99968) | Time: 0.28m
+Test epoch: 1  Acc: 1.1318108974358974 (113/9984)
 
 Epoch: 2
-Train epoch:2 	Loss: 4.634174 | Acc: 5.461748 (5460/99968) | Time: 0.28m
-Test epoch: 2  Acc: 7.181490384615385 (717/9984)
+Train epoch:2 	Loss: 5.082867 | Acc: 1.398448 (1398/99968) | Time: 0.27m
+Test epoch: 2  Acc: 1.6626602564102564 (166/9984)
 
 Epoch: 3
-Train epoch:3 	Loss: 4.392823 | Acc: 8.278649 (8276/99968) | Time: 0.27m
-Test epoch: 3  Acc: 10.40665064102564 (1039/9984)
+Train epoch:3 	Loss: 5.006246 | Acc: 2.104673 (2104/99968) | Time: 0.28m
+Test epoch: 3  Acc: 3.28525641025641 (328/9984)
 
 Epoch: 4
-Train epoch:4 	Loss: 4.224917 | Acc: 10.668414 (10665/99968) | Time: 0.27m
-Test epoch: 4  Acc: 13.381410256410257 (1336/9984)
+Train epoch:4 	Loss: 4.855938 | Acc: 3.440101 (3439/99968) | Time: 0.30m
+Test epoch: 4  Acc: 4.276842948717949 (427/9984)
 
 Epoch: 5
-Train epoch:5 	Loss: 4.072180 | Acc: 12.701064 (12697/99968) | Time: 0.27m
-Test epoch: 5  Acc: 14.012419871794872 (1399/9984)
+Train epoch:5 	Loss: 4.718080 | Acc: 4.640485 (4639/99968) | Time: 0.28m
+Test epoch: 5  Acc: 6.169871794871795 (616/9984)
 
 Epoch: 6
-Train epoch:6 	Loss: 3.945663 | Acc: 14.429617 (14425/99968) | Time: 0.29m
-Test epoch: 6  Acc: 15.695112179487179 (1567/9984)
+Train epoch:6 	Loss: 4.581867 | Acc: 5.807859 (5806/99968) | Time: 0.27m
+Test epoch: 6  Acc: 7.051282051282051 (704/9984)
 
 Epoch: 7
-Train epoch:7 	Loss: 3.861722 | Acc: 15.595991 (15591/99968) | Time: 0.28m
-Test epoch: 7  Acc: 16.49639423076923 (1647/9984)
-
-Epoch: 8
-slurmstepd: error: *** JOB 14540 ON node8 CANCELLED AT 2024-07-07T23:57:04 ***
+slurmstepd: error: *** JOB 14541 ON node8 CANCELLED AT 2024-07-08T00:00:28 ***
