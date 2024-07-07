@@ -4,28 +4,36 @@ Building Tiny ImageNet data loader with 4 workers
 ==> Building model..
 
 Epoch: 0
-Train epoch:0 	Loss: 5.251808 | Acc: 0.814261 (814/99968) | Time: 0.30m
-Test epoch: 0  Acc: 0.9114583333333334 (91/9984)
+Train epoch:0 	Loss: 5.168771 | Acc: 1.102353 (1102/99968) | Time: 0.29m
+Test epoch: 0  Acc: 1.7127403846153846 (171/9984)
 
 Epoch: 1
-Train epoch:1 	Loss: 5.017032 | Acc: 2.057658 (2057/99968) | Time: 0.28m
-Test epoch: 1  Acc: 2.8545673076923075 (285/9984)
+Train epoch:1 	Loss: 4.896199 | Acc: 2.990957 (2990/99968) | Time: 0.27m
+Test epoch: 1  Acc: 4.637419871794871 (463/9984)
 
 Epoch: 2
-Train epoch:2 	Loss: 4.871128 | Acc: 3.158011 (3157/99968) | Time: 0.28m
-Test epoch: 2  Acc: 4.1766826923076925 (417/9984)
+Train epoch:2 	Loss: 4.634174 | Acc: 5.461748 (5460/99968) | Time: 0.28m
+Test epoch: 2  Acc: 7.181490384615385 (717/9984)
 
 Epoch: 3
-Train epoch:3 	Loss: 4.778020 | Acc: 4.090309 (4089/99968) | Time: 0.28m
-Test epoch: 3  Acc: 5.158253205128205 (515/9984)
+Train epoch:3 	Loss: 4.392823 | Acc: 8.278649 (8276/99968) | Time: 0.27m
+Test epoch: 3  Acc: 10.40665064102564 (1039/9984)
 
 Epoch: 4
-Train epoch:4 	Loss: 4.739732 | Acc: 4.655490 (4654/99968) | Time: 0.28m
-Test epoch: 4  Acc: 5.679086538461538 (567/9984)
+Train epoch:4 	Loss: 4.224917 | Acc: 10.668414 (10665/99968) | Time: 0.27m
+Test epoch: 4  Acc: 13.381410256410257 (1336/9984)
 
 Epoch: 5
-Train epoch:5 	Loss: 4.721728 | Acc: 4.773528 (4772/99968) | Time: 0.30m
-Test epoch: 5  Acc: 4.527243589743589 (452/9984)
+Train epoch:5 	Loss: 4.072180 | Acc: 12.701064 (12697/99968) | Time: 0.27m
+Test epoch: 5  Acc: 14.012419871794872 (1399/9984)
 
 Epoch: 6
-Train epoch:6 	Loss: 4.705475 | Acc: 4.954585 (4953/99968) | Time: 0.28m
+Train epoch:6 	Loss: 3.945663 | Acc: 14.429617 (14425/99968) | Time: 0.29m
+Test epoch: 6  Acc: 15.695112179487179 (1567/9984)
+
+Epoch: 7
+Train epoch:7 	Loss: 3.861722 | Acc: 15.595991 (15591/99968) | Time: 0.28m
+Test epoch: 7  Acc: 16.49639423076923 (1647/9984)
+
+Epoch: 8
+slurmstepd: error: *** JOB 14540 ON node8 CANCELLED AT 2024-07-07T23:57:04 ***
