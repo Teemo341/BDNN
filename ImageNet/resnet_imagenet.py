@@ -14,19 +14,20 @@ import torch.backends.cudnn as cudnn
 import os
 import argparse
 import models
+import torchvision
 import data_loader
 import time
 
 parser = argparse.ArgumentParser(description='PyTorch ResNet Training')
-parser.add_argument('--epochs', type=int, default=60, help='number of epochs to train')
-parser.add_argument('--lr', default=1e-2, type=float, help='learning rate')
+parser.add_argument('--epochs', type=int, default=90, help='number of epochs to train')
+parser.add_argument('--lr', default=0.1, type=float, help='learning rate')
 parser.add_argument('--dataset', default='imagenet', help='in domain dataset')
 parser.add_argument('--batch-size', type=int, default=128, help='input batch size for training')
-parser.add_argument('--imageSize', type=int, default=32, help='the height / width of the input image to network')
+parser.add_argument('--imageSize', type=int, default=64, help='the height / width of the input image to network')
 parser.add_argument('--test_batch_size', type=int, default=1000)
 parser.add_argument('--gpu', type=int, default=0)
 parser.add_argument('--droprate', type=float, default=0.1, help='learning rate decay')
-parser.add_argument('--decreasing_lr', default=[20, 40], nargs='+', help='decreasing strategy')
+parser.add_argument('--decreasing_lr', default=[30, 60], nargs='+', help='decreasing strategy')
 parser.add_argument('--seed', type=float, default=0)
 args = parser.parse_args()
 
@@ -48,12 +49,13 @@ train_loader, test_loader = data_loader.getDataSet(args.dataset, args.batch_size
 # Model
 print('==> Building model..')
 net = models.Resnet()
+# net = torchvision.models.resnet18(pretrained=False,num_classes=200)
 net = net.to(device)
 
 
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.SGD(net.parameters(), lr=args.lr, momentum=0.9, weight_decay=5e-4)
-# optimizer = optim.Adam(net.parameters(), lr=args.lr, weight_decay=5e-4)
+# optimizer = optim.Adam(net.parameters(), lr=0.001, weight_decay=5e-4)
 
 
 # Training

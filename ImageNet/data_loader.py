@@ -25,6 +25,8 @@ def getSVHN(batch_size, test_batch_size, img_size, **kwargs):
             transform=transforms.Compose([
                 transforms.Resize(img_size),
                 transforms.ToTensor(),
+                transforms.Normalize(mean=[0.5,0.5,0.5], std=[0.5,0.5,0.5]),
+                transforms.RandomErasing(p=0.5, scale=(0.06, 0.08), ratio=(1, 3), value=0, inplace=True)
             ]),
             target_transform=target_transform,
         ),
@@ -37,6 +39,7 @@ def getSVHN(batch_size, test_batch_size, img_size, **kwargs):
             transform=transforms.Compose([
                 transforms.Resize(img_size),
                 transforms.ToTensor(),
+                transforms.Normalize(mean=[0.5,0.5,0.5], std=[0.5,0.5,0.5])
             ]),
             target_transform=target_transform
         ),
@@ -57,6 +60,8 @@ def getCIFAR10(batch_size, test_batch_size, img_size, **kwargs):
                 transforms.RandomHorizontalFlip(),
                 transforms.Resize(img_size),
                 transforms.ToTensor(),
+                transforms.Normalize(mean=[0.5,0.5,0.5], std=[0.5,0.5,0.5]),
+                transforms.RandomErasing(p=0.5, scale=(0.06, 0.08), ratio=(1, 3), value=0, inplace=True)
             ])),
         batch_size=batch_size, shuffle=True, drop_last=True, **kwargs)
     ds.append(train_loader)
@@ -66,6 +71,7 @@ def getCIFAR10(batch_size, test_batch_size, img_size, **kwargs):
             transform=transforms.Compose([
                 transforms.Resize(img_size),
                 transforms.ToTensor(),
+                transforms.Normalize(mean=[0.5,0.5,0.5], std=[0.5,0.5,0.5])
             ])),
         batch_size=batch_size, shuffle=False, drop_last=True, **kwargs)
     ds.append(test_loader)
@@ -88,6 +94,8 @@ def getCIFAR100(batch_size, test_batch_size, img_size, **kwargs):
                 transforms.RandomHorizontalFlip(),
                 transforms.Resize(img_size),
                 transforms.ToTensor(),
+                transforms.Normalize(mean=[0.5,0.5,0.5], std=[0.5,0.5,0.5]),
+                transforms.RandomErasing(p=0.5, scale=(0.06, 0.08), ratio=(1, 3), value=0, inplace=True)
             ])),
         batch_size=batch_size, shuffle=True, drop_last=True, **kwargs)
     ds.append(train_loader)
@@ -97,6 +105,7 @@ def getCIFAR100(batch_size, test_batch_size, img_size, **kwargs):
             transform=transforms.Compose([
                 transforms.Resize(img_size),
                 transforms.ToTensor(),
+                transforms.Normalize(mean=[0.5,0.5,0.5], std=[0.5,0.5,0.5])
             ])),
         batch_size=batch_size, shuffle=False, drop_last=True, **kwargs)
     ds.append(test_loader)
@@ -167,10 +176,14 @@ def getImagenetTiny(batch_size, test_batch_size, img_size, **kwargs):
         tiny_imagenet_train(
             root='../data/tiny-imagenet-200/',
             transform=transforms.Compose([
-                transforms.RandomCrop(64, padding=4),
+                transforms.RandomCrop(64,padding=4),
                 transforms.RandomHorizontalFlip(),
+                transforms.ColorJitter(brightness=0.4, contrast=0.4, saturation=0.4, hue=0.1),
+                transforms.RandomRotation(20),  
                 transforms.Resize(img_size),
                 transforms.ToTensor(),
+                transforms.Normalize(mean=[0.5,0.5,0.5], std=[0.5,0.5,0.5]),
+                transforms.RandomErasing(p=0.5, scale=(0.06, 0.08), ratio=(1, 3), value=0, inplace=True)
             ])),
         batch_size=batch_size, shuffle=True, drop_last=True, **kwargs)
     ds.append(train_loader)
@@ -180,6 +193,7 @@ def getImagenetTiny(batch_size, test_batch_size, img_size, **kwargs):
             transform=transforms.Compose([
                 transforms.Resize(img_size),
                 transforms.ToTensor(),
+                transforms.Normalize(mean=[0.5,0.5,0.5], std=[0.5,0.5,0.5]),
             ])),
         batch_size=batch_size, shuffle=False, drop_last=True, **kwargs)
     ds.append(test_loader)

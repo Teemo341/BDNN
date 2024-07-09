@@ -44,6 +44,7 @@ class ResBlock(nn.Module):
         self.conv1 = conv3x3(inplanes, planes, stride)
         self.norm2 = norm(planes)
         self.conv2 = conv3x3(planes, planes)
+        self.dropout = nn.Dropout(0.0)
 
     def forward(self, x):
         shortcut = x
@@ -57,6 +58,7 @@ class ResBlock(nn.Module):
         out = self.norm2(out)
         out = self.relu(out)
         out = self.conv2(out)
+        out = self.dropout(out)
 
         return out + shortcut
 
@@ -78,13 +80,13 @@ class Resnet(nn.Module):
             nn.Conv2d(3, 64, 3, 1),
             norm(64),
             nn.ReLU(inplace=True),
-            nn.Conv2d(64, 64, 4, 2, 1),
+            nn.Conv2d(64, 128, 4, 2, 1),
             norm(64),
             nn.ReLU(inplace=True),
-            nn.Conv2d(64, 64, 4, 2, 1),
+            nn.Conv2d(128, 256, 4, 2, 1),
         )
-        self.feature_layers = [ResBlock(64, 64) for _ in range(6)]
-        self.fc_layers = nn.Sequential(norm(64), nn.ReLU(inplace=True), nn.AdaptiveAvgPool2d((1, 1)), Flatten(), nn.Dropout(0.1), nn.Linear(64, 200))
+        self.feature_layers = [ResBlock(256, 256) for _ in range(6)]
+        self.fc_layers = nn.Sequential(norm(256), nn.ReLU(inplace=True), nn.AdaptiveAvgPool2d((1, 1)), Flatten(), nn.Dropout(0.5), nn.Linear(256, 200))
         self.model = nn.Sequential(*self.downsampling_layers, *self.feature_layers, *self.fc_layers)
         self.apply(init_params)
     def forward(self, x):
