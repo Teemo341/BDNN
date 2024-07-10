@@ -81,7 +81,7 @@ class Resnet(nn.Module):
             norm(64),
             nn.ReLU(inplace=True),
             nn.Conv2d(64, 128, 4, 2, 1),
-            norm(64),
+            norm(128),
             nn.ReLU(inplace=True),
             nn.Conv2d(128, 256, 4, 2, 1),
         )
