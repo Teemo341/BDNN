@@ -1,6 +1,6 @@
 #! /bin/bash
 #SBATCH -J OE
-#SBATCH -o result/OE_test_prob.out               
+#SBATCH -o result/OE_test_mat.out               
 #SBATCH -p test                  
 #SBATCH --qos=normal               
 #SBATCH -N 1                
@@ -8,4 +8,4 @@
 #SBATCH --cpus-per-task=12      
 
 
-python -u test_by_probability.py --pre_trained_net save_swag_mnist/final_model --network resnet --dataset svhn --out_dataset cifar100
+python -u test_by_matrix.py --pre_trained_net save_resnet_OE_mnist/final_model --network resnet --dataset mnist --semi_out_dataset svhn --out_dataset cifar10
