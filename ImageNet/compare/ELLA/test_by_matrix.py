@@ -66,7 +66,7 @@ if device == 'cuda':
 
 print('Load model')
 if args.network == 'swag':
-    model = models.swag.posteriors.SWAG(
+    model = models.other.posteriors.SWAG(
         models.Resnet(),
         no_cov_mat=False,
         max_num_models=20,

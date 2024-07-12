@@ -1,0 +1,311 @@
+cuda:0
+load data:  imagenet
+Building Tiny ImageNet data loader with 4 workers
+==> Building model..
+
+Epoch: 0
+Train epoch:0 	Loss: 5.106033 | Acc: 1.652529 (1652/99968) | Time: 1.74m
+Test epoch: 0  Acc: 4.216746794871795 (421/9984)
+
+Epoch: 1
+Train epoch:1 	Loss: 4.551160 | Acc: 6.302017 (6300/99968) | Time: 2.01m
+Test epoch: 1  Acc: 9.565304487179487 (955/9984)
+
+Epoch: 2
+Train epoch:2 	Loss: 4.118224 | Acc: 11.559699 (11556/99968) | Time: 2.02m
+Test epoch: 2  Acc: 14.633413461538462 (1461/9984)
+
+Epoch: 3
+Train epoch:3 	Loss: 3.837018 | Acc: 15.636004 (15631/99968) | Time: 1.99m
+Test epoch: 3  Acc: 18.63982371794872 (1861/9984)
+
+Epoch: 4
+Train epoch:4 	Loss: 3.638902 | Acc: 18.632963 (18627/99968) | Time: 2.00m
+Test epoch: 4  Acc: 21.444310897435898 (2141/9984)
+
+Epoch: 5
+Train epoch:5 	Loss: 3.489398 | Acc: 21.094750 (21088/99968) | Time: 1.92m
+Test epoch: 5  Acc: 23.297275641025642 (2326/9984)
+
+Epoch: 6
+Train epoch:6 	Loss: 3.373251 | Acc: 23.065381 (23058/99968) | Time: 1.87m
+Test epoch: 6  Acc: 25.30048076923077 (2526/9984)
+
+Epoch: 7
+Train epoch:7 	Loss: 3.257319 | Acc: 25.193062 (25185/99968) | Time: 1.89m
+Test epoch: 7  Acc: 26.943108974358974 (2690/9984)
+
+Epoch: 8
+Train epoch:8 	Loss: 3.181757 | Acc: 26.275408 (26267/99968) | Time: 1.88m
+Test epoch: 8  Acc: 29.27684294871795 (2923/9984)
+
+Epoch: 9
+Train epoch:9 	Loss: 3.089853 | Acc: 28.238036 (28229/99968) | Time: 1.88m
+Test epoch: 9  Acc: 29.346955128205128 (2930/9984)
+
+Epoch: 10
+Train epoch:10 	Loss: 3.022614 | Acc: 29.413412 (29404/99968) | Time: 1.88m
+Test epoch: 10  Acc: 31.219951923076923 (3117/9984)
+
+Epoch: 11
+Train epoch:11 	Loss: 2.935969 | Acc: 31.222991 (31213/99968) | Time: 1.87m
+Test epoch: 11  Acc: 32.712339743589745 (3266/9984)
+
+Epoch: 12
+Train epoch:12 	Loss: 2.886858 | Acc: 32.116277 (32106/99968) | Time: 1.88m
+Test epoch: 12  Acc: 34.49519230769231 (3444/9984)
+
+Epoch: 13
+Train epoch:13 	Loss: 2.833960 | Acc: 33.047575 (33037/99968) | Time: 1.87m
+Test epoch: 13  Acc: 35.34655448717949 (3529/9984)
+
+Epoch: 14
+Train epoch:14 	Loss: 2.781171 | Acc: 34.199944 (34189/99968) | Time: 1.86m
+Test epoch: 14  Acc: 34.635416666666664 (3458/9984)
+
+Epoch: 15
+Train epoch:15 	Loss: 2.729725 | Acc: 35.352313 (35341/99968) | Time: 1.89m
+Test epoch: 15  Acc: 35.92748397435897 (3587/9984)
+
+Epoch: 16
+Train epoch:16 	Loss: 2.699492 | Acc: 35.767446 (35756/99968) | Time: 1.87m
+Test epoch: 16  Acc: 36.96915064102564 (3691/9984)
+
+Epoch: 17
+Train epoch:17 	Loss: 2.650380 | Acc: 36.765765 (36754/99968) | Time: 1.88m
+Test epoch: 17  Acc: 37.66025641025641 (3760/9984)
+
+Epoch: 18
+Train epoch:18 	Loss: 2.629006 | Acc: 37.164893 (37153/99968) | Time: 1.87m
+Test epoch: 18  Acc: 38.92227564102564 (3886/9984)
+
+Epoch: 19
+Train epoch:19 	Loss: 2.585617 | Acc: 38.197223 (38185/99968) | Time: 1.87m
+Test epoch: 19  Acc: 38.381410256410255 (3832/9984)
+
+Epoch: 20
+Train epoch:20 	Loss: 2.549382 | Acc: 38.606354 (38594/99968) | Time: 1.88m
+Test epoch: 20  Acc: 39.57331730769231 (3951/9984)
+
+Epoch: 21
+Train epoch:21 	Loss: 2.526509 | Acc: 39.228553 (39216/99968) | Time: 1.87m
+Test epoch: 21  Acc: 38.541666666666664 (3848/9984)
+
+Epoch: 22
+Train epoch:22 	Loss: 2.500547 | Acc: 39.708707 (39696/99968) | Time: 1.88m
+Test epoch: 22  Acc: 39.36298076923077 (3930/9984)
+
+Epoch: 23
+Train epoch:23 	Loss: 2.473913 | Acc: 40.385923 (40373/99968) | Time: 1.88m
+Test epoch: 23  Acc: 41.19591346153846 (4113/9984)
+
+Epoch: 24
+Train epoch:24 	Loss: 2.451014 | Acc: 40.801056 (40788/99968) | Time: 1.87m
+Test epoch: 24  Acc: 41.82692307692308 (4176/9984)
+
+Epoch: 25
+Train epoch:25 	Loss: 2.427512 | Acc: 41.201184 (41188/99968) | Time: 2.04m
+Test epoch: 25  Acc: 42.30769230769231 (4224/9984)
+
+Epoch: 26
+Train epoch:26 	Loss: 2.414763 | Acc: 41.498279 (41485/99968) | Time: 1.93m
+Test epoch: 26  Acc: 42.16746794871795 (4210/9984)
+
+Epoch: 27
+Train epoch:27 	Loss: 2.396646 | Acc: 41.837388 (41824/99968) | Time: 1.95m
+Test epoch: 27  Acc: 41.02564102564103 (4096/9984)
+
+Epoch: 28
+Train epoch:28 	Loss: 2.388274 | Acc: 42.038452 (42025/99968) | Time: 1.96m
+Test epoch: 28  Acc: 41.877003205128204 (4181/9984)
+
+Epoch: 29
+Train epoch:29 	Loss: 2.353448 | Acc: 42.960747 (42947/99968) | Time: 1.95m
+Test epoch: 29  Acc: 42.43790064102564 (4237/9984)
+
+Epoch: 30
+Train epoch:30 	Loss: 2.347770 | Acc: 43.080786 (43067/99968) | Time: 1.96m
+Test epoch: 30  Acc: 41.145833333333336 (4108/9984)
+
+Epoch: 31
+Train epoch:31 	Loss: 1.900147 | Acc: 52.803897 (52787/99968) | Time: 1.95m
+Test epoch: 31  Acc: 50.17027243589744 (5009/9984)
+
+Epoch: 32
+Train epoch:32 	Loss: 1.815222 | Acc: 54.657490 (54640/99968) | Time: 2.00m
+Test epoch: 32  Acc: 50.33052884615385 (5025/9984)
+
+Epoch: 33
+Train epoch:33 	Loss: 1.778927 | Acc: 55.419734 (55402/99968) | Time: 1.97m
+Test epoch: 33  Acc: 50.891426282051285 (5081/9984)
+
+Epoch: 34
+Train epoch:34 	Loss: 1.746345 | Acc: 55.999920 (55982/99968) | Time: 1.97m
+Test epoch: 34  Acc: 51.41225961538461 (5133/9984)
+
+Epoch: 35
+Train epoch:35 	Loss: 1.716375 | Acc: 56.625120 (56607/99968) | Time: 1.99m
+Test epoch: 35  Acc: 50.80128205128205 (5072/9984)
+
+Epoch: 36
+Train epoch:36 	Loss: 1.698411 | Acc: 57.052257 (57034/99968) | Time: 1.99m
+Test epoch: 36  Acc: 51.49238782051282 (5141/9984)
+
+Epoch: 37
+Train epoch:37 	Loss: 1.683885 | Acc: 57.224312 (57206/99968) | Time: 2.00m
+Test epoch: 37  Acc: 51.272035256410255 (5119/9984)
+
+Epoch: 38
+Train epoch:38 	Loss: 1.660939 | Acc: 57.680458 (57662/99968) | Time: 2.00m
+Test epoch: 38  Acc: 51.02163461538461 (5094/9984)
+
+Epoch: 39
+Train epoch:39 	Loss: 1.648981 | Acc: 57.993558 (57975/99968) | Time: 2.04m
+Test epoch: 39  Acc: 51.40224358974359 (5132/9984)
+
+Epoch: 40
+Train epoch:40 	Loss: 1.637477 | Acc: 58.228633 (58210/99968) | Time: 2.04m
+Test epoch: 40  Acc: 51.1318108974359 (5105/9984)
+
+Epoch: 41
+Train epoch:41 	Loss: 1.615361 | Acc: 58.814821 (58796/99968) | Time: 2.03m
+Test epoch: 41  Acc: 51.83293269230769 (5175/9984)
+
+Epoch: 42
+Train epoch:42 	Loss: 1.600782 | Acc: 59.138924 (59120/99968) | Time: 2.01m
+Test epoch: 42  Acc: 51.34214743589744 (5126/9984)
+
+Epoch: 43
+Train epoch:43 	Loss: 1.589439 | Acc: 59.385003 (59366/99968) | Time: 1.97m
+Test epoch: 43  Acc: 51.05168269230769 (5097/9984)
+
+Epoch: 44
+Train epoch:44 	Loss: 1.572828 | Acc: 59.600072 (59581/99968) | Time: 2.15m
+Test epoch: 44  Acc: 51.10176282051282 (5102/9984)
+
+Epoch: 45
+Train epoch:45 	Loss: 1.563090 | Acc: 59.926176 (59907/99968) | Time: 1.92m
+Test epoch: 45  Acc: 51.282051282051285 (5120/9984)
+
+Epoch: 46
+Train epoch:46 	Loss: 1.548768 | Acc: 60.111236 (60092/99968) | Time: 1.95m
+Test epoch: 46  Acc: 51.53245192307692 (5145/9984)
+
+Epoch: 47
+Train epoch:47 	Loss: 1.534691 | Acc: 60.451344 (60432/99968) | Time: 1.93m
+Test epoch: 47  Acc: 51.71274038461539 (5163/9984)
+
+Epoch: 48
+Train epoch:48 	Loss: 1.530075 | Acc: 60.490357 (60471/99968) | Time: 1.95m
+Test epoch: 48  Acc: 51.93309294871795 (5185/9984)
+
+Epoch: 49
+Train epoch:49 	Loss: 1.522298 | Acc: 60.577385 (60558/99968) | Time: 1.92m
+Test epoch: 49  Acc: 51.75280448717949 (5167/9984)
+
+Epoch: 50
+Train epoch:50 	Loss: 1.503849 | Acc: 61.093550 (61074/99968) | Time: 1.94m
+Test epoch: 50  Acc: 51.642628205128204 (5156/9984)
+
+Epoch: 51
+Train epoch:51 	Loss: 1.500728 | Acc: 61.070543 (61051/99968) | Time: 1.94m
+Test epoch: 51  Acc: 51.041666666666664 (5096/9984)
+
+Epoch: 52
+Train epoch:52 	Loss: 1.481935 | Acc: 61.572703 (61553/99968) | Time: 1.93m
+Test epoch: 52  Acc: 50.83133012820513 (5075/9984)
+
+Epoch: 53
+Train epoch:53 	Loss: 1.483989 | Acc: 61.543694 (61524/99968) | Time: 1.94m
+Test epoch: 53  Acc: 51.57251602564103 (5149/9984)
+
+Epoch: 54
+Train epoch:54 	Loss: 1.471989 | Acc: 61.848792 (61829/99968) | Time: 1.92m
+Test epoch: 54  Acc: 51.12179487179487 (5104/9984)
+
+Epoch: 55
+Train epoch:55 	Loss: 1.465173 | Acc: 61.974832 (61955/99968) | Time: 1.94m
+Test epoch: 55  Acc: 51.35216346153846 (5127/9984)
+
+Epoch: 56
+Train epoch:56 	Loss: 1.454954 | Acc: 62.008843 (61989/99968) | Time: 1.87m
+Test epoch: 56  Acc: 50.56089743589744 (5048/9984)
+
+Epoch: 57
+Train epoch:57 	Loss: 1.451935 | Acc: 62.156890 (62137/99968) | Time: 1.87m
+Test epoch: 57  Acc: 51.5625 (5148/9984)
+
+Epoch: 58
+Train epoch:58 	Loss: 1.443156 | Acc: 62.501000 (62481/99968) | Time: 1.88m
+Test epoch: 58  Acc: 50.8213141025641 (5074/9984)
+
+Epoch: 59
+Train epoch:59 	Loss: 1.433829 | Acc: 62.552017 (62532/99968) | Time: 1.86m
+Test epoch: 59  Acc: 51.462339743589745 (5138/9984)
+
+Epoch: 60
+Train epoch:60 	Loss: 1.428178 | Acc: 62.596031 (62576/99968) | Time: 1.87m
+Test epoch: 60  Acc: 51.63261217948718 (5155/9984)
+
+Epoch: 61
+Train epoch:61 	Loss: 1.239622 | Acc: 67.608635 (67587/99968) | Time: 1.87m
+Test epoch: 61  Acc: 53.32532051282051 (5324/9984)
+
+Epoch: 62
+Train epoch:62 	Loss: 1.206219 | Acc: 68.256842 (68235/99968) | Time: 2.02m
+Test epoch: 62  Acc: 53.17508012820513 (5309/9984)
+
+Epoch: 63
+Train epoch:63 	Loss: 1.192376 | Acc: 68.594950 (68573/99968) | Time: 1.94m
+Test epoch: 63  Acc: 53.125 (5304/9984)
+
+Epoch: 64
+Train epoch:64 	Loss: 1.182095 | Acc: 68.972071 (68950/99968) | Time: 1.95m
+Test epoch: 64  Acc: 52.98477564102564 (5290/9984)
+
+Epoch: 65
+Train epoch:65 	Loss: 1.172899 | Acc: 69.140125 (69118/99968) | Time: 1.95m
+Test epoch: 65  Acc: 53.225160256410255 (5314/9984)
+
+Epoch: 66
+Train epoch:66 	Loss: 1.162024 | Acc: 69.207146 (69185/99968) | Time: 1.94m
+Test epoch: 66  Acc: 53.255208333333336 (5317/9984)
+
+Epoch: 67
+Train epoch:67 	Loss: 1.162509 | Acc: 69.323183 (69301/99968) | Time: 1.94m
+Test epoch: 67  Acc: 52.88461538461539 (5280/9984)
+
+Epoch: 68
+Train epoch:68 	Loss: 1.161274 | Acc: 69.323183 (69301/99968) | Time: 1.95m
+Test epoch: 68  Acc: 53.00480769230769 (5292/9984)
+
+Epoch: 69
+Train epoch:69 	Loss: 1.154016 | Acc: 69.556258 (69534/99968) | Time: 1.95m
+Test epoch: 69  Acc: 52.93469551282051 (5285/9984)
+
+Epoch: 70
+Train epoch:70 	Loss: 1.150108 | Acc: 69.506242 (69484/99968) | Time: 1.96m
+Test epoch: 70  Acc: 52.93469551282051 (5285/9984)
+
+Epoch: 71
+Train epoch:71 	Loss: 1.145965 | Acc: 69.692302 (69670/99968) | Time: 1.95m
+Test epoch: 71  Acc: 52.93469551282051 (5285/9984)
+
+Epoch: 72
+Train epoch:72 	Loss: 1.142610 | Acc: 69.757322 (69735/99968) | Time: 1.96m
+Test epoch: 72  Acc: 52.88461538461539 (5280/9984)
+
+Epoch: 73
+Train epoch:73 	Loss: 1.130669 | Acc: 69.837348 (69815/99968) | Time: 1.96m
+Test epoch: 73  Acc: 53.0849358974359 (5300/9984)
+
+Epoch: 74
+Train epoch:74 	Loss: 1.132798 | Acc: 70.059419 (70037/99968) | Time: 1.99m
+Test epoch: 74  Acc: 53.07491987179487 (5299/9984)
+
+Epoch: 75
+Train epoch:75 	Loss: 1.124554 | Acc: 70.208467 (70186/99968) | Time: 1.98m
+Test epoch: 75  Acc: 52.96474358974359 (5288/9984)
+
+Epoch: 76
+slurmstepd: error: *** JOB 14620 ON node7 CANCELLED AT 2024-07-08T23:26:02 ***

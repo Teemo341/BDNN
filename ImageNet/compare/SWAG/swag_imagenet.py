@@ -25,7 +25,7 @@ from models.swag import utils
 
 
 parser = argparse.ArgumentParser(description='PyTorch SWAG Training')
-parser.add_argument('--epochs', type=int, default=120, help='number of epochs to train')
+parser.add_argument('--epochs', type=int, default=200, help='number of epochs to train')
 parser.add_argument('--lr', default=0.1, type=float, help='learning rate')
 parser.add_argument('--dataset', default='imagenet', help='in domain dataset')
 parser.add_argument('--batch-size', type=int, default=128, help='input batch size for training')

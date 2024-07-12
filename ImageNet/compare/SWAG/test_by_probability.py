@@ -54,24 +54,22 @@ if device == 'cuda':
 
 
 print('Load model')
-if args.network == 'resnet':
-    model = models.Resnet()
-    args.eva_iter = 1
-elif args.network == 'resnet_bayesian':
-    model = models.Resnet_bayesian()
-elif args.network == 'sdenet':
-    model = models.SDENet_mnist(layer_depth=6, num_classes=10, dim=64)
-elif args.network == 'sdenet_multi':
-    model = models.SDENet_multi_mnist(layer_depth=6, num_classes=10, dim=64)
-elif args.network == 'mc_dropout':
-    model = models.Resnet_dropout()
+if args.network == 'swag':
+    model = models.swag.posteriors.SWAG(
+        models.Resnet(),
+        no_cov_mat=False,
+        max_num_models=20,
+        num_classes=200,
+    )
+    args.eva_iter = 10
+else:
+    raise ValueError('wrong network')
 
-
-
-model.load_state_dict(torch.load(args.pre_trained_net))
+checkpoint = torch.load(args.pre_trained_net)
+model.load_state_dict(checkpoint["state_dict"])
+model.eval()
 model = model.to(device)
 model_dict = model.state_dict()
-
 
 
 print('load target data: ',args.dataset)
@@ -101,6 +99,8 @@ def generate_target():
             data, targets = data.to(device), targets.to(device)
             batch_output = 0
             for j in range(args.eva_iter):
+                sample_with_cov = True
+                model.sample(scale=1.0, cov=sample_with_cov)
                 current_batch = model(data)
                 batch_output = batch_output + F.softmax(current_batch, dim=1)
             batch_output = batch_output/args.eva_iter
@@ -134,7 +134,10 @@ def generate_non_target():
             data, targets = data.to(device), targets.to(device)
             batch_output = 0
             for j in range(args.eva_iter):
-                batch_output = batch_output + F.softmax(model(data), dim=1)
+                sample_with_cov = True
+                model.sample(scale=1.0, cov=sample_with_cov)
+                current_batch = model(data)
+                batch_output = batch_output + F.softmax(current_batch, dim=1)
             batch_output = batch_output/args.eva_iter
             for i in range(data.size(0)):
                 # confidence score: max_y p(y|x)
